@@ -3,23 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="">
     <link rel="manifest" href="/manifest.json" />
     <title>Concierge Virtual</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx">
-      if ('serviceWorker' in navigator) {
-          navigator.serviceWorker
-            .register('/service-worker.js')
-            .then((resp) => {
-              console.log('Service Worker registrado com sucesso:', resp)
-            })
-            .catch((error) => {
-              console.error('Erro ao registrar o Service Worker:', error)
-            })
-        
-      }
-    </script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
