@@ -1,0 +1,9 @@
+{
+    "name": "concierge virtual",
+    "short_name": "cv",
+    "theme_color": "#2196f3",
+    "background_color": "#2196f3",
+    "display": "browser",
+    "scope": "/",
+    "start_url": "http://localhost:5173"
+  }
