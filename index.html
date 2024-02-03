@@ -8,6 +8,18 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx">
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker
+            .register('/service-worker.js')
+            .then((registration) => {
+              console.log('Service Worker registrado com sucesso:', registration)
+            })
+            .catch((error) => {
+              console.error('Erro ao registrar o Service Worker:', error)
+            })
+        
+      }
+    </script>
   </body>
 </html>
