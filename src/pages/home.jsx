@@ -1,14 +1,19 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
 
 export default function Home(){
+
+    const [ extractedCode, setExtractedCode ] = useState("")
+    
     const verifyCode = async () => {
       if (data){
-        const extractedCode = data.split('/').pop()
-        console.log(extractedCode)
+        setExtractedCode = data.split('/').pop()
       }
       }
+      verifyCode()
     return(
-        verifyCode()
+        <>
+            {extractedCode}
+        </>
     )
 }
