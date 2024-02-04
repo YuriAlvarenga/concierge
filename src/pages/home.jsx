@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState} from "react"
 
 
 export default function Home(){
@@ -6,11 +6,11 @@ export default function Home(){
     const [ extractedCode, setExtractedCode ] = useState("")
 
     const verifyCode = async () => {
-      if (data){
-        setExtractedCode = data.split('/').pop()
-      }
-      }
-      verifyCode()
+        setExtractedCode = window.location.href
+        
+      
+    }
+    verifyCode()
     return(
         <>
             hellooo
