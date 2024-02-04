@@ -4,7 +4,7 @@ import {
     Route,
     Routes,
 } from "react-router-dom"
-import HotelItaliaBC from "./pages/hotel-italia-bc"
+import HotelItaliaBC from "./pages/hotels/hotelItaliaBc/hotel-italia-bc"
 import Home from "./pages/home"
 
 
