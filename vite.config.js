@@ -10,7 +10,7 @@ const manifestForPlugIn = {
     short_name:"Concierge",
     description:"Concierge para faciliar o dia a dia",
     icons:[{
-      src: "/512.png",
+      src: "/hotel-piscina.png",
       sizes: "512x512",
       type:"hotel-piscina/png",
       purpose:"any maskable"
