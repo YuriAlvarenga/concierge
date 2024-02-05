@@ -1,23 +1,44 @@
 import React from 'react'
 import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
-import { Typography, Box } from '@mui/material'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import { Box } from '@mui/material'
 
-export default function ImageCard(props){
+
+export default function ImageCard(){
+  const settings ={
+    dots: true,
+    infinity: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000
+  }
+  
+
   return (
-    <>
-      <Typography sx={{mt:5, ml:1, mb: 1}}>
-          {props.title}
-      </Typography>
-      <Card >
-        <CardMedia
-          component="img"
-          alt="Imagem"
-          height="240"
-          image="512.png" 
-        />
-      </Card>
-    </>
+    <Box>
+      <Slider {...settings} sx={{display:'flex'}}>
+        <Card>
+          <CardMedia
+            component="img"
+            alt="Imagem"
+            image="hotel.jpg" 
+          />
+        </Card>
+        
+        <Card >
+          <CardMedia
+            component="img"
+            alt="Imagem"
+            image="hotel-piscina.jpg" 
+          />
+        </Card>
+      </Slider>
+    </Box>
   )
 }
 

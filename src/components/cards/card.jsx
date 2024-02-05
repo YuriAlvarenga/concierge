@@ -1,15 +1,11 @@
 import React from 'react'
-import CardComponent from '@mui/material/Card'
+import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 
-export default function Card(props){ //props vindo de hotel italia
+export default function CardComponent(){ //props vindo de hotel italia
   return (
-    <>
-      <Typography sx={{m:1, mt:2}}>
-        {props.title}
-      </Typography>
-      <CardComponent >
+      <Card sx={{}} >
         <CardContent>
           <Typography component="div">
             Refeições
@@ -26,8 +22,23 @@ export default function Card(props){ //props vindo de hotel italia
           <Typography color="text.secondary">
             Check-out: Até às 12h
           </Typography>
+          <Typography color="text.secondary">
+            Check-out: Até às 12h
+          </Typography>
+          <Typography color="text.secondary">
+            Check-out: Até às 12h
+          </Typography>
+          <Typography color="text.secondary">
+            Check-out: Até às 12h
+          </Typography>
+          <Typography color="text.secondary">
+            Check-out: Até às 12h
+          </Typography>
+          <Typography color="text.secondary">
+            Check-out: Até às 12h
+          </Typography>
         </CardContent>
-      </CardComponent>
-    </>
+      </Card>
+    
   )
 }
