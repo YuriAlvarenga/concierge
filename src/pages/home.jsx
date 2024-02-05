@@ -6,9 +6,9 @@ export default function Home() {
   useEffect(() => {
     const verifyCode = async () => {
       setExtractedCode(window.location.href)
-    };
+    }
 
-    verifyCode();
+    verifyCode()
   }, []) // Dependência vazia para executar apenas uma vez após a montagem
 
   return (
