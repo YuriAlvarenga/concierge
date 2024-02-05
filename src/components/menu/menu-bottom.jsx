@@ -11,7 +11,9 @@ const RootBottomNavigation = styled(BottomNavigation)({
   width: '100%',
   position: 'fixed', 
   bottom: 0,
-  background:'#000'
+  background:'#000',
+  margin:0,
+  padding:0
 })
 
 export default function MenuBottomNavigation() {
