@@ -6,13 +6,13 @@ const manifestForPlugIn = {
   registerType:'prompt',
   includeAssests:['favicon.ico', "apple-touc-icon.png", "masked-icon.svg"],
   manifest:{
-    name:"React-vite-app",
-    short_name:"react-vite-app",
-    description:"I am a simple vite app",
+    name:"Concierge Virtual",
+    short_name:"Concierge",
+    description:"Concierge para faciliar o dia a dia",
     icons:[{
       src: "/512.png",
       sizes: "512x512",
-      type:"image/png",
+      type:"hotel-piscina/png",
       purpose:"any maskable"
     }
   ],

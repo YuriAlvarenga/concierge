@@ -6,8 +6,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { Box } from '@mui/material'
 
-
-export default function ImageCard(){
+export default function ImageCard(props){
   const settings ={
     dots: true,
     infinity: true,
@@ -20,17 +19,17 @@ export default function ImageCard(){
   
 
   return (
-    <Box>
-      <Slider {...settings} sx={{display:'flex'}}>
-        <Card>
+    <Box sx={{m:4, mt:1}}>
+      <Slider {...settings} sx={{display:'flex', m:4}}>
+        <Card sx={{ml:2, mr:2}}>
           <CardMedia
             component="img"
             alt="Imagem"
             image="hotel.jpg" 
           />
         </Card>
-        
-        <Card >
+  
+        <Card sx={{ml:2, mr:2}}>
           <CardMedia
             component="img"
             alt="Imagem"
