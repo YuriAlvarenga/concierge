@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
 import HomeIcon from '@mui/icons-material/Home'
@@ -9,12 +9,13 @@ import { styled } from '@mui/system'
 
 const RootBottomNavigation = styled(BottomNavigation)({
   width: '100%',
-  position: 'fixed', // Adicionando 'fixed' para manter na parte inferior
-  bottom: 0 // Adicionando 'bottom: 0' para fixar na parte inferior
+  position: 'fixed', 
+  bottom: 0,
+  background:'#000'
 })
 
 export default function MenuBottomNavigation() {
-  const [value, setValue] = React.useState('recents')
+  const [value, setValue] = useState('home')
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
@@ -22,10 +23,10 @@ export default function MenuBottomNavigation() {
 
   return (
     <RootBottomNavigation value={value} onChange={handleChange}>
-      <BottomNavigationAction label="Recents" value="recents" icon={<HomeIcon />} />
-      <BottomNavigationAction label="Favorites" value="favorites" icon={<ExploreIcon />} />
-      <BottomNavigationAction label="Nearby" value="nearby" icon={<FavoriteIcon />} />
-      <BottomNavigationAction label="Folder" value="folder" icon={<PersonIcon />} />
+      <BottomNavigationAction label="Início" value="home" icon={<HomeIcon />} sx={{color:"#fff"}} />
+      <BottomNavigationAction label="Favorites" value="favorites" icon={<ExploreIcon />} sx={{color:"#fff"}} />
+      <BottomNavigationAction label="Categorias" value="categories" icon={<FavoriteIcon />} sx={{color:"#fff"}} />
+      <BottomNavigationAction label="Recepção" value="reception" icon={<PersonIcon />} sx={{color:"#fff"}} />
     </RootBottomNavigation>
   )
 }

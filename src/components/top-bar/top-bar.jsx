@@ -1,16 +1,13 @@
-import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import React from 'react'
+import AppBar from '@mui/material/AppBar'
+import Typography from '@mui/material/Typography'
 
 export default function TopBar() {
   return (
-    <AppBar position="fixed" sx={{height:30}}>
-      <Toolbar style={{ margin: 'auto', height:30 }}>
-        <Typography variant="h8" style={{ margin: 'auto', height:40 }}>
+    <AppBar position="fixed" sx={{height:25, background:'#000', color:'#fff',}}>
+        <Typography style={{ margin: 'auto', fontSize:14 }}>
             Concierge Virtual
         </Typography>
-      </Toolbar>
     </AppBar>
-  );
+  )
 }
