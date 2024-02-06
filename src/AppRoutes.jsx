@@ -14,7 +14,6 @@ export default function AppRoutes(){
         <Router>
             <Routes>
                 <Route exact path="/" element={<Home/>}/>
-                <Route exact path="/hotelitaliabc" element={<HotelItaliaBC/>}/>
             </Routes>
         </Router>
     )
