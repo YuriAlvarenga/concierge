@@ -1,37 +1,36 @@
 import React from 'react'
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import Typography from '@mui/material/Typography'
+import {Box, Grid, Card, CardContent, Typography } from '@mui/material'
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
+import EastIcon from '@mui/icons-material/East'
 
-export default function CardComponent(){ //props vindo de hotel italia
+export default function CardComponent({gradientColors}){ //props vindo de hotel italia
   return (
-      <Card sx={{color:'#FFF'}}>
-        <CardContent  sx={{background:'radial-gradient(#f588d8, #c0a3e5)'}}>
-          <Typography component="div">
-            Farmácia
-          </Typography>
-        </CardContent>
-        <CardContent  sx={{background:'radial-gradient(#60efbc,#58d5c9)', mt: 1}}>
-          <Typography component="div">
-            Refeições
-          </Typography>
-        </CardContent>
-        <CardContent  sx={{background:'radial-gradient(#76b2fe, #b69efe)', mt: 1}}>
-          <Typography component="div">
-            Refeições
-          </Typography>
-        </CardContent>
-        <CardContent  sx={{background:'radial-gradient(#fbc1cc, #fa99b2)', mt: 1}}>
-          <Typography component="div">
-            Refeições
-          </Typography>
-        </CardContent>
-        <CardContent  sx={{background:'radial-gradient(#1fe4f5, #3fbafe)', mt: 1}}>
-          <Typography component="div">
-            Refeições
-          </Typography>
-        </CardContent>
-      </Card>
+    <Grid container spacing={2} style={{ padding: 10, paddingBottom:0}}>
+       <Grid item xs={12}>
+        <Card sx={{background: `radial-gradient(${gradientColors})`, color:'#FFF'}}>
+          <CardContent sx={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
+            <Typography >
+              Aquário
+            </Typography>
+            <EastIcon/>
+          </CardContent>
+
+          <CardContent>
+            <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
+              <Typography>
+                08:00h às 21:00h
+              </Typography>
+              <Box sx={{display:'flex', alignItems:'center'}}>
+                <RadioButtonUncheckedIcon sx={{ background: 'green', color:'green', borderRadius:'100%', mr:1, fontSize:13 }}/>
+                <Typography>
+                  Aberto
+                </Typography>
+              </Box>
+            </Box>
+          </CardContent>
+        </Card>
+       </Grid>
+    </Grid>
     
   )
 }
