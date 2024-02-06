@@ -9,10 +9,15 @@ export default function CardComponent({gradientColors}){ //props vindo de hotel 
        <Grid item xs={12}>
         <Card sx={{background: `radial-gradient(${gradientColors})`, color:'#FFF'}}>
           <CardContent sx={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
-            <Typography >
+            <Typography variant='h6'>
               Aquário
             </Typography>
-            <EastIcon/>
+            <Box sx={{display:'flex', alignItems:'center'}}>
+                <RadioButtonUncheckedIcon sx={{ background: 'green', color:'green', borderRadius:'100%', mr:1, fontSize:13 }}/>
+                <Typography>
+                  Aberto
+                </Typography>
+              </Box>
           </CardContent>
 
           <CardContent>
@@ -20,12 +25,7 @@ export default function CardComponent({gradientColors}){ //props vindo de hotel 
               <Typography>
                 08:00h às 21:00h
               </Typography>
-              <Box sx={{display:'flex', alignItems:'center'}}>
-                <RadioButtonUncheckedIcon sx={{ background: 'green', color:'green', borderRadius:'100%', mr:1, fontSize:13 }}/>
-                <Typography>
-                  Aberto
-                </Typography>
-              </Box>
+              <EastIcon/>
             </Box>
           </CardContent>
         </Card>
