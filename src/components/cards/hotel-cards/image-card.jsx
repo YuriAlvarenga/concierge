@@ -19,7 +19,7 @@ export default function ImageCard(props){
   
 
   return (
-    <Box sx={{m:4, mt:1}}>
+    <Box sx={{m:4, mt:5}}>
       <Slider {...settings} sx={{display:'flex', m:4}}>
         <Card sx={{ml:2, mr:2}}>
           <CardMedia
