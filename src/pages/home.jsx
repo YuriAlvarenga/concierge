@@ -22,15 +22,17 @@ export default function Home() {
         <SmallCard/>
         <>
           <Title title={"Passeios"}/>
-          <CardComponent gradientColors={['#00FFFF', '#008B8B']} title={"Aquário"} horario={"09:00h às 21:00h"} status={"Aberto"}/>
-          <CardComponent gradientColors={['#98FB98', '#008000']} title={"Jurassic Park"} horario={"09:00h às 20:00h"} status={"Aberto"}/>
-          <CardComponent gradientColors={['#FFA07A', '#FF6347']} title={"Roda Gigante"} horario={"09:00h às 21:30h"} status={"Fechado"}/>
+          <CardComponent gradientColors={['#1fe4f5, #3fbafe']} title={"Aquário"} horario={"09:00h às 21:00h"} status={"Aberto"}/>
+          <CardComponent gradientColors={['#60efbc, #58d5c9']} title={"Jurassic Park"} horario={"09:00h às 20:00h"} status={"Aberto"}/>
+          <CardComponent gradientColors={['#FFDAB9', '#FFA500']} title={"Roda Gigante"} horario={"09:00h às 21:30h"} status={"Fechado"}/>
+          <CardComponent gradientColors={['#76b2fe, #b69efe']} title={"Barco Pirata"} horario={"09:00h às 21:30h"} status={"Fechado"}/>
           <SeeAll/>
         </>
         <>
           <Title title={"Restaurantes"}/>
           <CardComponent gradientColors={['#AAAAAA', '#000000']} title={"Distretto"} horario={"19:00h às 00:00h"} status={"Aberto"}/>
-          <CardComponent gradientColors={['#f588d8, #c0a3e5']} title={"Águas da Brava"} horario={"19:00h às 23:30h"} status={"Aberto"}/>
+          <CardComponent gradientColors={['#00FFFF', '#008B8B']} title={"Águas da Brava"} horario={"19:00h às 23:30h"} status={"Aberto"}/>
+          <CardComponent gradientColors={['#FFA07A', '#CD5C5C']} title={"Brava Sushi"} horario={"19:00h às 23:30h"} status={"Aberto"}/>
           <SeeAll/>
         </>
         <>
@@ -41,7 +43,7 @@ export default function Home() {
         </>
         <>
           <Title title={"Baladas"}/>
-          <CardComponent gradientColors={['#FFDAB9', '#FFA500']} title={"Shed"} horario={"21:00h às 05:00h"} status={"Fechado"}/>
+          <CardComponent gradientColors={['#f588d8, #c0a3e5']} title={"Shed"} horario={"21:00h às 05:00h"} status={"Fechado"}/>
           <CardComponent gradientColors={['#AAAAAA', '#000000']} title={"Warung"} horario={"22:00h às 04:30h"} status={"Aberto"}/>
           <CardComponent gradientColors={['#00FFFF', '#008B8B']} title={"Green Valley"} horario={"23:00h às 06:30h"} status={"Aberto"}/>
           <SeeAll/>
