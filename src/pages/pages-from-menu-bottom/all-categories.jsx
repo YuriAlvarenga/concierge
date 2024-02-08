@@ -1,6 +1,7 @@
-import { Typography, Grid, Card, CardContent } from "@mui/material"
+import { Typography, Grid, Card, CardContent, Toolbar } from "@mui/material"
 import React from "react"
 import TopBar from "../../components/menu/top-bar/top-bar"
+import MenuBottomNavigation from "../../components/menu/menu-bottom/menu-bottom"
 
 
 
@@ -30,6 +31,7 @@ export default function Categories(){
     return(
         <>
             <TopBar title={"Categorias"}/>
+            <Toolbar/>
             {allCategories.map((name,id)=>(
                 <Grid container spacing={2} style={{ padding: 10 }} key={id}>
                     <Grid item xs={12}>
@@ -43,6 +45,8 @@ export default function Categories(){
                     </Grid>
                 </Grid>
             ))}
+            <Toolbar/>
+            <MenuBottomNavigation/>
         </>
     )
 }

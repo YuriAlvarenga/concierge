@@ -1,15 +1,15 @@
-import { Toolbar, Typography } from "@mui/material"
 import React from "react"
 import TopBar from "../../components/menu/top-bar/top-bar"
+import { Toolbar } from "@mui/material"
 import MenuBottomNavigation from "../../components/menu/menu-bottom/menu-bottom"
 
 
-export default function Notifications(){
+
+export default function NightClubs(){
     return(
         <>
-            <TopBar title={"Notificações"}/>
+            <TopBar title={"Baladas"}/>
             <Toolbar/>
-            <Typography>oi</Typography>
             <Toolbar/>
             <MenuBottomNavigation/>
         </>
