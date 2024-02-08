@@ -6,8 +6,9 @@ import SmallCard from '../../components/cards/hotel-cards/small-card'
 import CardComponent from '../../components/cards/hotel-cards/simple-card'
 import SeeAll from '../../components/titles/seeAll'
 
-
 export default function HotelPage() {
+
+  
 
   return (
     <>

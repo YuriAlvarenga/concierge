@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import MenuBottomNavigation from '../components/menu/menu-bottom/menu-bottom'
-import { Box } from '@mui/material'
+import { Box, Toolbar } from '@mui/material'
 import HotelPage from './pages-from-menu-bottom/hotel-page'
 import Categories from './pages-from-menu-bottom/all-categories'
 import Notifications from './pages-from-menu-bottom/notifications'
@@ -14,6 +14,8 @@ export default function Home() {
   }
 
   return (
+    <>
+    <Toolbar/>
     <Box  style={{ maxWidth: '100%', margin: '0 auto' }}>
 
       {itemBottomBar === 1 ? (
@@ -22,10 +24,11 @@ export default function Home() {
         <Notifications/>) : 
       itemBottomBar === 4 ? (
         <Categories/>) : ("")}
-        
-      <Box sx={{mt:10}}></Box>
+
+      <Toolbar/>
       <MenuBottomNavigation handleItemClick={handleItemClick} />
     </Box>
+    </>
   )
 }
 

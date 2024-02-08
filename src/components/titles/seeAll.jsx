@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Typography, Link } from "@mui/material"
-import EastIcon from '@mui/icons-material/East'
+
 
 
 export default function SeeAll(){

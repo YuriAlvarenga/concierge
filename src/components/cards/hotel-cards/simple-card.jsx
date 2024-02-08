@@ -4,6 +4,7 @@ import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import EastIcon from '@mui/icons-material/East'
 
 export default function CardComponent({gradientColors, title, horario, status}){ //props vindo de home.jsx
+
   return (
     <Grid container spacing={2} style={{ padding: 10, paddingBottom:0}}>
        <Grid item xs={12}>
