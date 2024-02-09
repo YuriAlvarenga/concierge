@@ -13,7 +13,6 @@ export default function Restaurantes(){
             <TopBar title={"Restaurantes"}/>
             <Toolbar/>
             <SmallCardFromRestaurants/>
-            <SmallCardFromRestaurants/>
             <CardAllRestaurants/>
             <Toolbar/>
             <MenuBottomNavigation/>
