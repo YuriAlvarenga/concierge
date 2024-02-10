@@ -9,7 +9,7 @@ export default function CardAllBarsAndNightclubs() {
   return (
       <>
       {dataOfAllBars.map(({name, children})=>(
-      <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
+      <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }} key={name}>
         <Typography sx={{fontSize:16, mt:2, mb:0, ml:2}}>{name}</Typography>
         <Grid item xs={12}>
           {children.map(({ id, title:childName, horario, status, gradient, image }) => (
