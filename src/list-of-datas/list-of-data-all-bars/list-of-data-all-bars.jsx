@@ -5,12 +5,12 @@ const dataOfAllBarsAndNightclub = [
     {
         name: "Alternativos",
         children:[
-            { id: 1, title:"PG Skate e Surf ", horario:"19:00h às 23:30h", status:"Aberto",gradient:['#AAAAAA', '#000000'], image: "/bars/pg-skate-diversao.jpg"},
+            { id: 1, title:"Taj Bar", horario:"19:00h às 00:00h", status:"Aberto" ,gradient: ['#000000', '#000000'], image: "/bars/taj-bar.jpg"},
             { id: 2, title:"Distrito BC", horario:"19:00h às 23:30h", status:"Aberto",gradient:['#AAAAAA', '#000000']},
             { id: 3, title:"Tribus Bar", horario:"19:00h às 00:00h", status:"Aberto" ,gradient: ['#AAAAAA', '#000000'], image: "/bars/tribus-bar.jpg"},
             { id: 4, title:"Das Antigas", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#b07eb9', '#b07eb9'] },
             { id: 5, title:"Lit Bar", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#b07eb9', '#b07eb9'] },
-            { id: 6, title:"Taj Bar", horario:"19:00h às 00:00h", status:"Aberto" ,gradient: ['#000000', '#000000'], image: "/bars/taj-bar.jpg"},
+            { id: 6, title:"PG Skate e Surf ", horario:"19:00h às 23:30h", status:"Aberto",gradient:['#AAAAAA', '#000000'], image: "/bars/pg-skate-diversao.jpg"},
             { id: 7, title:"Shed Bar", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#ff6888' ,'red'],  image: "/bars/shed-bar.jpg" },
             { id: 8, title:"The Grand", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FF69B4', '#b07eb9'], image: "/bars/the-grand.jpg"},
         ]
