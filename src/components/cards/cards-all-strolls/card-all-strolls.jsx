@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Card, CardContent, Typography } from '@mui/material';
+import { Box, Grid, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import EastIcon from '@mui/icons-material/East';
 import dataOfAllStrolls from '../../../list-of-datas/list-of-data-all-strolls/list-of-data-all-strolls';
@@ -12,9 +12,12 @@ export default function CardAllStrolls() {
           
           <Card key={id} sx={{ background: `radial-gradient(${childGradient})`, color: '#FFF', marginBottom: '10px' }}>
             {image && (
-              <Box>
-                <img src={image} alt={childName} style={{ width: '100%', maxHeight: '280px', objectFit: 'cover' }} />
-              </Box>
+              <CardMedia
+                component="img"
+                image={image}
+                alt={childName}
+                style={{ width: '100%', maxHeight: '220px', objectFit: 'cover' }}
+              />
             )}
             <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <Typography>{childName}</Typography>

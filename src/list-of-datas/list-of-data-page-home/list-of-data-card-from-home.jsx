@@ -6,7 +6,7 @@ const dataOfSimpleCard = [
       name: 'Passeios',
       route: '/strollsbc',
       children: [
-        {id: 1, title:"Aquário", horario:"09:00h às 21:00h", status:"Aberto", gradient: ['#3fbafe, #3fbafe']},
+        {id: 1, title:"Aquário", horario:"09:00h às 21:00h", status:"Aberto", gradient: ['#3fbafe, #0077cc']},
         { id: 2, title:"Jurassic Park", horario:"09:00h às 20:00h", status:"Aberto", gradient: ['#60efbc, #60efbc']},
         { id: 3, title:"Roda Gigante", horario:"09:00h às 21:30h", status:"Fechado",gradient: ['#FFA500', '#FFA500']},
       ],

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Grid, Card, CardContent, Typography } from '@mui/material'
+import {Box, Grid, Card, CardContent, CardMedia, Typography } from '@mui/material'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import EastIcon from '@mui/icons-material/East'
 import dataOfAllBars from '../../../list-of-datas/list-of-data-all-bars/list-of-data-all-bars'
@@ -9,8 +9,16 @@ export default function CardAllBarsAndNightclubs() {
   return (
     <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
         <Grid item xs={12}>
-          {dataOfAllBars.map(({ id, title, horario, status, gradient }) => (
-            <Card key={id} sx={{ background: gradient, color: '#FFF', marginBottom: '10px' }}>
+          {dataOfAllBars.map(({ id, title, horario, status, gradient, image }) => (
+            <Card key={id} sx={{ background: `radial-gradient(${gradient})`, color: '#FFF', marginBottom: '10px' }}>
+              {image && (
+                <CardMedia
+                  component="img"
+                  image={image}
+                  alt={title}
+                  style={{ width: '100%', maxHeight: '220px', objectFit: 'cover' }}
+                />
+              )}
               <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <Typography>{title}</Typography>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
