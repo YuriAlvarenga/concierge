@@ -1,7 +1,6 @@
 
 import WbTwilightIcon from '@mui/icons-material/WbTwilight'
 import MusicNoteIcon from '@mui/icons-material/MusicNote'
-import { GiGuitar } from "react-icons/gi"
 
 const dataOfSmallCardsFromBars = 
     [
