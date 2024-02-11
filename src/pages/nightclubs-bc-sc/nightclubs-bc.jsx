@@ -2,7 +2,7 @@ import React from "react"
 import TopBar from "../../components/menu/top-bar/top-bar"
 import { Toolbar } from "@mui/material"
 import MenuBottomNavigation from "../../components/menu/menu-bottom/menu-bottom"
-import CardAllBarsAndNightclubs from "../../components/cards/cards-all-bars/cards-all-bars"
+import CardAllNightclubs from "../../components/cards/cards-all-nightclubs/cards-all-nightclubs"
 
 
 
@@ -11,7 +11,7 @@ export default function NightClubs(){
         <>
             <TopBar title={"Baladas"}/>
             <Toolbar/>
-            <CardAllBarsAndNightclubs/>
+            <CardAllNightclubs/>
             <Toolbar/>
             <MenuBottomNavigation/>
         </>

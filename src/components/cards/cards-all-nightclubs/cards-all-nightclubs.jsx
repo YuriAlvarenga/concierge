@@ -1,14 +1,13 @@
 import React from 'react'
-import { Box, Grid, Card, CardContent, CardMedia, Typography } from '@mui/material'
+import { Box, Grid, Card, CardMedia, Typography } from '@mui/material'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
-import EastIcon from '@mui/icons-material/East'
-import dataOfAllStrolls from '../../../list-of-datas/list-of-data-all-strolls/list-of-data-all-strolls'
+import dataOfAllNightClubs from '../../../list-of-datas/list-of-data-all-nightclubs/list-of-data-all-nightclubs-bc'
 
-export default function CardAllStrolls() {
+export default function CardAllNightclubs() {
   return (
     <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
-        {dataOfAllStrolls.map(({ id, title: childName, status, gradient: childGradient, image }) => (
-      <Grid item xs={12}>
+        {dataOfAllNightClubs.map(({ id, title: childName, status, gradient: childGradient, image }) => (
+      <Grid item xs={12} key={childName}>
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <Typography>{childName}</Typography>
             <Box sx={{ display: 'flex', alignItems: 'center', mr:1 }}>
@@ -25,7 +24,7 @@ export default function CardAllStrolls() {
                 alt={childName}
                 style={{ width: '100%', maxHeight: '220px', objectFit: 'cover' }}
               />
-            )}
+            )}       
           </Card>
       </Grid>
         ))}
