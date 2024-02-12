@@ -1,57 +1,15 @@
 
 
+const dataOfAllRestaurants = 
+    [
+        {id: 1, title:"Heróis da Pizza", horario:"09:00h às 21:00h", status:"Aberto", gradient: ['#1fe4f5, #1fe4f5'], image: "/restaurants/herois-da-pizza-bc.jpg"},
+        { id: 2, title:"Distretto Trattoria", horario:"09:00h às 20:00h", status:"Aberto", gradient: ['#60efbc, #60efbc'], image: "/restaurants/distretto.jpg"},
+        { id: 3, title:"Baobá", horario:"09:00h às 21:30h", status:"Fechado",gradient: ['#60efbc', '#60efbc'], image:"/restaurants/baoba.jpg"},
+        {id: 4, title:"O Pharol Restaurante", horario:"09:00h às 21:00h", status:"Aberto", gradient: ['#b07eb9, #b07eb9'], image: "/restaurants/o-pharol-bc.jpg"},
+        { id: 5, title:"Brava-Grill", horario:"09:00h às 20:00h", status:"Aberto", gradient: ['#b07eb9, #b07eb9'],  image:"/restaurants/brava-grill.jpg"},
+        { id: 6, title:"Brava Sushi", horario:"09:00h às 20:00h", status:"Aberto", gradient: ['#1fe4f5, #1fe4f5'], image: "/restaurants/brava-sushi.png"},
+        { id: 7, title:"Pizza Bis", horario:"09:00h às 21:30h", status:"Fechado",gradient: ['#1fe4f5', '#1fe4f5'],image: "/restaurants/pizza-bis.jpg"},
+        {id: 8, title:"Lucca Bistrô", horario:"09:00h às 21:00h", status:"Aberto", gradient: ['#ff6888, #ff6888'], image:"/restaurants/lucca-bistro.jpg"},
+    ]
 
-const dataOfAllRestaurants = [
-    {
-        title: 'Pizzarias',
-        children:[
-            { id: 1, title:"Distretto", horario:"19:00h às 00:00h", status:"Aberto" ,gradient: ['#555555', '#000000']},
-            { id: 2, title:"Herois da Pizza", horario:"19:00h às 23:30h", status:"Aberto",gradient:['#2E8B57', '#2E8B57']},
-            { id: 3, title:"Hipopótamos", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-            { id: 4, title:"Pizza Biz", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-            { id: 5, title:"Pizzaria .com", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-        ]
-    },
-    {
-        title: 'Oriental',
-        children:[
-            { id: 6, title:"Brava Sushi", horario:"19:00h às 00:00h", status:"Aberto" ,gradient: ['#555555', '#000000']},
-            { id: 7, title:"Dhoô", horario:"19:00h às 23:30h", status:"Aberto",gradient:['#2E8B57', '#2E8B57']},
-            { id: 8, title:"Temaki ART", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-            { id: 9, title:"Yujin Temakeria", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-            { id: 10, title:"Mity Sushi", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-        ]
-    },
-    {
-        title: 'Mexicana',
-        children:[
-            { id: 11, title:"Distretto", horario:"19:00h às 00:00h", status:"Aberto" ,gradient: ['#555555', '#000000']},
-            { id: 12, title:"Guacamole", horario:"19:00h às 23:30h", status:"Aberto",gradient:['#2E8B57', '#2E8B57']},
-            { id: 13, title:"Brava Sushi", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-            { id: 14, title:"Brava Sushi", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-            { id: 15, title:"Brava Sushi", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-        ]
-    },
-    {
-        title: 'Churrascarias',
-        children:[
-            { id: 16, title:"Distretto", horario:"19:00h às 00:00h", status:"Aberto" ,gradient: ['#555555', '#000000']},
-            { id: 17, title:"Guacamole", horario:"19:00h às 23:30h", status:"Aberto",gradient:['#2E8B57', '#2E8B57']},
-            { id: 18, title:"Brava Sushi", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-            { id: 19, title:"Brava Sushi", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-            { id: 20, title:"Brava Sushi", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-        ]
-    },
-    {
-        title: 'Frutos do Mar',
-        children:[
-            { id: 21, title:"O Pharol", horario:"19:00h às 00:00h", status:"Aberto" ,gradient: ['#555555', '#000000']},
-            { id: 22, title:"Cabral Restaurante", horario:"19:00h às 23:30h", status:"Aberto",gradient:['#2E8B57', '#2E8B57']},
-            { id: 23, title:"Restaurante do Fábio", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-            { id: 24, title:"Segredos do Mar", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-            { id: 25, title:"Cia do Peixe", horario:"19:00h às 23:30h", status:"Aberto",gradient: ['#FFA500', '#FF8C00'] },
-        ]
-    },
-    
-]
 export default dataOfAllRestaurants

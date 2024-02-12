@@ -14,9 +14,8 @@ export default function Home() {
 
   return (
     <>
-    <Toolbar/>
     <Box  style={{ maxWidth: '100%', margin: '0 auto' }}>
-      <TopBar title={"Hotel Itália"}/>
+      <TopBar title={"Concierge Virtual"}/>
           <ImageCard/>
           <Title title={"Serviços"}/>
           <SmallCard/>

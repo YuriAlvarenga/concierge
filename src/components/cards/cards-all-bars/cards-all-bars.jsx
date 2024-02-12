@@ -6,7 +6,7 @@ import dataOfAllBars from '../../../list-of-datas/list-of-data-all-bars/list-of-
 export default function CardAllBars() {
   return (
     <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
-        {dataOfAllBars.map(({ id, title: childName, status, gradient: childGradient, image }) => (
+        {dataOfAllBars.map(({ id, title: childName, status, image }) => (
       <Grid item xs={12} key={childName}>
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <Typography>{childName}</Typography>
@@ -16,14 +16,16 @@ export default function CardAllBars() {
               </Box>
           </Box>
           
-          <Card key={id} sx={{ background: `radial-gradient(${childGradient})`, color: '#FFF', marginBottom: '10px' }}>
-            {image && (
+          <Card key={id} sx={{ color: '#FFF', marginBottom: '10px' }}>
+            {image ? (
               <CardMedia
                 component="img"
                 image={image}
                 alt={childName}
                 style={{ width: '100%', maxHeight: '220px', objectFit: 'cover' }}
               />
+            ): (
+              <Skeleton variant="rectangular" height={220} sx={{background: '#cdcdcd'}}/>
             )}       
           </Card>
       </Grid>

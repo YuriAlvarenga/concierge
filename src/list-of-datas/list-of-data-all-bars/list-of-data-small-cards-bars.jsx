@@ -2,19 +2,33 @@
 import WbTwilightIcon from '@mui/icons-material/WbTwilight'
 import MusicNoteIcon from '@mui/icons-material/MusicNote'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGuitar, faMicrophone, faUserGroup } from '@fortawesome/free-solid-svg-icons'
+import { faGuitar, faMicrophone } from '@fortawesome/free-solid-svg-icons'
 
+
+const iconAoVivo = "/icons-from-bars/icon-ao-vivo.png"
+const iconOpen = "/icons-from-bars/open.png"
+const iconSertanejo = "/icons-from-bars/sertanejo.png"
+const iconHiphop = "/icons-from-bars/hip-hop.png"
+const iconBrasilidade = "/icons-from-bars/brasilidade.png"
+const iconRockAndRoll = "/icons-from-bars/rock-and-roll.png"
+const iconEltronica = "/icons-from-bars/eletronica.png"
+
+
+const smallerIconStyle = {
+    width: '40px',
+    height: '40px',
+}
 
 const dataOfSmallCardsFromBars = 
     [
-        {id: 1, title: 'Ao vivo',icon:<FontAwesomeIcon icon={faUserGroup} />,  gradient: ' #1fe4f5'},
-        { id: 2, title: 'Aberto agora', icon: <MusicNoteIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #60efbc, #60efbc)'},
-        { id: 3, title: 'Sertanejo', icon: <MusicNoteIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #ff6888, #ff6888)' },
-        { id: 4, title: 'Hip-Hop', icon: <FontAwesomeIcon icon={faMicrophone}/>, gradient: 'linear-gradient(to bottom, #b07eb9, #b07eb9)' },
-        { id: 5, title: 'Brasilidade', icon: <MusicNoteIcon sx={{color:'#FFA500'}}/>, gradient: 'linear-gradient(to bottom, green 50%, #FFA500)' },
-        { id: 6, title: 'Rock', icon: <FontAwesomeIcon  icon={faGuitar} />, gradient: 'linear-gradient(to bottom, #FFF 60%, #AAAAAA)' },
+        {id: 1, title: 'Aberto agora', icon:<img src={iconOpen} alt="Aberto agora" style={smallerIconStyle} />,  gradient: ' #1fe4f5'},
+        { id: 2, title: 'Ao vivo', icon:<img src={iconAoVivo} alt="Ao vivo" style={smallerIconStyle}/>, gradient: 'linear-gradient(to bottom, #60efbc, #60efbc)'},
+        { id: 3, title: 'Sertanejo', icon:<img src={iconSertanejo} alt="Sertanejo" style={smallerIconStyle}/>, gradient: 'linear-gradient(to bottom, #ff6888, #ff6888)' },
+        { id: 4, title: 'Hip-Hop', icon:<img src={iconHiphop} alt="hip-hop" style={smallerIconStyle}/>, gradient: 'linear-gradient(to bottom, #b07eb9, #b07eb9)' },
+        { id: 5, title: 'Brasilidade', icon:<img src={iconBrasilidade} alt="brasilidade" style={smallerIconStyle}/>, gradient: 'linear-gradient(to bottom, green 50%, green)' },
+        { id: 6, title: 'Rock', icon:<img src={iconRockAndRoll} alt="rock-and-roll" style={smallerIconStyle}/>, gradient: 'linear-gradient(to bottom, #FFF 60%, #AAAAAA)' },
         { id: 7, title: 'Sunset', icon: <WbTwilightIcon sx={{color:'#FFD700'}}/>, gradient: 'linear-gradient(to bottom, #FFA500 60%, #1fe4f5 )'},  
-        { id: 8, title: 'Eletrônica', icon: <MusicNoteIcon sx={{color:'#00000'}}/>, gradient: 'linear-gradient(to bottom, #FF69B4, #b07eb9 55%, #1fe4f5 )' },
+        { id: 8, title: 'Eletrônica', icon:<img src={iconEltronica} alt="eletronica" style={smallerIconStyle}/>, gradient: 'linear-gradient(to bottom, #FF69B4, #b07eb9 55%, #1fe4f5 )' },
     ]
    
 

@@ -10,6 +10,7 @@ const allCategories = [
     { id:6, categorie: "Soverterias", gradient: ['#ff6888', '#ff6888']},
     { id:7, categorie: "Translados", gradient: ['#b07eb9', '#b07eb9']},
     { id:8, categorie: "Restaurantes", gradient: ['#76b2fe', '#76b2fe']},
+    { id:8, categorie: "Locadoras", gradient: ['#60efbc', '#58d5c9']},
   ]
 
 export default allCategories
