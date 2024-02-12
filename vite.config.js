@@ -4,15 +4,15 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 const manifestForPlugIn = {
   registerType:'prompt',
-  includeAssests:['favicon.ico', "apple-touc-icon.png", "masked-icon.svg"],
+  includeAssets:['favicon.ico', "apple-touc-icon.png", "masked-icon.svg"],
   manifest:{
     name:"Concierge Virtual",
     short_name:"Concierge",
     description:"Concierge para faciliar o dia a dia",
     icons:[{
-      src: "/hotel-piscina.jpg",
+      src: "/nightclubs/amaite-praia-brava.png",
       sizes: "512x512",
-      type:"hotel-piscina/jpg",
+      type:"image/png",
       purpose:"any maskable"
     }
   ],
