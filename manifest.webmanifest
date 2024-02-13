@@ -13,6 +13,6 @@
   "background_color":"#f0e7db",
   "display":"standalone",
   "scope":"/",
-  "start_url":"/https://concierge-rosy.vercel.app/",
+  "start_url":"/",
   "orientation":"portrait"
   }
