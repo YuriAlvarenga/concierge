@@ -8,7 +8,7 @@ export default function SeeAll({route}){ //vindo da página hotel-page como prop
     const navigate = useNavigate()
     const handleClick = () => {
         navigate(route)
-      }
+    }
 
     return(
         <Box sx={{display:'flex', justifyContent:'flex-end', m:2}}>
