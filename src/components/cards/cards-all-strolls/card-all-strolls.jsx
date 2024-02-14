@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box, Grid, Card, CardMedia, Typography, Skeleton } from '@mui/material'
+import { Box, Grid, Card, CardMedia, Typography, Skeleton, IconButton } from '@mui/material'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import dataOfAllStrolls from '../../../list-of-datas/list-of-data-all-strolls/list-of-data-all-strolls'
 
 export default function CardAllStrolls() {
@@ -16,14 +17,19 @@ export default function CardAllStrolls() {
             </Box>
           </Box>
 
-          <Card key={id} sx={{  color: '#FFF', marginBottom: '10px' }}>
+          <Card key={id} sx={{  color: '#FFF', marginBottom: '10px', position: 'relative' }}>
             {image ? (
-              <CardMedia
-                component="img"
-                image={image}
-                alt={childName}
-                style={{ width: '100%', maxHeight: '220px', objectFit: 'cover' }}
-              />
+              <>
+                <CardMedia
+                  component="img"
+                  image={image}
+                  alt={childName}
+                  style={{ width: '100%', maxHeight: '220px', objectFit: 'cover' }}
+                />
+                <IconButton style={{ position: 'absolute', bottom: 0, right: 0, color: '#fff' }}>
+                  <ArrowForwardIcon />
+                </IconButton>
+              </>
             ) : (
               <Skeleton variant="rectangular" height={220} />
             )}

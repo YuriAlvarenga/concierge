@@ -12,7 +12,7 @@ export default function CardComponent() {
         <Grid item xs={12} key={name}>
           <Typography sx={{fontSize:16, mb:1}}>{name}</Typography>
           {children.map(({ id, title: childName, horario, status, gradient: childGradient }) => (
-            <Card key={id} sx={{ background: `radial-gradient(${childGradient})`, color: '#FFF', marginBottom: '10px' }}>
+            <Card key={id} sx={{ background: "#000", color: '#FFF', marginBottom: '10px' }}>
               <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <Typography>{childName}</Typography>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>

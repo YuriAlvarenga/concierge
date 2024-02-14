@@ -16,9 +16,10 @@ export default function Home() {
     <>
     <Box  style={{ maxWidth: '100%', margin: '0 auto' }}>
       <TopBar title={"Concierge Virtual"}/>
-          <ImageCard/>
           <Title title={"Serviços"}/>
           <SmallCard/>
+          <Title title={"Destaques"}/>
+          <ImageCard/>
           <CardComponent />  
       <Toolbar/>
       <MenuBottomNavigation/>

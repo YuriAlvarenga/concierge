@@ -15,7 +15,7 @@ export default function HotelCard() {
     <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
       <Grid item xs={12}>
         <Typography sx={{ fontSize: 16, mb: 1 }}>Wi-fi</Typography>
-        <Card sx={{ marginBottom: '10px' }}>
+        <Card sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)' }}>
           <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <Typography>
               Rede:

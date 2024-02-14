@@ -4,7 +4,7 @@ import React from "react"
 
 export default function Title({title}){ //vindo como props de outras páginas que requerem o title (Componente topbar)
     return(
-        <Typography sx={{ml: 1, mt:2}}>
+        <Typography sx={{ml: 1, mt:4}}>
             {title}
         </Typography>
     )

@@ -11,30 +11,30 @@ export default function ImageCard(){
     "/bars/shed-bar.jpg",
     "/strolls-bc/aventura-jurassica.jpg",
     "/restaurants/herois-da-pizza-bc.jpg"
-    
   ]
 
   const settings ={
     dots: true,
+    infinity: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     height: 240
   }
   
 
   return (
-    <Box sx={{ m: 0, mt: 3, overflow: 'hidden'}}>
-      <Slider {...settings} sx={{ display: 'flex', m: 0, height: '100%' }}>
+    <Box sx={{ m: 0, mt: 1, overflow: 'hidden', height:140 }}>
+      <Slider {...settings}>
         {images.map((image, index) => (
-          <Card key={index} sx={{ ml: 2, mr: 2, width: '100%'}}>
+          <Card key={index} sx={{ margin: '0 8px' }}>
             <CardMedia
               component="img"
               alt={`Imagem ${index}`}
               image={image} 
-              sx={{ width: '100%', height:200, objectFit: 'fill'}}
+              sx={{ height: 140, objectFit: 'fill' }}
             />
           </Card>
         ))}
