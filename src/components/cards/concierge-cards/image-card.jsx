@@ -21,20 +21,19 @@ export default function ImageCard(){
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    height: 240
   }
   
 
   return (
-    <Box sx={{ m: 0, mt: 1, overflow: 'hidden', height:140 }}>
+    <Box sx={{ m: 4, mt: 1 }}>
       <Slider {...settings}>
         {images.map((image, index) => (
-          <Card key={index} sx={{ margin: '0 8px' }}>
+          <Card key={index} sx={{borderRadius:4}}>
             <CardMedia
               component="img"
               alt={`Imagem ${index}`}
               image={image} 
-              sx={{ height: 140, objectFit: 'fill' }}
+              sx={{ height: 240, objectFit: 'fill' }}
             />
           </Card>
         ))}
