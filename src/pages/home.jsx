@@ -18,7 +18,7 @@ export default function Home() {
             <Title title={"Destaques"} index={1}/>
             <ImageCard/>
           </Box>
-          <Box sx={{mt:22}}>
+          <Box sx={{mt:23}}>
             <Title title={"Serviços"} />
             <SmallCard />
             <CardComponent />

@@ -6,11 +6,11 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { Box } from '@mui/material'
 
-export default function ImageCard(){
+export default function ImageCardFromHotel(){
   const images = [
-    "/bars/shed-bar.jpg",
-    "/strolls-bc/aventura-jurassica.jpg",
-    "/restaurants/herois-da-pizza-bc.jpg"
+    "/hotels/promocao-pascoa.jpg",
+    "/hotels/cafe-na-cama.jpg",
+    "/hotels/promocao-fique-mais-um-dia.jpg"
   ]
 
   const settings ={
@@ -25,7 +25,7 @@ export default function ImageCard(){
   
 
   return (
-    <Box sx={{ m: 3, mt: 2 }}>
+    <Box sx={{ m: 3, mt: 0 }}>
       <Slider {...settings}>
         {images.map((image, index) => (
           <Card key={index} sx={{borderRadius:4}}>
@@ -33,7 +33,7 @@ export default function ImageCard(){
               component="img"
               alt={`Imagem ${index}`}
               image={image} 
-              sx={{ height: 260, objectFit: 'fill' }}
+              sx={{ height: 240, objectFit: 'fill' }}
             />
           </Card>
         ))}

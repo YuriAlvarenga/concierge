@@ -39,7 +39,7 @@ export default function ServicesFromHotelCard(){
             <Card sx={{background:"#000", m:0}} >
               <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'space-between', m: 0 }}>
                 <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
-                     Fale com a recepção
+                     Recepção
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                     <EastIcon sx={{fontSize:16, color:"#FFF"}} />
