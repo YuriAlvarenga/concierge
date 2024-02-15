@@ -4,6 +4,7 @@ import { Toolbar } from "@mui/material"
 import MenuBottomNavigation from "../../components/menu/menu-bottom/menu-bottom"
 import CardAllRestaurants from "../../components/cards/cards-all-restaurants/cards-all-restaurants"
 import SmallCardFromRestaurants from "../../components/cards/cards-all-restaurants/small-cards-from-restaurants"
+import Story from "../../components/cards/stories-card/stories-card"
 
 
 
@@ -12,7 +13,7 @@ export default function Restaurantes(){
         <>
             <TopBar title={"Restaurantes"}/>
             <Toolbar/>
-            <SmallCardFromRestaurants/>
+            <Story stories={"Destaques"}/>
             <CardAllRestaurants/>
             <Toolbar/>
             <MenuBottomNavigation/>

@@ -11,11 +11,11 @@ const storyImages = [
 ]
 
 
-export default function Story(){
+export default function Story({stories}){
   return (
     <>
         <Typography sx={{m:1}}>
-            Stories
+            {stories}
         </Typography>
         <Card sx={{ display:'flex', alignItems:'center', justifyContent:'space-around', mb:2, boxShadow:'none'}}>
         {storyImages.map((imageObj, index) => (
