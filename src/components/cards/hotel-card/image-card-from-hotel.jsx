@@ -8,7 +8,7 @@ import { Box } from '@mui/material'
 
 export default function ImageCardFromHotel(){
   const images = [
-    "/hotels/promocao-pascoa.jpg",
+    "/hotels/hotel.jpg",
     "/hotels/cafe-na-cama.jpg",
     "/hotels/promocao-fique-mais-um-dia.jpg"
   ]

@@ -14,7 +14,7 @@ export default function CardComponent() {
           {children.map(({ id, title: childName, horario, status }) => (
             <Card key={id} sx={{marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)'  }}>
               <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <Typography>{childName}</Typography>
+                <Typography sx={{fontSize:18}}>{childName}</Typography>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                   <RadioButtonUncheckedIcon sx={{ background: status === 'Aberto' ? 'green' : 'red', color: status === "Aberto" ? 'green' : 'red', borderRadius: '100%', mr: 1, fontSize: 13 }} />
                   <Typography color="text.secondary">{status}</Typography>
