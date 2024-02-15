@@ -4,15 +4,17 @@ import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import EastIcon from '@mui/icons-material/East'
 import dataOfSimpleCard from '../../../list-of-datas/list-of-data-page-home/list-of-data-card-from-home'
 import SeeAll from '../../titles/seeAll'
+import { useNavigate } from 'react-router-dom'
 
 export default function CardComponent() {
+  const navigate = useNavigate()
   return (
     <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
       {dataOfSimpleCard.map(({ name, children, route }) => (
         <Grid item xs={12} key={name}>
           <Typography sx={{fontSize:16, mb:1, mt:2}}>{name}</Typography>
-          {children.map(({ id, title: childName, horario, status }) => (
-            <Card key={id} sx={{marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)'  }}>
+          {children.map(({ id, title: childName, horario, status, routePage }) => (
+            <Card key={id} sx={{marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)'  }} onClick={()=>navigate(routePage)}> 
               <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <Typography sx={{fontSize:18}}>{childName}</Typography>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>

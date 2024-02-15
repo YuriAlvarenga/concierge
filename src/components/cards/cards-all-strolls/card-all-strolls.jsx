@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Grid, Card, CardMedia, Typography, Skeleton, IconButton } from '@mui/material'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
-import dataOfAllStrolls from '../../../list-of-datas/list-of-data-all-strolls/list-of-data-all-strolls'
+import dataOfAllStrolls from '../../../list-of-datas/list-of-data-strolls/list-of-data-all-strolls'
 
 export default function CardAllStrolls() {
   return (

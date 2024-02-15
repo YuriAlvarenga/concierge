@@ -9,8 +9,8 @@ import { Box } from '@mui/material'
 export default function ImageCard(){
   const images = [
     "/restaurants/sushi-bc.jpg",
-    "/restaurants/brava-grill.jpg",
-    "/strolls-bc/space-adventure-bc.jpg"
+    "/strolls-bc/images-from-cards-bc/space-adventure-bc.jpg",
+    "/strolls-bc/images-from-cards-bc/hollywood-bowl.jpg"
   ]
 
   const settings ={
