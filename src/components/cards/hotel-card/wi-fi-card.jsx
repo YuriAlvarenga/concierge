@@ -18,26 +18,28 @@ export default function WifiCard() {
         <Typography sx={{ fontSize: 16, mb: 1 }}>Wi-fi</Typography>
         {dataOfWifiHotel.map(({id, network, password})=>(
           <Card key={id} sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              <Typography>
-                Rede:
-              </Typography>
-              <Typography color="text.secondary">
-                {network}
-              </Typography>
-              <Typography>
-                Senha:
-              </Typography>
+            <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent:'space-between' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center'}}>
+                <Typography sx={{mr:1}}>
+                  Rede:
+                </Typography>
+                <Typography color="text.secondary">
+                  {network}
+                </Typography>
+              </Box>
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                <Typography sx={{mr:1}}>
+                  Senha:
+                </Typography>
+                <Typography color="text.secondary">
+                  Senha
+                </Typography>
                 <IconButton 
                   aria-label="Copiar Senha"
                   onClick={() => copyToClipboard(password)}
                 >
                   <FileCopyIcon />
                 </IconButton>
-                <Typography color="text.secondary">
-                  Senha
-                </Typography>
               </Box>
             </CardContent>
             {copied && <Typography color="text.secondary" sx={{ textAlign: 'center' }}>Senha copiada para a área de transferência!</Typography>}

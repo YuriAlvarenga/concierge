@@ -2,13 +2,17 @@ import React from 'react'
 import { Box, Grid, Card, CardMedia, Typography, Skeleton, IconButton } from '@mui/material'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
-import dataOfAllStrolls from '../../../list-of-datas/list-of-data-strolls/list-of-data-all-strolls'
+import dataOfAllStrolls from '../../../../list-of-datas/list-of-data-strolls/list-of-data-all-strolls'
+import { useNavigate } from 'react-router-dom'
 
 export default function CardAllStrolls() {
+
+  const navigate = useNavigate()
+
   return (
     <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
-      {dataOfAllStrolls.map(({ id, title: childName, status, image }) => (
-        <Grid item xs={12} key={childName}>
+      {dataOfAllStrolls.map(({ id, title: childName, status, image, routePage }) => (
+        <Grid item xs={12} key={childName} onClick={()=>navigate(routePage)}>
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <Typography>{childName}</Typography>
             <Box sx={{ display: 'flex', alignItems: 'center', mr: 1 }}>
