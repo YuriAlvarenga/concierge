@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
-import {Grid, Card, CardMedia, Button, Typography, Box, IconButton } from '@mui/material'
+import {Grid, Card, CardMedia, CardContent, Typography, IconButton } from '@mui/material'
 import dataOfPageStrolls from '../../list-of-datas/list-of-data-strolls/list-of-data-from-page-strolls'
 import MenuBottomNavigation from '../../components/menu/menu-bottom/menu-bottom'
 import FileCopyIcon from '@mui/icons-material/FileCopy'
+import DirectionsIcon from '@mui/icons-material/Directions'
+
+
 
 export default function PageStrolls() {
     // Função para abrir o aplicativo de navegação com o endereço desejado
@@ -48,21 +51,24 @@ export default function PageStrolls() {
                 ))}
             </Grid>
             <Grid item xs={12}>
-          {/* Botão para navegar até o endereço */}
-          <Button variant="contained" onClick={openNavigationApp}>
-            Navegar até o Endereço
-          </Button>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Typography sx={{m:1}}>
+                Como Chegar?
+            </Typography>
+            <CardContent sx={{display: 'flex', alignItems:'center', justifyContent:'space-around', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', m:1}} >
+               
+                <Typography color="text.secondary">
+                    Rua 4000, 133 Balneário Camboriú, SC
+                </Typography>
                 <IconButton 
                   aria-label="Copiar Senha"
                   onClick={() => copyToClipboard("Rua 4000, 133 Barra Sul, Balneário Camboriú, SC")}
                 >
                   <FileCopyIcon />
                 </IconButton>
-                <Typography color="text.secondary">
-                    Rua 4000, 133 Barra Sul, Balneário Camboriú, SC
-                </Typography>
-              </Box>
+                <IconButton aria-label="Navegar até o endereço" variant="contained" onClick={openNavigationApp}>
+                  <DirectionsIcon />
+                </IconButton>
+            </CardContent>    
             {copied && <Typography color="text.secondary" sx={{ textAlign: 'center' }}>Senha copiada para a área de transferência!</Typography>}
         </Grid>
         </Grid>
