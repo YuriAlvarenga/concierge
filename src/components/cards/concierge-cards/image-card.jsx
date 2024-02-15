@@ -10,7 +10,7 @@ export default function ImageCard(){
   const images = [
     "/restaurants/sushi-bc.jpg",
     "/restaurants/brava-grill.jpg",
-    "/strolls-bc/space-adventure.jpg"
+    "/strolls-bc/space-adventure-bc.jpg"
   ]
 
   const settings ={
