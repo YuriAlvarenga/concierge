@@ -8,7 +8,7 @@ import Title from "../../components/titles/title"
 import ServicesFromHotelCard from "../../components/cards/hotel-card/cards-services-from-hotel"
 import ImageCardFromHotel from "../../components/cards/hotel-card/image-card-from-hotel"
 import HourCard from "../../components/cards/hotel-card/hour-card-hotel"
-import Story from "../../components/cards/stories-card/stories-card"
+
 
 
 
@@ -18,7 +18,6 @@ export default function HotelPage(){
             <TopBar title={'Hotel Itália'}/>
             <Toolbar/>
                 <ImageCardFromHotel/>
-                <Story stories={"Aproveite agora"}/>
                 <WifiCard/>
                 <HourCard/>
                 <Title title={"Serviços"}/>
