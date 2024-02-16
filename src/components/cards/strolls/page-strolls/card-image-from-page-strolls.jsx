@@ -13,7 +13,7 @@ export default function ImageCardFromPageStrolls() {
                         component="img"
                         alt={`Imagem ${id}`}
                         image={image} 
-                        sx={{ height: 240, objectFit: 'fill' }}
+                        sx={{  objectFit: 'fill' }}
                     />
                 </Card>
             ))}

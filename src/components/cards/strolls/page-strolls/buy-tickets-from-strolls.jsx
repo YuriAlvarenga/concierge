@@ -13,7 +13,7 @@ export default function BuyTicketsFromStrollsPage(){
             <Card sx={{background:"#ff6888", m:0}} >
               <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'center' }}>
                 <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
-                    Passaporte da Diversão
+                    Fale com nosso agente
                 </Typography>
               </CardContent>
             </Card>
@@ -22,7 +22,7 @@ export default function BuyTicketsFromStrollsPage(){
             <Card sx={{background:"#FFA500", m:0}} >
               <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'center' }}>
                 <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
-                    Ingressos
+                    Compre no site
                 </Typography>
               </CardContent>
             </Card>

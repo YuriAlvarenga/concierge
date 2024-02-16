@@ -14,7 +14,7 @@ export default function PageStrolls() {
     <>
       <Toolbar/>
         <TopBar title={"Oceanic Aquarium"} />
-          <Story stories={"stories"}/>
+          <Story stories={"Stories"}/>
           <Title title={"Garanta seus dias de Diversão"}/>
           <BuyTicketsFromStrollsPage/>
           <CardAddressFromPageStrolls/>
