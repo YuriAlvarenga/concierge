@@ -25,7 +25,7 @@ export default function CardAllRestaurants() {
                   component="img"
                   image={image}
                   alt={childName}
-                  style={{ width: '100%', maxHeight: '220px', objectFit: 'cover' }}
+                  style={{ width: '100%', height: '220px', objectFit: 'cover' }}
                 />
                 <IconButton style={{ position: 'absolute', bottom: 0, right: 0, color: '#fff' }}>
                   <ArrowForwardIcon />
