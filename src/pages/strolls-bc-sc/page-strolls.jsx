@@ -7,6 +7,7 @@ import StoryFromStrolls from '../../components/cards/strolls/stories-card-from-s
 import { Toolbar } from '@mui/material'
 import Title from '../../components/titles/title'
 import BuyTicketsFromStrollsPage from '../../components/cards/strolls/page-strolls/buy-tickets-from-strolls'
+import SwiperCardFromStrolls from '../../components/cards/strolls/page-strolls/swipper-card-from-strolls'
 
 export default function PageStrolls() {
 
@@ -18,6 +19,8 @@ export default function PageStrolls() {
           <Title title={"Garanta seus dias de Diversão"}/>
           <BuyTicketsFromStrollsPage/>
           <CardAddressFromPageStrolls/>
+          <Title title={"Sobre nós"}/>
+          <SwiperCardFromStrolls/>
           <ImageCardFromPageStrolls/>
           <Toolbar/>
         <MenuBottomNavigation/>
