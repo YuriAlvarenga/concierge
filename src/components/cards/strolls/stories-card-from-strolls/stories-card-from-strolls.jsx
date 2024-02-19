@@ -45,7 +45,7 @@ export default function StoryFromStrolls() {
                   component="img"
                   image={image.image}
                   alt={image.image}
-                  sx={{ borderRadius: "50%", width: 70, height: 70, cursor: 'pointer' }}
+                  sx={{ borderRadius: "50%", width: 80, height: 80, cursor: 'pointer' }}
                   onClick={() => handleCardClick(index)}
                 />
               </Card>

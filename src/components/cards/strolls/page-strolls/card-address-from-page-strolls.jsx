@@ -10,7 +10,13 @@ export default function CardAddressFromPageStrolls() {
     const endereco = "Rua 4000, 133 Barra Sul, Balneário Camboriú, SC"
     const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(endereco)}`
 
-    window.open(googleMapsUrl, '_blank')
+    if ("geolocation" in navigator) {
+      // Abre o endereço no aplicativo de mapas
+      window.location.href = googleMapsUrl
+    } else {
+      // Abre o endereço no navegador
+      window.open(googleMapsUrl, '_blank')
+    }
 
   }
 
