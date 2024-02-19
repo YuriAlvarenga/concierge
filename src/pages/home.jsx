@@ -15,7 +15,6 @@ export default function Home() {
     <Box  style={{ maxWidth: '100%', margin: '0 auto', background: '#f3f3f3'}}>
       <TopBar title={"Concierge Virtual"}/>
           <Box style={{ background: '#000', height: 140 }}>
-            <Title title={"Destaques"} index={1}/>
             <ImageCard/>
           </Box>
           <Box sx={{mt:23}}>

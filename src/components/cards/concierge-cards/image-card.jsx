@@ -4,9 +4,15 @@ import CardMedia from '@mui/material/CardMedia'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 export default function ImageCard(){
+
+  const titles = [
+    "Brava Sushi",
+    "Space Adventure",
+    "Hollywood Bowl"
+  ]
   const images = [
     "/restaurants/sushi-bc.jpg",
     "/strolls-bc/images-from-cards-bc/space-adventure-bc.jpg",
@@ -25,17 +31,20 @@ export default function ImageCard(){
   
 
   return (
-    <Box sx={{ m: 3, mt: 2 }}>
+    <Box sx={{ m: 3, mt: 2, pt:3 }}>
       <Slider {...settings}>
         {images.map((image, index) => (
-          <Card key={index} sx={{borderRadius:4}}>
-            <CardMedia
-              component="img"
-              alt={`Imagem ${index}`}
-              image={image} 
-              sx={{ height: 260, objectFit: 'fill' }}
-            />
-          </Card>
+          <>
+            <Typography sx={{color:"#FFF"}}  gutterBottom>{titles[index]}</Typography>
+            <Card key={index} sx={{borderRadius:4}}>
+              <CardMedia
+                component="img"
+                alt={`Imagem ${index}`}
+                image={image} 
+                sx={{ height: 260, objectFit: 'fill' }}
+              />
+            </Card>
+          </>
         ))}
       </Slider>
     </Box>
