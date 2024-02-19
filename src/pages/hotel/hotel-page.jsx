@@ -8,6 +8,7 @@ import Title from "../../components/titles/title"
 import ServicesFromHotelCard from "../../components/cards/hotel-card/cards-services-from-hotel"
 import ImageCardFromHotel from "../../components/cards/hotel-card/image-card-from-hotel"
 import HourCard from "../../components/cards/hotel-card/hour-card-hotel"
+import SocialMedia from "../../components/cards/card-social-media/social-media"
 
 
 
@@ -16,7 +17,9 @@ export default function HotelPage(){
     return(
         <>
             <TopBar title={'Hotel Itália'}/>
-            <Toolbar/>
+                <SocialMedia 
+                    instagramUrl={"https://www.instagram.com/hotelitaliabc/"} 
+                    facebookUrl={"https://www.facebook.com/hotelitaliabc/?locale=pt_BR"}/>
                 <ImageCardFromHotel/>
                 <WifiCard/>
                 <HourCard/>

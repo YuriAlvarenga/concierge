@@ -8,13 +8,16 @@ import { Toolbar } from '@mui/material'
 import Title from '../../components/titles/title'
 import BuyTicketsFromStrollsPage from '../../components/cards/strolls/page-strolls/buy-tickets-from-strolls'
 import SwiperCardFromStrolls from '../../components/cards/strolls/page-strolls/swipper-card-from-strolls'
+import SocialMedia from '../../components/cards/card-social-media/social-media'
 
 export default function PageStrolls() {
 
   return (  
     <>
-      <Toolbar/>
         <TopBar title={"Oceanic Aquarium"} />
+          <SocialMedia 
+            instagramUrl="https://www.instagram.com/oceanicaquarium/"
+            facebookUrl="https://www.facebook.com/oceanicaquarium/"/>
           <StoryFromStrolls/>
           <Title title={"Garanta seus dias de Diversão"}/>
           <BuyTicketsFromStrollsPage/>

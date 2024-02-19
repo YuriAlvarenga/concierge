@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <>
-    <Box  style={{ maxWidth: '100%', margin: '0 auto', background: '#FFF'}}>
+    <Box  style={{ maxWidth: '100%', margin: '0 auto', background: '#f3f3f3'}}>
       <TopBar title={"Concierge Virtual"}/>
           <Box style={{ background: '#000', height: 140 }}>
             <Title title={"Destaques"} index={1}/>

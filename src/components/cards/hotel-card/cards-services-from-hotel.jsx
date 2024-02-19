@@ -45,9 +45,27 @@ export default function ServicesFromHotelCard(){
             <Card sx={{background:"#000", m:0}} onClick={handleWhatsAppClick}>
               <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'space-between', m: 0 }}>
                 <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
-                    Recepção
+                    Room Service
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    <EastIcon sx={{fontSize:16, color:"#FFF"}} />
+                </Box>
+              </CardContent>
+            </Card>
+        </Grid>
+        <Grid item xs={12}>
+            <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
+                <Typography sx={{fontSize:14, mr:1}} component="div">
+                <RadioButtonUncheckedIcon sx={{ background:"green", color:"green", borderRadius: '100%', mr: 1, fontSize: 13 }} />
+                    aberto 24h
+                </Typography>
+            </Box>
+            <Card sx={{background:"#000", m:0}} onClick={handleWhatsAppClick}>
+              <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
+                <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
+                    Recepção
+                </Typography>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', position: "absolute", right: 0, top: 0, bottom: 0, pr: 1 }}>
                     <EastIcon sx={{fontSize:16, color:"#FFF"}} />
                 </Box>
               </CardContent>

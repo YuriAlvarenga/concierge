@@ -19,9 +19,9 @@ export default function StoryFromStrolls() {
   
 
   return (
-    <Box>
+    <>
       {activeListIndex !== null ? (
-        <Box style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 9998 }}>
+        <Box style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 9998}}>
           <ReactInstaStories
             stories={stories[activeListIndex].items}
             defaultInterval={1500}
@@ -37,15 +37,15 @@ export default function StoryFromStrolls() {
         </Box>
       ) : (
         <>
-          <Typography sx={{ m: 1 }}>Stories</Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', }}>
+          <Typography sx={{ m: 1, mt:0 }}>Stories</Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around'  }}>
             {stories.map((image, index) => (
-              <Card key={index} sx={{ boxShadow: 'none' }}>
+              <Card key={index} sx={{ boxShadow: 'none', background:"#f3f3f3" }}>
                 <CardMedia
                   component="img"
                   image={image.image}
                   alt={image.image}
-                  sx={{ borderRadius: "50%", width: 80, height: 80, cursor: 'pointer' }}
+                  sx={{ borderRadius: "50%", width: 80, height: 80, cursor: 'pointer'  }}
                   onClick={() => handleCardClick(index)}
                 />
               </Card>
@@ -53,6 +53,6 @@ export default function StoryFromStrolls() {
           </Box>
         </>
       )}
-    </Box>
+    </>
   )
 }
