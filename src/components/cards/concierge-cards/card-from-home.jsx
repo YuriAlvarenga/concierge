@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 export default function CardComponent() {
   const navigate = useNavigate()
   return (
-    <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
+    <Grid container spacing={2} style={{ padding: 15, paddingBottom: 0 }}>
       {dataOfSimpleCard.map(({ name, children, route }) => (
         <Grid item xs={12} key={name}>
           <Typography sx={{fontSize:16, mb:1, mt:2}}>{name}</Typography>
