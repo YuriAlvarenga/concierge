@@ -7,7 +7,7 @@ import dataOfAllNightClubs from '../../../list-of-datas/list-of-data-all-nightcl
 export default function CardAllNightclubs() {
   return (
     <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
-        {dataOfAllNightClubs.map(({ id, title: childName, status, image }) => (
+        {dataOfAllNightClubs.map(({ id, title: childName, status, image, video }) => (
       <Grid item xs={12} key={childName}>
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <Typography>{childName}</Typography>
@@ -18,20 +18,30 @@ export default function CardAllNightclubs() {
           </Box>
           
           <Card key={id} sx={{ color: '#FFF', marginBottom: '10px', position: 'relative' }}>
-            {image ? (
-             <>
-              <CardMedia
-                component="img"
-                image={image}
-                alt={childName}
-                style={{ width: '100%', height: '220px', objectFit: 'cover' }}
-              />
-              <IconButton style={{ position: 'absolute', bottom: 0, right: 0, color: '#fff' }}>
-                <ArrowForwardIcon />
-              </IconButton>
+            {video ? (
+              <>
+                <video width="100%" autoPlay loop>
+                  <source src={video} type="video/mp4" />
+                  Seu navegador não suporta a reprodução de vídeos.
+                </video>
+                <IconButton style={{ position: 'absolute', bottom: 0, right: 0, color: '#fff' }}>
+                  <ArrowForwardIcon />
+                </IconButton>
               </>
-            ): (
-                <Skeleton variant="rectangular" height={220} />
+            ) : (
+              <>
+                {image && (
+                  <CardMedia
+                    component="img"
+                    image={image}
+                    alt={childName}
+                    style={{ width: '100%', objectFit: 'cover' }}
+                  />
+                )}
+                {!image && (
+                  <Typography>Imagem indisponível</Typography>
+                )}
+              </>
             )}       
           </Card>
       </Grid>

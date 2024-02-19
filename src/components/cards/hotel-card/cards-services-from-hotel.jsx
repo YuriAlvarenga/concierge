@@ -9,6 +9,12 @@ import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 
 export default function ServicesFromHotelCard(){
 
+  const handleWhatsAppClick = () => {
+    const encodedMessage = encodeURIComponent("Olá, tudo bem?")
+    const phoneNumber = "+5547997815538"
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
+  }
+
   return (
     <Grid container spacing={2} style={{ padding: 10 }}>
         <Grid item xs={6}>
@@ -18,10 +24,10 @@ export default function ServicesFromHotelCard(){
                     fechado agora
                 </Typography>
             </Box>
-            <Card sx={{background:"#000", m:0}} >
+            <Card sx={{background:"#000", m:0}} onClick={handleWhatsAppClick} >
               <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'space-between', m: 0 }}>
                 <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
-                     Room Service
+                    Reservas
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                     <EastIcon sx={{fontSize:16, color:"#FFF"}} />
@@ -36,10 +42,10 @@ export default function ServicesFromHotelCard(){
                     aberto 24h
                 </Typography>
             </Box>
-            <Card sx={{background:"#000", m:0}} >
+            <Card sx={{background:"#000", m:0}} onClick={handleWhatsAppClick}>
               <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'space-between', m: 0 }}>
                 <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
-                     Recepção
+                    Recepção
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                     <EastIcon sx={{fontSize:16, color:"#FFF"}} />

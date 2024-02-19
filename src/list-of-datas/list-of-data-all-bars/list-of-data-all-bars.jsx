@@ -3,14 +3,13 @@ import { calculateStatus } from "../function-calculate-hour-of-status-from-lists
 
 
 const dataOfAllBars = 
-    [
-        {id: 1, title:"PG Surf, Skate e Diversão", horario:"11:00h às 04:00h", status: calculateStatus("19:00h às 04:00h"), gradient: ['#1fe4f5, #1fe4f5'], image: "/bars/pg-skate-diversao.jpg", tags: ["aberto agora"]},
-        { id: 2, title:"Shed Bar", horario:"22:00h às 05:00h", status: calculateStatus("22:00h às 05:00h"), gradient: ['#60efbc, #60efbc'], image: "/bars/shed-bar.jpg", tags: ["aberto", "rock"]},
-        { id: 3, title:"The Grand", horario:"22:00h às 05:00h", status: calculateStatus("22:00h às 05:00h"), gradient: ['#60efbc', '#60efbc'], image:"/bars/the-grand.jpg", tags: ["aberto agora"]},
-        {id: 4, title:"Édem Praia Brava", horario:"15:00h às 23:00h", status: calculateStatus("15:00h às 23:00h"), gradient: ['#b07eb9, #b07eb9'], image: "/bars/pg-skate-diversao.jpg", tags: ["aberto agora"]},
-        { id: 5, title:"Taj Bar", horario:"19:00h às 00:00h", status: calculateStatus("19:00h às 00:00h"), gradient: ['#1fe4f5, #1fe4f5'], image: "/bars/taj-bar.jpg", tags: ["aberto agora"]},
-        { id: 6, title:"Hike", horario:"15:00h às 22:00h", status: calculateStatus("15:00h às 22:00h"), gradient: ['#b07eb9, #b07eb9'],  image:"/bars/the-grand.jpg", tags: ["aberto agora"]},
-        { id: 7, title:"Amaitê", horario:"15:00h às 22:30h", status: calculateStatus("15:00h às 22:00h"), gradient: ['#1fe4f5', '#1fe4f5'],image: "/bars/shed-bar.jpg", tags: ["aberto agora"]},
-        {id: 8, title:"Tribus Bar", horario:"19:00h às 03:00h", status: calculateStatus("19:00h às 03:00h"), gradient: ['#ff6888, #ff6888'], image:"/bars/tribus-bar.jpg", tags: ["aberto agora"]},
-    ]
+   [
+
+    { id: 1, title:"Taj Bar", horario:"19:00h às 00:00h", status: calculateStatus("19:00h às 00:00h"), gradient: ['#555555', '#000000'], image: "/nightclubs/taj-bar.png"},
+    { id: 2, title:"Shed Bar", horario:"19:00h às 00:00h", status: calculateStatus("19:00h às 00:00h"), gradient: ['#555555', '#000000'], image: "/nightclubs/shed-bar.png"},
+    { id: 3, title:"Warung Club", horario:"19:00h às 23:30h", status: calculateStatus("19:00h às 05:30h"), gradient: ['#FFA500', '#FF8C00'], image: "/nightclubs/warung-beach-club.png" },
+    { id: 4, title:"Surreal Park", horario:"19:00h às 23:30h", status: calculateStatus("19:00h às 05:30h"), gradient: ['#FFA500', '#FF8C00'] , image: "/nightclubs/surreal-park-bc.png"},
+    { id: 5, title:"Hike Club", horario:"19:00h às 23:30h", status: calculateStatus("15:00h às 22:00h"), gradient:['#2E8B57', '#2E8B57'], image: "/nightclubs/hike-praia-brava.png"},
+    { id: 6, title:"Édem Praia Brava", horario:"19:00h às 23:30h", status: calculateStatus("15:00h às 23:30h"), gradient: ['#FFA500', '#FF8C00'], image: "/nightclubs/edem-praia-brava.png" },
+]
 export default dataOfAllBars

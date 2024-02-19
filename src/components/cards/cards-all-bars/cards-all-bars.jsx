@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Grid, Card, CardMedia, Typography, IconButton } from '@mui/material'
+import { Box, Grid, Card, CardMedia, Typography, IconButton, Skeleton } from '@mui/material'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import dataOfAllBars from '../../../list-of-datas/list-of-data-all-bars/list-of-data-all-bars'
@@ -24,7 +24,7 @@ export default function CardAllBars() {
                   component="img"
                   image={image}
                   alt={childName}
-                  style={{ width: '100%', height: '220px', objectFit: 'cover' }}
+                  style={{ width: '100%', objectFit: 'cover' }}
                 />
                 <IconButton style={{ position: 'absolute', bottom: 0, right: 0, color: '#fff' }}>
                   <ArrowForwardIcon />
