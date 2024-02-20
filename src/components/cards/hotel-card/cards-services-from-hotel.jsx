@@ -24,12 +24,12 @@ export default function ServicesFromHotelCard(){
                     fechado agora
                 </Typography>
             </Box>
-            <Card sx={{background:"#000", m:0}} onClick={handleWhatsAppClick} >
-              <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'space-between', m: 0 }}>
+            <Card sx={{background:"#ff6888", m:0}} onClick={handleWhatsAppClick} >
+              <CardContent sx={{background:"#60efbc", display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
                 <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
                     Reservas
                 </Typography>
-                <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', position: "absolute", right: 0, top: 0, bottom: 0, pr: 1 }}>
                     <EastIcon sx={{fontSize:16, color:"#FFF"}} />
                 </Box>
               </CardContent>
@@ -42,12 +42,12 @@ export default function ServicesFromHotelCard(){
                     aberto 24h
                 </Typography>
             </Box>
-            <Card sx={{background:"#000", m:0}} onClick={handleWhatsAppClick}>
-              <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'space-between', m: 0 }}>
+            <Card sx={{background:"#1fe4f5", m:0}} onClick={handleWhatsAppClick}>
+              <CardContent sx={{background:"#60efbc", display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
                 <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
                     Room Service
                 </Typography>
-                <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', position: "absolute", right: 0, top: 0, bottom: 0, pr: 1 }}>
                     <EastIcon sx={{fontSize:16, color:"#FFF"}} />
                 </Box>
               </CardContent>
@@ -60,8 +60,8 @@ export default function ServicesFromHotelCard(){
                     aberto 24h
                 </Typography>
             </Box>
-            <Card sx={{background:"#000", m:0}} onClick={handleWhatsAppClick}>
-              <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
+            <Card sx={{ m:0}} onClick={handleWhatsAppClick}>
+              <CardContent sx={{background:"#60efbc", display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
                 <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
                     Recepção
                 </Typography>

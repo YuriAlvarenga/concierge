@@ -12,7 +12,10 @@ export default function CardComponent() {
     <Grid container spacing={2} style={{ padding: 15, paddingBottom: 0 }}>
       {dataOfSimpleCard.map(({ name, children, route }) => (
         <Grid item xs={12} key={name}>
-          <Typography sx={{fontSize:16, mb:1, mt:2}}>{name}</Typography>
+          <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
+            <Typography sx={{fontSize:18, mb:1, mt:2}}>{name}</Typography>
+            <SeeAll route={route}/>
+          </Box>
           {children.map(({ id, title: childName, horario, status, gradient, routePage }) => (
             <Card key={id} sx={{background: gradient, color:'#FFF', marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)'  }} onClick={()=>navigate(routePage)}> 
               <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -30,7 +33,7 @@ export default function CardComponent() {
               </CardContent>
             </Card>
           ))}
-          <SeeAll route={route}/>
+          
         </Grid>
       ))}
     </Grid>

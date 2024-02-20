@@ -2,7 +2,7 @@ import { Box, Typography, Card, CardMedia, IconButton } from '@mui/material'
 import React, { useState } from 'react'
 import ReactInstaStories from 'react-insta-stories'
 import CloseIcon from '@mui/icons-material/Close'
-import stories from '../../../../list-of-datas/list-of-data-strolls/list-of-data-stories-strolls'
+import stories from '../../../../list-of-datas/list-of-data-strolls/oceanic-aquarium-bc/list-of-data-stories-strolls'
 
 
 export default function StoryFromStrolls() {

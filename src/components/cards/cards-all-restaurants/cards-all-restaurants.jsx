@@ -3,13 +3,17 @@ import { Box, Grid, Card, CardMedia, Typography, IconButton } from '@mui/materia
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import dataOfAllRestaurants from '../../../list-of-datas/list-of-data-all-restaurants/list-of-data-all-restaurants'
+import { useNavigate } from 'react-router-dom'
 
 
 export default function CardAllRestaurants() {
+
+  const navigate = useNavigate()
+
   return (
     <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
-        {dataOfAllRestaurants.map(({ id, title: childName, status, gradient: childGradient, image }) => (
-      <Grid item xs={12} key={childName}>
+        {dataOfAllRestaurants.map(({ id, title: childName, status, gradient: childGradient, image, routePage }) => (
+      <Grid item xs={12} key={childName} onClick={()=>navigate(routePage)}>
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <Typography>{childName}</Typography>
             <Box sx={{ display: 'flex', alignItems: 'center', mr:1 }}>

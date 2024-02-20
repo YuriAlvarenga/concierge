@@ -2,7 +2,7 @@ import React from "react"
 import { Typography, Grid, Card, CardContent, CardMedia } from "@mui/material"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import aboutUsStrolls from "../../../../list-of-datas/list-of-data-strolls/list-of-data-about-us-strolls"
+import aboutUsStrolls from "../../../../list-of-datas/list-of-data-strolls/oceanic-aquarium-bc/list-of-data-about-us-strolls"
 
 export default function SwiperCardFromStrolls() {
 

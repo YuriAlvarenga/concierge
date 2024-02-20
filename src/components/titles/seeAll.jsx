@@ -11,7 +11,7 @@ export default function SeeAll({route}){ //vindo da página hotel-page como prop
     }
 
     return(
-        <Box sx={{display:'flex', justifyContent:'flex-end', m:2}}>
+        <Box sx={{display:'flex', justifyContent:'flex-end', mt:1.5, mr:1}}>
             <Typography onClick={handleClick} component={Link} href="#" underline="hover">
                 Ver todos 
             </Typography>

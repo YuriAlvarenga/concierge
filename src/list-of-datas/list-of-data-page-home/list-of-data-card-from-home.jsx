@@ -7,7 +7,7 @@ const dataOfSimpleCard = [
       name: 'Passeios',
       route: '/strollsbc',
       children: [
-        {id: 1, title:"Oceanic Aquarium", horario:"09:00h às 21:00h", status: calculateStatus("09:00h às 21:00h"), gradient: ['#1fe4f5', '#1fe4f5'], routePage: '/strolls-page-bc'}, 
+        {id: 1, title:"Oceanic Aquarium", horario:"09:00h às 21:00h", status: calculateStatus("09:00h às 21:00h"), gradient: ['#1fe4f5', '#1fe4f5'], routePage: '/strolls-oceanic-aquarium-page-bc'}, 
         { id: 2, title:"Aventura Jurássica", horario:"09:00h às 20:00h", status: calculateStatus("09:00h às 21:00h"), gradient: ['#60efbc', '#60efbc']},
         { id: 3, title:"Big Weel", horario:"09:00h às 21:30h", status: calculateStatus("09:00h às 21:30h"), gradient: ['#b07eb9', '#b07eb9']},
       ],
@@ -17,7 +17,7 @@ const dataOfSimpleCard = [
       name: 'Restaurantes',
       route: '/restaurantesbc',
       children: [
-        { id: 4, title:"Distretto", horario:"19:00h às 00:00h", status: calculateStatus("19:00h às 00:00h"), gradient: ['#1fe4f5', '#1fe4f5']},
+        { id: 4, title:"Distretto", horario:"19:00h às 00:00h", status: calculateStatus("19:00h às 00:00h"), gradient: ['#1fe4f5', '#1fe4f5'], routePage: '/distretto-tratoria'},
         { id: 5, title:"Guacamole", horario:"19:00h às 23:30h", status: calculateStatus("19:00h às 23:30h"), gradient:['#60efbc', '#60efbc']},
         { id: 6, title:"Brava Sushi", horario:"19:00h às 23:30h", status: calculateStatus("19:00h às 23:30h"), gradient: ['#b07eb9', '#b07eb9'] },
       ],

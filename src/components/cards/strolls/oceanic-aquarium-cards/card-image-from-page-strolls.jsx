@@ -1,6 +1,6 @@
 import React from 'react'
 import {Grid, Card, CardMedia} from '@mui/material'
-import dataOfPageStrolls from '../../../../list-of-datas/list-of-data-strolls/list-of-data-from-page-strolls'
+import dataOfPageStrolls from '../../../../list-of-datas/list-of-data-strolls/oceanic-aquarium-bc/list-of-data-from-page-strolls'
 
 
 export default function ImageCardFromPageStrolls() {

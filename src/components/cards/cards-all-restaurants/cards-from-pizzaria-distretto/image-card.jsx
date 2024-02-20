@@ -6,13 +6,12 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { Box, Typography } from '@mui/material'
 
-export default function ImageCardFromHotel(){
+export default function ImageCardFromPizzariaDistretto(){
 
   const images = [
-    { title: "Lazer", image: "/hotels/hotel.jpg" },
-    { title: "Café na cama", image: "/hotels/cafe-na-cama.jpg" },
-    { title: "Estenda sua reserva", image: "/hotels/promocao-fique-mais-um-dia.jpg" },
-    { title: "Conheça nossas salas de reuniões", image: "/hotels/sala-de-reuniao.jpg" },
+    { title: "Fogão a lenha", image: "/restaurants/distretto-tratoria/pizza-no-forno.jpg" },
+    { title: "Fogão a lenha", image: "/restaurants/distretto-tratoria/pizza-no-forno.jpg" },
+    { title: "Fogão a lenha", image: "/restaurants/distretto-tratoria/pizza-no-forno.jpg" },
   ]
 
   const settings ={
@@ -27,17 +26,17 @@ export default function ImageCardFromHotel(){
   
 
   return (
-    <Box sx={{ m: 3, mt: 0 }}>
+    <Box sx={{ m: 3, mt: 2, pt:3 }}>
       <Slider {...settings}>
         {images.map((item, index) => (
-          <Box key={item.title}>
-            <Typography gutterBottom>{item.title}</Typography>
+          <Box  key={item.title}>
+            <Typography sx={{color:"#FFF"}}  gutterBottom>{item.title}</Typography>
             <Card sx={{borderRadius:4}}>
               <CardMedia
                 component="img"
                 alt={`Imagem ${index}`}
                 image={item.image} 
-                sx={{ height: 240, objectFit: 'fill' }}
+                sx={{ height: 260, objectFit: 'fill' }}
               />
             </Card>
           </Box>

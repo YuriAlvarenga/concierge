@@ -8,15 +8,10 @@ import { Box, Typography } from '@mui/material'
 
 export default function ImageCard(){
 
-  const titles = [
-    "Brava Sushi",
-    "Space Adventure",
-    "Hollywood Bowl"
-  ]
   const images = [
-    "/restaurants/sushi-bc.jpg",
-    "/strolls-bc/images-from-cards-bc/space-adventure-bc.jpg",
-    "/strolls-bc/images-from-cards-bc/hollywood-bowl.jpg"
+    { title: "Brava Sushi", image: "/restaurants/sushi-bc.jpg" },
+    { title: "Space Adventure", image: "/strolls-bc/images-from-cards-bc/space-adventure-bc.jpg"},
+    { title: "Hollywood Bowl", image: "/strolls-bc/images-from-cards-bc/hollywood-bowl.jpg" },
   ]
 
   const settings ={
@@ -33,18 +28,18 @@ export default function ImageCard(){
   return (
     <Box sx={{ m: 3, mt: 2, pt:3 }}>
       <Slider {...settings}>
-        {images.map((image, index) => (
-          <>
-            <Typography sx={{color:"#FFF"}}  gutterBottom>{titles[index]}</Typography>
-            <Card key={index} sx={{borderRadius:4}}>
+        {images.map((item, index) => (
+          <Box  key={item.title}>
+            <Typography sx={{color:"#FFF"}}  gutterBottom>{item.title}</Typography>
+            <Card sx={{borderRadius:4}}>
               <CardMedia
                 component="img"
                 alt={`Imagem ${index}`}
-                image={image} 
+                image={item.image} 
                 sx={{ height: 260, objectFit: 'fill' }}
               />
             </Card>
-          </>
+          </Box>
         ))}
       </Slider>
     </Box>
