@@ -9,9 +9,9 @@ import { Box, Typography } from '@mui/material'
 export default function ImageCardFromPizzariaDistretto(){
 
   const images = [
-    { title: "Fogão a lenha", image: "/restaurants/distretto-tratoria/pizza-no-forno.jpg" },
-    { title: "Fogão a lenha", image: "/restaurants/distretto-tratoria/pizza-no-forno.jpg" },
-    { title: "Fogão a lenha", image: "/restaurants/distretto-tratoria/pizza-no-forno.jpg" },
+    { title: "Pizza", image: "/restaurants/distretto-tratoria/pizza-no-forno.jpg" },
+    { title: "Pizza", image: "/restaurants/distretto-tratoria/vinhos-e-pizza.jpg" },
+    { title: "Pizza", image: "/restaurants/distretto-tratoria/pizza-no-forno.jpg" },
   ]
 
   const settings ={
@@ -26,7 +26,7 @@ export default function ImageCardFromPizzariaDistretto(){
   
 
   return (
-    <Box sx={{ m: 3, mt: 2, pt:3 }}>
+    <Box sx={{ m:3, mt:0 }}>
       <Slider {...settings}>
         {images.map((item, index) => (
           <Box  key={item.title}>

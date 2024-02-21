@@ -4,7 +4,7 @@ import FileCopyIcon from '@mui/icons-material/FileCopy'
 import DirectionsIcon from '@mui/icons-material/Directions'
 import PlaceIcon from '@mui/icons-material/Place'
 
-export default function CardAddressFromPageStrolls() {
+export default function CardAddressFromPageDistretto() {
     // Função para abrir o aplicativo de navegação com o endereço desejado
   const openNavigationApp = () => {
     const endereco = "Rua 4000, 133 Barra Sul, Balneário Camboriú, SC"

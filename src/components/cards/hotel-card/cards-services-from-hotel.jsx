@@ -24,8 +24,8 @@ export default function ServicesFromHotelCard(){
                     fechado agora
                 </Typography>
             </Box>
-            <Card sx={{background:"#ff6888", m:0}} onClick={handleWhatsAppClick} >
-              <CardContent sx={{background:"#60efbc", display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
+            <Card sx={{background:"#000", m:0}} onClick={handleWhatsAppClick} >
+              <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
                 <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
                     Reservas
                 </Typography>
@@ -42,8 +42,8 @@ export default function ServicesFromHotelCard(){
                     aberto 24h
                 </Typography>
             </Box>
-            <Card sx={{background:"#1fe4f5", m:0}} onClick={handleWhatsAppClick}>
-              <CardContent sx={{background:"#60efbc", display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
+            <Card sx={{background:"#000", m:0}} onClick={handleWhatsAppClick}>
+              <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
                 <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
                     Room Service
                 </Typography>
@@ -60,13 +60,13 @@ export default function ServicesFromHotelCard(){
                     aberto 24h
                 </Typography>
             </Box>
-            <Card sx={{ m:0}} onClick={handleWhatsAppClick}>
-              <CardContent sx={{background:"#60efbc", display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
-                <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
+            <Card sx={{ m:0, boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.9)' }} onClick={handleWhatsAppClick} >
+              <CardContent sx={{background:'#000', color:"#Fff", display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
+                <Typography sx={{fontSize:14}} component="div">
                     Recepção
                 </Typography>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', position: "absolute", right: 0, top: 0, bottom: 0, pr: 1 }}>
-                    <EastIcon sx={{fontSize:16, color:"#FFF"}} />
+                    <EastIcon sx={{fontSize:16}} />
                 </Box>
               </CardContent>
             </Card>
