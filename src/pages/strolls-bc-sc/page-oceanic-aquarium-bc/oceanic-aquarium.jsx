@@ -15,9 +15,7 @@ export default function PageStrolls() {
   return (  
     <>
         <TopBar title={"Oceanic Aquarium"} />
-          <SocialMedia 
-            instagramUrl="https://www.instagram.com/oceanicaquarium/"
-            facebookUrl="https://www.facebook.com/oceanicaquarium/"/>
+          <Toolbar/>
           <StoryFromStrolls/>
           <Title title={"Garanta seus dias de Diversão"}/>
           <BuyTicketsFromStrollsPage/>

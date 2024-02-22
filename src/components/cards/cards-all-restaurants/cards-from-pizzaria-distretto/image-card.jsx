@@ -13,30 +13,28 @@ export default function ImageCardFromPizzariaDistretto(){
     { title: "Pizza", image: "/restaurants/distretto-tratoria/vinhos-e-pizza.jpg" },
     { title: "Pizza", image: "/restaurants/distretto-tratoria/pizza-no-forno.jpg" },
   ]
-
-  const settings ={
+  const settings = {
     dots: true,
-    infinity: true,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
   }
-  
 
   return (
-    <Box sx={{ m:3, mt:0 }}>
+    <Box sx={{ mt:1, pt: 4, overflow: 'hidden' }}>
       <Slider {...settings}>
         {images.map((item, index) => (
-          <Box  key={item.title}>
-            <Typography sx={{color:"#FFF"}}  gutterBottom>{item.title}</Typography>
-            <Card sx={{borderRadius:4}}>
+          <Box key={item.title} sx={{padding: 0 }}>
+            <Typography sx={{ m: 2, color:'#FFF' }}>{item.title}</Typography>
+            <Card sx={{ maxWidth: '100vw', mr: 2, ml: 2, padding: 0, borderRadius: 4 }}>
               <CardMedia
                 component="img"
                 alt={`Imagem ${index}`}
-                image={item.image} 
-                sx={{ height: 260, objectFit: 'fill' }}
+                image={item.image}
+                sx={{ height: 240, objectFit: 'fill', margin: 0, padding: 0 }}
               />
             </Card>
           </Box>

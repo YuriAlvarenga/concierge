@@ -20,13 +20,10 @@ export default function PizzariaDistrettoBC(){
     return(
         <>
             <TopBar title={"Distretto Tratoria"}/>
-            <Box style={{ background: '#000', height: 140 }}>
-                <SocialMedia 
-                    instagramUrl="https://www.instagram.com/distrettobartrattoria/"
-                    facebookUrl="https://www.facebook.com/DistrettoDItalia/?locale=pt_BR"/>
+            <Box style={{ background: '#000', height: 160 }}>
                 <ImageCardFromPizzariaDistretto/>
             </Box>
-            <Box sx={{mt:29}}>
+            <Box sx={{mt:24}}>
                 <Title title={"Menus"} />
                 <MenuBook/>
             </Box> 

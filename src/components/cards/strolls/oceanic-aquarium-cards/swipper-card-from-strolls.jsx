@@ -9,7 +9,7 @@ export default function SwiperCardFromStrolls() {
   const highlightWords = (content) => {
     const words = content.split(" ")
     return words.map((word, index) => {
-      const lowerCaseWord = word.toLowerCase();
+      const lowerCaseWord = word.toLowerCase()
       if (lowerCaseWord === "aquário" || lowerCaseWord === "brasil") {
         return (
           <span key={index} style={{ color: "#FFA500" }}>{word} </span>
@@ -21,41 +21,41 @@ export default function SwiperCardFromStrolls() {
     })
   }
 
-
   return (
     <Swiper
-      spaceBetween={4}
+      spaceBetween={20}
       slidesPerView={2}
-      style={{padding: 15 }}
+      style={{ padding: "15px 0" }}
     >
-      <Grid container >
-        {aboutUsStrolls.map(({ id, content, gradient, image }) => (
-          <SwiperSlide key={id} >
-            <Grid item >
-            {content && (
-                <Card sx={{ background: gradient, color: "#FFF", display: "flex", height: 170, width: 'auto', maxWidth: 180 }}>
+      {aboutUsStrolls.map(({ id, content, gradient, image }) => (
+        <SwiperSlide key={id}>
+          <Grid container spacing={2} sx={{ml:0.1}}>
+            <Grid item xs={12} sm={6}>
+              {content && (
+                <Card sx={{ background: gradient, color: "#FFF", height: "100%" }}>
                   <CardContent>
-                  <Typography sx={{ fontSize: 22 }} component="div">
+                    <Typography sx={{ fontSize: 18 }} component="div">
                       {highlightWords(content)}
                     </Typography>
                   </CardContent>
                 </Card>
               )}
+            </Grid>
+            <Grid item xs={12} sm={6}>
               {image && (
-                <Card sx={{ background: gradient, color: "#FFF", height:170 }}>
+                <Card sx={{ background: gradient, color: "#FFF", height: "100%" }}>
                   <CardMedia
                     component="img"
-                    height='170'
+                    height='100%'
                     image={image}
                     alt="Imagem"
                   />
                 </Card>
               )}
             </Grid>
-          </SwiperSlide>
-        ))}
-        <Grid />
-      </Grid>
+          </Grid>
+        </SwiperSlide>
+      ))}
     </Swiper>
   )
 }

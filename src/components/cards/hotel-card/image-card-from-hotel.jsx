@@ -1,5 +1,5 @@
 import React from 'react'
-import Slider from 'react-slick';
+import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { Box, Card, CardMedia, Typography } from '@mui/material'
@@ -23,16 +23,16 @@ export default function ImageCardFromHotel() {
   }
 
   return (
-    <Box sx={{ mt: 2, mb: 4 }}>
+    <Box sx={{ mt: 2, mb: 1, overflow: 'hidden' }}>
       <Slider {...settings}>
         {images.map((item, index) => (
-          <Box key={item.title} sx={{ textAlign: 'center' }}>
-            <Card sx={{ maxWidth: 600, margin: '0 auto' }}>
+          <Box key={item.title} sx={{ textAlign: 'center', margin: 0, padding: 0 }}>
+            <Card sx={{ maxWidth: '100vw', margin: 0, padding: 0 }}>
               <CardMedia
                 component="img"
                 alt={`Imagem ${index}`}
                 image={item.image}
-                sx={{ height: 300, width: '100%', objectFit: 'cover' }}
+                sx={{ height: 300, objectFit: 'fill', margin: 0, padding: 0 }}
               />
             </Card>
             <Typography variant="h6" sx={{ mt: 1 }}>{item.title}</Typography>
