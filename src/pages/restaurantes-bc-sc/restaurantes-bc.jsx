@@ -14,6 +14,7 @@ export default function Restaurantes(){
             <TopBar title={"Restaurantes"}/>
             <Title title={"Explorar opções"}/>
             <SmallCardFromRestaurants/>
+            <Title title={"Restaurantes"}/>
             <CardAllRestaurants/>
             <Toolbar/>
             <MenuBottomNavigation/>

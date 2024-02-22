@@ -1,26 +1,31 @@
 import React, { useState } from 'react'
-import { Box, Grid, Card, CardContent, Typography, IconButton } from '@mui/material'
+import { Grid, Card, CardContent, Typography, IconButton, Snackbar, Box } from '@mui/material'
 import FileCopyIcon from '@mui/icons-material/FileCopy'
 import dataOfWifiHotel from '../../../list-of-datas/list-of-data-hotel-page/list-of-data-wi-fi'
 
 export default function WifiCard() {
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false);
+  const [copiedNetwork, setCopiedNetwork] = useState('')
 
-  const copyToClipboard = (text) => {
+  const copyToClipboard = (text, network) => {
     navigator.clipboard.writeText(text)
     setCopied(true)
-    setTimeout(() => setCopied(false), 3000)
+    setCopiedNetwork(network)
+    setTimeout(() => {
+      setCopied(false)
+      setCopiedNetwork('')
+    }, 3000)
   }
 
   return (
-    <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
+    <Grid container spacing={2} style={{ padding: 15, paddingBottom: 0 }}>
       <Grid item xs={12}>
-        <Typography sx={{ fontSize: 16, mb: 1 }}>Wi-fi</Typography>
-        {dataOfWifiHotel.map(({id, network, password})=>(
-          <Card key={id} sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent:'space-between' }}>
-            <Box sx={{ display: 'flex', alignItems: 'center'}}>
-                <Typography sx={{mr:1}}>
+        <Typography variant="h6" sx={{ mb: 1 }}>Wi-Fi</Typography>
+        {dataOfWifiHotel.map(({ id, network, password }) => (
+          <Card key={id} sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 4 }}>
+            <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                <Typography sx={{ mr: 1 }}>
                   Rede:
                 </Typography>
                 <Typography color="text.secondary">
@@ -28,23 +33,28 @@ export default function WifiCard() {
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Typography sx={{mr:1}}>
+                <Typography sx={{ mr: 1 }}>
                   Senha:
                 </Typography>
                 <Typography color="text.secondary">
-                  Senha
+                  {password}
                 </Typography>
-                <IconButton 
+                <IconButton
                   aria-label="Copiar Senha"
-                  onClick={() => copyToClipboard(password)}
+                  onClick={() => copyToClipboard(password, network)}
                 >
                   <FileCopyIcon />
                 </IconButton>
               </Box>
             </CardContent>
-            {copied && <Typography color="text.secondary" sx={{ textAlign: 'center' }}>Senha copiada para a área de transferência!</Typography>}
           </Card>
         ))}
+        <Snackbar
+          open={copied}
+          autoHideDuration={3000}
+          onClose={() => setCopied(false)}
+          message={`Senha de ${copiedNetwork} copiada para a área de transferência!`}
+        />
       </Grid>
     </Grid>
   )

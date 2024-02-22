@@ -4,9 +4,9 @@ import { Box, Grid, Typography } from '@mui/material'
 
 
 const menus = [
-    {id:1, title: 'Brasil', icon:<MenuBookIcon/>},
-    {id:2, title: 'Spanish', icon:<MenuBookIcon/>},
-    {id:3, title: 'English', icon:<MenuBookIcon/>},
+    {id:1, title: 'Brasil', icon:<MenuBookIcon sx={{fontSize:35}}/>},
+    {id:2, title: 'Spanish', icon:<MenuBookIcon sx={{fontSize:35}}/>},
+    {id:3, title: 'English', icon:<MenuBookIcon sx={{fontSize:35}}/>},
 ]
 
 

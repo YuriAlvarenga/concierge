@@ -17,9 +17,7 @@ export default function HotelPage(){
     return(
         <>
             <TopBar title={'Hotel Itália'}/>
-                <SocialMedia 
-                    instagramUrl={"https://www.instagram.com/hotelitaliabc/"} 
-                    facebookUrl={"https://www.facebook.com/hotelitaliabc/?locale=pt_BR"}/>
+               
                 <ImageCardFromHotel/>
                 <WifiCard/>
                 <HourCard/>
