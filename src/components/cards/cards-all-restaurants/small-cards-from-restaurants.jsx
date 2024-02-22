@@ -18,14 +18,14 @@ export default function SmallCardFromRestaurants() {
   return (
 
     <Swiper
-      slidesPerView={3.5}
+      slidesPerView={2.5}
       style={{ marginBottom: 15, marginTop: 10 }}
     >
         {dataOfSmallCardsFromRestaurants.map(({ id, title, gradient }) => (
           <SwiperSlide key={id}>
  
-                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', background: gradient, ml: 1, color:'#FFF', borderRadius: 2 }}>
-                  <Typography sx={{ fontSize: 11}}  component="div">
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', background: gradient, ml: 1, color:'#FFF', borderRadius: 2, p:2 }}>
+                  <Typography sx={{ fontSize: 14}}  component="div">
                       {title}
                   </Typography>
                   <Typography  component="div">

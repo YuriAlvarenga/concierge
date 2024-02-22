@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Box } from '@mui/material'
+import { Grid, Box, Button } from '@mui/material'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
@@ -24,34 +24,26 @@ export default function ServicesFromHotelCard(){
                     fechado agora
                 </Typography>
             </Box>
-            <Card sx={{background:"#000", m:0}} onClick={handleWhatsAppClick} >
-              <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
-                <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
-                    Reservas
-                </Typography>
+            <Button variant="outlined" fullWidth sx={{p:2}} onClick={handleWhatsAppClick}>
+                Reservas
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', position: "absolute", right: 0, top: 0, bottom: 0, pr: 1 }}>
-                    <EastIcon sx={{fontSize:16, color:"#FFF"}} />
+                    <EastIcon sx={{fontSize:16, color:"blue"}} />
                 </Box>
-              </CardContent>
-            </Card>
+            </Button>
         </Grid>
         <Grid item xs={6}>
             <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
                 <Typography sx={{fontSize:14, mr:1}} component="div">
-                <RadioButtonUncheckedIcon sx={{ background:"green", color:"green", borderRadius: '100%', mr: 1, fontSize: 13 }} />
-                    aberto 24h
+                <RadioButtonUncheckedIcon sx={{ background:"red", color:"red", borderRadius: '100%', mr: 1, fontSize: 13 }} />
+                    fechado agora
                 </Typography>
             </Box>
-            <Card sx={{background:"#000", m:0}} onClick={handleWhatsAppClick}>
-              <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
-                <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
-                    Room Service
-                </Typography>
+            <Button variant="outlined" fullWidth sx={{p:2}} onClick={handleWhatsAppClick}>
+                Room Service
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', position: "absolute", right: 0, top: 0, bottom: 0, pr: 1 }}>
-                    <EastIcon sx={{fontSize:16, color:"#FFF"}} />
+                    <EastIcon sx={{fontSize:16, color:"blue"}} />
                 </Box>
-              </CardContent>
-            </Card>
+            </Button>
         </Grid>
         <Grid item xs={12}>
             <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
@@ -60,16 +52,12 @@ export default function ServicesFromHotelCard(){
                     aberto 24h
                 </Typography>
             </Box>
-            <Card sx={{ m:0, boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.9)' }} onClick={handleWhatsAppClick} >
-              <CardContent sx={{background:'#000', color:"#fff", display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
-                <Typography sx={{fontSize:14}} component="div">
-                    Recepção
-                </Typography>
+            <Button variant="outlined" fullWidth sx={{p:2}} onClick={handleWhatsAppClick}>
+                Recepção
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', position: "absolute", right: 0, top: 0, bottom: 0, pr: 1 }}>
-                    <EastIcon sx={{fontSize:16}} />
+                    <EastIcon sx={{fontSize:16, color:"blue"}} />
                 </Box>
-              </CardContent>
-            </Card>
+            </Button>
         </Grid>
     </Grid>
     
