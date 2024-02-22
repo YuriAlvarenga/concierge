@@ -17,17 +17,17 @@ export default function CardComponent() {
             <SeeAll route={route}/>
           </Box>
           {children.map(({ id, title: childName, horario, status, gradient, routePage }) => (
-            <Card key={id} sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.9)'  }} onClick={()=>navigate(routePage)}> 
+            <Card key={id} sx={{background: gradient, color:'#FFF', marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.9)'  }} onClick={()=>navigate(routePage)}> 
               <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <Typography sx={{fontSize:18}}>{childName}</Typography>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <RadioButtonUncheckedIcon sx={{ background: status === 'Aberto' ? 'green' : 'red', color: status === "Aberto" ? 'green' : 'red', borderRadius: '100%', mr: 1, fontSize: 13 }} />
-                  <Typography sx={{ color: status === 'Aberto' ? '#000' : 'text.secondary'}}>{status}</Typography>
+                  <RadioButtonUncheckedIcon sx={{ background: status === 'Aberto' ? 'green' : 'red', color: status === "Aberto" ? 'green' : 'red', borderRadius: '100%', mr: 1, fontSize: 12 }} />
+                  <Typography sx={{ color: status === 'Aberto' ? '#000' : 'text.secondary', fontSize:14}}>{status}</Typography>
                 </Box>
               </CardContent>
               <CardContent>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <Typography sx={{color:"text.secondary"}}>{horario}</Typography>
+                  <Typography sx={{color:"text.secondary", fontSize:14}}>{horario}</Typography>
                   <EastIcon />
                 </Box>
               </CardContent>

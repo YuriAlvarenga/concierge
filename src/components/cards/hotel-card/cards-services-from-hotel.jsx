@@ -61,7 +61,7 @@ export default function ServicesFromHotelCard(){
                 </Typography>
             </Box>
             <Card sx={{ m:0, boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.9)' }} onClick={handleWhatsAppClick} >
-              <CardContent sx={{background:'#000', color:"#Fff", display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
+              <CardContent sx={{background:'#000', color:"#fff", display:'flex', alignItems:'center', justifyContent:'center', m: 0, position:'relative' }}>
                 <Typography sx={{fontSize:14}} component="div">
                     Recepção
                 </Typography>
