@@ -3,6 +3,7 @@ import TopBar from "../../../components/menu/top-bar/top-bar"
 import MenuBottomNavigation from "../../../components/menu/menu-bottom/menu-bottom"
 import { Toolbar } from "@mui/material"
 import LaundryCard from "../../../components/cards/concierge-cards/cards-from-services/loundries-bc"
+import ArrowBackButton from "../../../components/menu/top-bar/arrow-back-button"
 
 
 
@@ -10,7 +11,7 @@ import LaundryCard from "../../../components/cards/concierge-cards/cards-from-se
 export default function LaundryPage(){
     return(
         <>
-            <TopBar title={'Lavanderias'}/>
+            <TopBar title={'Lavanderias'} leftComponent={<ArrowBackButton/>}/>
             <Toolbar/>
                 <LaundryCard/>
             <Toolbar/>

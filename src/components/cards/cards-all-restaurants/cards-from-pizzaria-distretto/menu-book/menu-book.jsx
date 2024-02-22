@@ -12,7 +12,7 @@ const menus = [
 
 export default function MenuBook(){
     return(
-        <Grid item xs={12} sx={{display:'flex', alignItems:'center', justifyContent:'space-around', mt:1}}>
+        <Grid item xs={12} sx={{display:'flex', alignItems:'center', justifyContent:'space-around'}}>
             {menus.map((item) => (
                 <Box key={item.id} sx={{display: 'flex', flexDirection:'column', alignItems:'center'}}>
                     <>{item.icon}</>

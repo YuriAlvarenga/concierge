@@ -17,7 +17,6 @@ export default function HotelPage(){
     return(
         <>
             <TopBar title={'Hotel Itália'}/>
-               
                 <ImageCardFromHotel/>
                 <WifiCard/>
                 <HourCard/>

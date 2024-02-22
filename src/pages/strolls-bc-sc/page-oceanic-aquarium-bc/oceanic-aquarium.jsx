@@ -9,12 +9,13 @@ import Title from '../../../components/titles/title'
 import BuyTicketsFromStrollsPage from '../../../components/cards/strolls/oceanic-aquarium-cards/buy-tickets-from-strolls'
 import SwiperCardFromStrolls from '../../../components/cards/strolls/oceanic-aquarium-cards/swipper-card-from-strolls'
 import SocialMedia from '../../../components/cards/card-social-media/social-media'
+import ArrowBackButton from '../../../components/menu/top-bar/arrow-back-button'
 
 export default function PageStrolls() {
 
   return (  
     <>
-        <TopBar title={"Oceanic Aquarium"} />
+        <TopBar title={"Oceanic Aquarium"} leftComponent={<ArrowBackButton/>}/>
           <Toolbar/>
           <StoryFromStrolls/>
           <Title title={"Garanta seus dias de Diversão"}/>
