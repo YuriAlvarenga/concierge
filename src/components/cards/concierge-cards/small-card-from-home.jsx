@@ -11,7 +11,7 @@ export default function SmallCard(){
   const navigate = useNavigate()
 
   return (
-    <Grid container spacing={2} style={{ padding: 15 }}>
+    <Grid container spacing={2} sx={{ padding: 2 }}>
       {dataOfSmallCards.map(({id,title, icon, gradient, route})=>(
         <Grid item xs={3} key={id} onClick={()=>navigate(route)}>
             <Card sx={{background: gradient, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>

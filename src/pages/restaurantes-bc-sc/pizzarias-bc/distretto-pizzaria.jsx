@@ -23,7 +23,7 @@ export default function PizzariaDistrettoBC(){
             <Box style={{ background: '#000', height: 160 }}>
                 <ImageCardFromPizzariaDistretto/>
             </Box>
-            <Box sx={{mt:24}}>
+            <Box sx={{mt:20}}>
                 <Title title={"Menus"} />
                 <MenuBook/>
             </Box> 
