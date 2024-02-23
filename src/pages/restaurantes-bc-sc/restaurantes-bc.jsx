@@ -4,7 +4,7 @@ import { Toolbar } from "@mui/material"
 import MenuBottomNavigation from "../../components/menu/menu-bottom/menu-bottom"
 import CardAllRestaurants from "../../components/cards/cards-all-restaurants/cards-all-restaurants"
 import SmallCardFromRestaurants from "../../components/cards/cards-all-restaurants/small-cards-from-restaurants"
-import Title from "../../components/titles/title"
+import Title from "../../components/cards/shared-components/titles/title"
 import ArrowBackButton from "../../components/menu/top-bar/arrow-back-button"
 
 

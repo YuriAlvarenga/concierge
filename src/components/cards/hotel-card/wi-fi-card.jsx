@@ -22,7 +22,7 @@ export default function WifiCard() {
       <Grid item xs={12}>
         <Typography variant="h6" sx={{ mb: 1 }}>Wi-Fi</Typography>
         {dataOfWifiHotel.map(({ id, network, password }) => (
-          <Card key={id} sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 4 }}>
+          <Card key={id} sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2 }}>
             <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <Typography sx={{ mr: 1 }}>

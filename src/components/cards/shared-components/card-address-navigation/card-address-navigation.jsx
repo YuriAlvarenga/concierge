@@ -4,11 +4,10 @@ import FileCopyIcon from '@mui/icons-material/FileCopy'
 import DirectionsIcon from '@mui/icons-material/Directions'
 import PlaceIcon from '@mui/icons-material/Place'
 
-export default function CardAddressFromPageStrolls() {
+export default function CardAddressNavigation({endereco}) {
     // Função para abrir o aplicativo de navegação com o endereço desejado
   const openNavigationApp = () => {
-    const endereco = "Rua 4000, 133 Barra Sul, Balneário Camboriú, SC"
-    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(endereco)}`
+    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent({endereco})}`
 
     if ("geolocation" in navigator) {
       // Abre o endereço no aplicativo de mapas
@@ -39,11 +38,11 @@ export default function CardAddressFromPageStrolls() {
           <CardContent sx={{display: 'flex', alignItems:'center', justifyContent:'space-around', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', m:1}} >
               <PlaceIcon sx={{color:'red'}}/>
               <Typography sx={{fontSize:13}} color="text.secondary">
-                  Rua 4000, 133 Balneário Camboriú, SC
+                  {endereco}
               </Typography>
               <IconButton 
                 aria-label="Copiar Senha"
-                onClick={() => copyToClipboard("Rua 4000, 133 Barra Sul, Balneário Camboriú, SC")}
+                onClick={() => copyToClipboard(endereco)}
               >
                 <FileCopyIcon />
               </IconButton>

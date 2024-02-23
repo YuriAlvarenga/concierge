@@ -4,7 +4,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import EastIcon from '@mui/icons-material/East'
 import dataOfSimpleCard from '../../../list-of-datas/list-of-data-page-home/list-of-data-card-from-home'
-import SeeAll from '../../titles/seeAll'
+import SeeAll from '../../cards/shared-components/titles/seeAll'
 import { useNavigate } from 'react-router-dom'
 
 export default function CardComponent() {
