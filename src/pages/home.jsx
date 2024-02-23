@@ -6,19 +6,19 @@ import ImageCard from '../components/cards/concierge-cards/image-card'
 import Title from '../../src/components/cards/shared-components/titles/title'
 import SmallCard from '../components/cards/concierge-cards/small-card-from-home'
 import CardComponent from '../components/cards/concierge-cards/card-from-home'
-
+import { useTranslation } from 'react-i18next'
 
 export default function Home() {
-
+  const { t } = useTranslation()
   return (
     <>
     <Box  style={{ maxWidth: '100%', margin: '0 auto', background: '#f3f3f3'}}>
-      <TopBar title={"Concierge Virtual"}/>
+      <TopBar title={"Hotel Itália"}/>
           <Box style={{ background: '#000', height: 140 }}>
             <ImageCard/>
           </Box>
           <Box sx={{mt:23}}>
-            <Title title={"Serviços"} />
+            <Title title={t("Serviços")} />
             <SmallCard />
             <CardComponent />
           </Box>  

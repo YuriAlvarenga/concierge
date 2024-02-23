@@ -18,13 +18,15 @@ import CarRentalPage from "./pages/services-from-concierge-and-home-page/car-ren
 import ShuttlePage from "./pages/services-from-concierge-and-home-page/shuttle-services/shuttle-services"
 import PageStrolls from "./pages/strolls-bc-sc/page-oceanic-aquarium-bc/oceanic-aquarium"
 import PizzariaDistrettoBC from "./pages/restaurantes-bc-sc/pizzarias-bc/distretto-pizzaria"
+import LanguageSelector from "./language-selector"
 
 export default function AppRoutes(){
     return(
         <Router>
             <Routes>
                  {/* rotas de menu bottom */}
-                <Route exact path="/" element={<Home/>}/>
+                <Route exact path="/concierge" element={<Home/>}/>
+                <Route exact path="/" element={<LanguageSelector/>}/>
                 <Route exact path="/hotelpage" element={<HotelPage/>}/>
                 <Route exact path="/categories" element={<Categories/>}/>
                 <Route exact path="/highlight" element={<Notifications/>}/>
