@@ -2,15 +2,18 @@ import React from 'react'
 import { Box, Grid, Card, CardMedia, Typography, IconButton, Toolbar } from '@mui/material'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import MenuBottomNavigation from '../../components/menu/menu-bottom/menu-bottom'
+import TopBar from '../../components/menu/top-bar/top-bar'
+import ArrowBackButton from "../../components/menu/top-bar/arrow-back-button"
+
 
 
 export default function Notifications() {
 
-
-
   return (
     <>
-        <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
+        <TopBar title={"Destaques"} leftComponent={<ArrowBackButton/>}/>
+        <Toolbar/>
+        <Grid container spacing={2} style={{ padding: 10, paddingBottom: 15, marginTop: 0}}>
             <Grid item xs={12}>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <Typography>Stand de Vendas</Typography>

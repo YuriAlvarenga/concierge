@@ -3,10 +3,10 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
 import HomeIcon from '@mui/icons-material/Home'
-import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications'
 import PersonIcon from '@mui/icons-material/Person'
 import { styled } from '@mui/system'
 import AddIcon from '@mui/icons-material/Add'
+import StarPurple500Icon from '@mui/icons-material/StarPurple500'
 
 const RootBottomNavigation = styled(BottomNavigation)({
   width: '100%',
@@ -35,7 +35,7 @@ export default function MenuBottomNavigation() {
   const itemsMenu = [
     { id: 1, label: "Hotel", value: "/hotelpage", icon: <HomeIcon /> },
     { id: 2, label: "Concierge", value: "/", icon: <PersonIcon /> },
-    { id: 3, label: "Destaques", value: "/notifications", icon: <CircleNotificationsIcon /> },
+    { id: 3, label: "Destaques", value: "/highlight", icon: <StarPurple500Icon /> },
     { id: 4, label: "Categorias", value: "/categories", icon: <AddIcon /> }
   ]
 

@@ -27,7 +27,7 @@ export default function AppRoutes(){
                 <Route exact path="/" element={<Home/>}/>
                 <Route exact path="/hotelpage" element={<HotelPage/>}/>
                 <Route exact path="/categories" element={<Categories/>}/>
-                <Route exact path="/notifications" element={<Notifications/>}/>
+                <Route exact path="/highlight" element={<Notifications/>}/>
 
                 {/* rotas de serviços small cards*/}
                 <Route exact path="/pharmacy" element={<PharmacyPage/>}/>
