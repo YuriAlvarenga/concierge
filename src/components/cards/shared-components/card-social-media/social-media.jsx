@@ -12,8 +12,8 @@ export default function SocialMedia({instagramUrl, facebookUrl}){//parametros vi
         window.open(facebookUrl, '_blank')
     }
   return (
-    <Grid container spacing={2} style={{ display:'flex', alignItems:'right', justifyContent:'rigth',}}>
-        <Grid item xs={12} style={{marginTop:0, display:'flex', alignItems:'right', justifyContent:'flex-end'}}>
+    <Grid container spacing={2} style={{ display:'flex', alignItems:'right', justifyContent:'rigth'}}>
+        <Grid item xs={12} style={{marginTop:0, display:'flex', alignItems:'right', justifyContent:'flex-end', marginRight: 8}}>
             <IconButton component="div" onClick={handleInstagramClick}>
                 <InstagramIcon sx={{color:'#C13584', fontSize:25}}/>
             </IconButton>

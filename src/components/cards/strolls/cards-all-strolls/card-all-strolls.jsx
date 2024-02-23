@@ -11,7 +11,7 @@ export default function CardAllStrolls() {
   const navigate = useNavigate()
 
   return (
-    <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
+    <Grid container spacing={2} style={{ padding: 10, paddingBottom: 15 }}>
       {dataOfAllStrolls.map(({ id, title: childName, status, image, routePage }) => (
         <Grid item xs={12} sm={6} md={4} key={id}>
           {status === "Aberto" && (
