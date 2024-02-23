@@ -8,10 +8,11 @@ export default function CardAddressNavigation({endereco}) {
     // Função para abrir o aplicativo de navegação com o endereço desejado
   const openNavigationApp = () => {
     const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent({endereco})}`
+    const geoUrl = `geo:0,0?q=${encodeURIComponent({endereco})}`
 
     if ("geolocation" in navigator) {
       // Abre o endereço no aplicativo de mapas
-      window.location.href = googleMapsUrl
+      window.location.href = geoUrl
     } else {
       // Abre o endereço no navegador
       window.open(googleMapsUrl, '_blank')
