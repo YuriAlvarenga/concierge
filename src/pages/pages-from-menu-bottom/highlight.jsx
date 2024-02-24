@@ -3,15 +3,15 @@ import { Box, Grid, Card, CardMedia, Typography, IconButton, Toolbar } from '@mu
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import MenuBottomNavigation from '../../components/menu/menu-bottom/menu-bottom'
 import TopBar from '../../components/menu/top-bar/top-bar'
-import ArrowBackButton from "../../components/menu/top-bar/arrow-back-button"
+import ButtonTranslate from '../../components/menu/top-bar/button-translate'
 
 
 
-export default function Notifications() {
+export default function Highlight() {
 
   return (
     <>
-        <TopBar title={"Destaques"} leftComponent={<ArrowBackButton/>}/>
+        <TopBar title={"Destaques"} rightComponent={<ButtonTranslate/>}/>
         <Toolbar/>
         <Grid container spacing={2} style={{ padding: 10, paddingBottom: 15, marginTop: 0}}>
             <Grid item xs={12}>

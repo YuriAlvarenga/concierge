@@ -34,7 +34,7 @@ export default function MenuBottomNavigation() {
 
   const itemsMenu = [
     { id: 1, label: "Hotel", value: "/hotelpage", icon: <HomeIcon /> },
-    { id: 2, label: "Concierge", value: "/concierge", icon: <PersonIcon /> },
+    { id: 2, label: "Concierge", value: "/", icon: <PersonIcon /> },
     { id: 3, label: "Destaques", value: "/highlight", icon: <StarPurple500Icon /> },
     { id: 4, label: "Categorias", value: "/categories", icon: <AddIcon /> }
   ]

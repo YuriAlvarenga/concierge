@@ -3,6 +3,7 @@ import { Grid, IconButton } from '@mui/material'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import FacebookIcon from '@mui/icons-material/Facebook'
 
+
 export default function SocialMedia({instagramUrl, facebookUrl}){//parametros vindo de page strolls, hotel page.
 
     const handleInstagramClick = () => {

@@ -1,23 +1,23 @@
-import React from 'react';
-import { Grid, Box, Button, Typography, IconButton } from '@mui/material';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import EastIcon from '@mui/icons-material/East';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import React from 'react'
+import { Grid, Box, Button, Typography, IconButton } from '@mui/material'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
+import EastIcon from '@mui/icons-material/East'
+import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 
 export default function ServicesFromHotelCard() {
-  const handleWhatsAppClick = () => {
-    const encodedMessage = encodeURIComponent("Olá, tudo bem?");
-    const phoneNumber = "+5547997815538";
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-  };
+  const handleWhatsAppClick = (phoneNumber, message) => {
+    const encodedMessage = encodeURIComponent(message)
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
+  }
+  
 
   const serviceItems = [
-    { title: 'Reservas', isOpen: false, color: 'red' },
-    { title: 'Room Service', isOpen: false, color: 'red' },
-    { title: 'Recepção', isOpen: true, color: 'green' },
-  ];
+    { title: 'Reservas', phoneNumber: '+5547997815538', message: 'Olá, gostaria de fazer uma reserva.', isOpen: false, color: 'red'  },
+    { title: 'Room Service', phoneNumber: '+5547997815538', message: 'Mensagem para o serviço de quarto.', isOpen: true, color: 'green'  },
+    { title: 'Recepção', phoneNumber: '+5547997815538', message: 'Mensagem para a recepção.', isOpen: true, color: 'green'  },
+  ]
 
   return (
     <Grid container spacing={2} sx={{ padding: 2 }}>
@@ -34,11 +34,11 @@ export default function ServicesFromHotelCard() {
                   )}
                   <Typography variant="body2">{item.isOpen ? 'Aberto' : 'Fechado agora'}</Typography>
                 </Box>
-                <IconButton onClick={handleWhatsAppClick}>
+                <IconButton onClick={() => handleWhatsAppClick(item.phoneNumber, item.message)}>
                   <EastIcon sx={{ fontSize: 16, color: "blue" }} />
                 </IconButton>
               </Box>
-              <Button variant="outlined" fullWidth onClick={handleWhatsAppClick} sx={{ mt: 1 }}>
+              <Button variant="outlined" fullWidth onClick={() => handleWhatsAppClick(item.phoneNumber, item.message)} sx={{ mt: 1 }}>
                 {item.title}
               </Button>
             </CardContent>
@@ -46,5 +46,5 @@ export default function ServicesFromHotelCard() {
         </Grid>
       ))}
     </Grid>
-  );
+  )
 }

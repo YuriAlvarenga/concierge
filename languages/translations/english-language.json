@@ -1,5 +1,8 @@
 {
     "Serviços": "Services",
-    "greeting": "Hello, {{name}}!"
+    "Passeios": "Strolls",
+    "Restaurantes": "Restaurants",
+    "Bares": "Bars",
+    "Baladas": "Nightclubs"
   }
   

@@ -6,16 +6,19 @@ import EastIcon from '@mui/icons-material/East'
 import dataOfSimpleCard from '../../../list-of-datas/list-of-data-page-home/list-of-data-card-from-home'
 import SeeAll from '../../cards/shared-components/titles/seeAll'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+
 
 export default function CardComponent() {
   const navigate = useNavigate();
+  const { t } = useTranslation()
 
   return (
     <Grid container spacing={2} sx={{ padding: 2 }}>
       {dataOfSimpleCard.map(({ name, children, route }) => (
         <Grid item xs={12} key={name}>
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
-            <Typography variant="h6" sx={{ mb: 1, mt: 2 }}>{name}</Typography>
+            <Typography variant="h6" sx={{ mb: 1, mt: 2 }}>{t([name])}</Typography>
             <SeeAll route={route} />
           </Box>
           {children.map(({ id, title: childName, horario, status, gradient, routePage }) => (

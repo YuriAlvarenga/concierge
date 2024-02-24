@@ -2,7 +2,7 @@
 
 const dataOfWifiHotel = 
     [
-        {id: 1, network: 'Hotel Itália', password: 'senhadohotel'},
+        {id: 1, network: 'Hotel Ibis', password: 'senhadohotel'},
     ]
    
 

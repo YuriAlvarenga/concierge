@@ -13,7 +13,7 @@ i18n
       es: { translation: esTranslation },
       'pt-BR': { translation: ptTranslation }
     },
-    lng: 'en', // Idioma padrão
+    lng: 'pt-BR', // Idioma padrão
     interpolation: {
       escapeValue: false // Evita a necessidade de escapar strings
     }

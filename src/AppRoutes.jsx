@@ -7,7 +7,7 @@ import {
 import Home from "./pages/home"
 import Strolls from "./pages/strolls-bc-sc/all-strolls-bc-sc"
 import Categories from "./pages/pages-from-menu-bottom/all-categories"
-import Notifications from "./pages/pages-from-menu-bottom/notifications"
+import Highlight from "./pages/pages-from-menu-bottom/highlight"
 import Restaurantes from "./pages/restaurantes-bc-sc/restaurantes-bc"
 import Bars from "./pages/bars-bc-sc/bars-bc"
 import NightClubs from "./pages/nightclubs-bc-sc/nightclubs-bc"
@@ -18,18 +18,17 @@ import CarRentalPage from "./pages/services-from-concierge-and-home-page/car-ren
 import ShuttlePage from "./pages/services-from-concierge-and-home-page/shuttle-services/shuttle-services"
 import PageStrolls from "./pages/strolls-bc-sc/page-oceanic-aquarium-bc/oceanic-aquarium"
 import PizzariaDistrettoBC from "./pages/restaurantes-bc-sc/pizzarias-bc/distretto-pizzaria"
-import LanguageSelector from "./language-selector"
+
 
 export default function AppRoutes(){
     return(
         <Router>
             <Routes>
                  {/* rotas de menu bottom */}
-                <Route exact path="/concierge" element={<Home/>}/>
-                <Route exact path="/" element={<LanguageSelector/>}/>
+                <Route exact path="/" element={<Home/>}/>
                 <Route exact path="/hotelpage" element={<HotelPage/>}/>
                 <Route exact path="/categories" element={<Categories/>}/>
-                <Route exact path="/highlight" element={<Notifications/>}/>
+                <Route exact path="/highlight" element={<Highlight/>}/>
 
                 {/* rotas de serviços small cards*/}
                 <Route exact path="/pharmacy" element={<PharmacyPage/>}/>
