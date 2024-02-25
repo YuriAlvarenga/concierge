@@ -1,21 +1,31 @@
-import React from "react"
+import React, { useState } from "react"
 import TopBar from "../../components/menu/top-bar/top-bar"
 import { Toolbar } from "@mui/material"
 import MenuBottomNavigation from "../../components/menu/menu-bottom/menu-bottom"
 import CardAllBars from "../../components/cards/cards-all-bars/cards-all-bars"
 import ArrowBackButton from "../../components/menu/top-bar/arrow-back-button"
-import SmallCardComponent from "../../components/cards/shared-cards/small-cards-component"
-import dataOfSmallCardsFromBars from "../../list-of-datas/list-of-data-all-bars/list-of-data-small-cards-bars"
+import SmallCardFilters from "../../components/cards/shared-components/small-cards-components/small-cards-filters"
+import dataOfAllBars from "../../list-of-datas/list-of-data-all-bars/list-of-data-all-bars"
 
 
 
 export default function Bars(){
+
+    const [filteredData, setFilteredData] = useState([])
+
+    const handleClick = (title) => {
+        const filteredData = dataOfAllBars.filter(item => item.tag && item.tag.includes(title.toLowerCase()))
+        setFilteredData(filteredData)
+        console.log(filteredData)
+    }
+      
+
     return(
         <>
             <TopBar title={"Bares"} leftComponent={<ArrowBackButton/>}/>
             <Toolbar/>
-            <SmallCardComponent data={dataOfSmallCardsFromBars}/>
-            <CardAllBars/>
+            <SmallCardFilters handleClick={handleClick}/>
+            <CardAllBars filteredData={filteredData}/>
             <Toolbar/>
             <MenuBottomNavigation/>
         </>

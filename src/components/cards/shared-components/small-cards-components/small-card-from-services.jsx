@@ -3,11 +3,11 @@ import { Grid } from '@mui/material'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
-import dataOfSmallCards from '../../../list-of-datas/list-of-data-page-home/list-of-data-small-cards'
+import dataOfSmallCards from '../../../../list-of-datas/list-of-data-page-home/list-of-data-small-cards'
 import { useNavigate } from 'react-router-dom'
 
 
-export default function SmallCard(){
+export default function SmallCardServices(){
   const navigate = useNavigate()
 
   return (

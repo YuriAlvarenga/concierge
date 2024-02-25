@@ -4,7 +4,7 @@ import { Box, Toolbar } from '@mui/material'
 import TopBar from '../components/menu/top-bar/top-bar'
 import ImageCard from '../components/cards/concierge-cards/image-card'
 import Title from '../../src/components/cards/shared-components/titles/title'
-import SmallCard from '../components/cards/concierge-cards/small-card-from-home'
+import SmallCardServices from '../components/cards/shared-components/small-cards-components/small-card-from-services'
 import CardComponent from '../components/cards/concierge-cards/card-from-home'
 import { useTranslation } from 'react-i18next'
 import ButtonTranslate from '../components/menu/top-bar/button-translate'
@@ -20,7 +20,7 @@ export default function Home() {
           </Box>
           <Box sx={{mt:23}}>
             <Title title={t("Serviços")} />
-            <SmallCard />
+            <SmallCardServices />
             <CardComponent />
           </Box>  
       <Toolbar/>
