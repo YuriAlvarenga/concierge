@@ -18,15 +18,15 @@ export default function HotelPage(){
         <>
             <TopBar title={'Ibis Criciúma'} rightComponent={<ButtonTranslate/>}/>
                 <ImageCardFromHotel/>
+                <WifiCard/>
+                <HourCard/>
                 <Title title={"Serviços"}/>
                 <SocialMedia 
                     instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
                     facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
-                    />
-                <SmallCard/>
+                />
                 <ServicesFromHotelCard/>
-                <WifiCard/>
-                <HourCard/>
+                <SmallCard/>
             <Toolbar/>
             <MenuBottomNavigation/>
         </>
