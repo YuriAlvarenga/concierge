@@ -26,7 +26,7 @@ export default function CardComponent() {
               key={id}
               sx={{
                 background: gradient,
-                color: '#f4e9cd',
+                color: '#FFF',
                 mb: 2,
                 boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.9)',
                 cursor: 'pointer',

@@ -52,7 +52,7 @@ export default function CardAllStrolls() {
                   right: 0,
                   p: 2,
                   background: 'rgba(0,0,0,0.5)',
-                  color: '#f4e9cd',
+                  color: '#FFF',
                 }}
               >
                 <Typography variant="h6" sx={{ mb: 1 }}>{childName}</Typography>

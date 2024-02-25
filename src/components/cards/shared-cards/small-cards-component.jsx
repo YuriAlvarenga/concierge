@@ -18,7 +18,7 @@ export default function SmallCardComponent({ data }) {
     >
       {data.map(({ id, title, gradient }) => (
         <SwiperSlide key={id}>
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', background: gradient, ml: 1, color: '#f4e9cd', borderRadius: 2, p: 2 }} onClick={() => handleClick(title)}>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', background: gradient, ml: 1, color: '#FFF', borderRadius: 2, p: 2 }} onClick={() => handleClick(title)}>
             <Typography sx={{ fontSize: 14 }} component="div">
               {title}
             </Typography>

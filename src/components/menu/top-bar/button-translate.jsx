@@ -24,7 +24,7 @@ export default function ButtonTranslate(){
 
     return(
         <>
-            <IconButton onClick={handleClick} style={{ position: 'absolute', right: 1, top: '50%', transform: 'translateY(-50%)', color:'#f4e9cd'}} >
+            <IconButton onClick={handleClick} style={{ position: 'absolute', right: 1, top: '50%', transform: 'translateY(-50%)', color:'#FFF'}} >
                 <LanguageIcon sx={{fontSize:25}} />
             </IconButton>
             <Menu

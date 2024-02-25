@@ -48,7 +48,7 @@ export default function MenuBottomNavigation() {
           label={item.label}
           value={item.value}
           icon={item.icon}
-          sx={{ color: "#f4e9cd"}}
+          sx={{ color: "#FFF"}}
         />
       ))}
     </RootBottomNavigation>

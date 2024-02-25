@@ -12,7 +12,7 @@ export default function ArrowBackButton() {
 
   return (
     <IconButton
-      style={{ position: 'absolute', left: 1, top: '50%', transform: 'translateY(-50%)', color:'#f4e9cd'}} 
+      style={{ position: 'absolute', left: 1, top: '50%', transform: 'translateY(-50%)', color:'#FFF'}} 
       onClick={handleBackButtonClick}
     >
       <ArrowBackIcon sx={{fontSize:18}} />
