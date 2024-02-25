@@ -30,7 +30,7 @@ export default function ImageCard(){
       <Slider {...settings}>
         {images.map((item, index) => (
           <Box  key={item.title}>
-            <Typography sx={{color:"#FFF"}}  gutterBottom>{item.title}</Typography>
+            <Typography sx={{color:"#f4e9cd"}}  gutterBottom>{item.title}</Typography>
             <Card sx={{borderRadius:4}}>
               <CardMedia
                 component="img"

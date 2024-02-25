@@ -17,7 +17,7 @@ export default function CardAllNightclubs() {
               </Box>
           </Box>
           
-          <Card key={id} sx={{ color: '#FFF', marginBottom: '10px', position: 'relative' }}>
+          <Card key={id} sx={{ color: '#f4e9cd', marginBottom: '10px', position: 'relative' }}>
             {video ? (
               <>
                 <video width="100%" autoPlay loop>

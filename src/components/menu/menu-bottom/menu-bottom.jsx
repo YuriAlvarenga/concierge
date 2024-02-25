@@ -12,7 +12,7 @@ const RootBottomNavigation = styled(BottomNavigation)({
   width: '100%',
   position: 'fixed',
   bottom: 0,
-  background: '#000',
+  background: '#031926',
   margin: 0,
   padding: 0
 })
@@ -48,7 +48,7 @@ export default function MenuBottomNavigation() {
           label={item.label}
           value={item.value}
           icon={item.icon}
-          sx={{ color: "#fff"}}
+          sx={{ color: "#f4e9cd"}}
         />
       ))}
     </RootBottomNavigation>

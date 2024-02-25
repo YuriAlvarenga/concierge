@@ -52,7 +52,7 @@ export default function CardAllStrolls() {
                   right: 0,
                   p: 2,
                   background: 'rgba(0,0,0,0.5)',
-                  color: '#fff',
+                  color: '#f4e9cd',
                 }}
               >
                 <Typography variant="h6" sx={{ mb: 1 }}>{childName}</Typography>
@@ -69,7 +69,7 @@ export default function CardAllStrolls() {
                 position: 'absolute',
                 bottom: 10,
                 right: 10,
-                color: '#FFF',
+                color: '#f4e9cd',
               }}
             >
               <ArrowForwardIcon />

@@ -26,7 +26,7 @@ export default function CardComponent() {
               key={id}
               sx={{
                 background: gradient,
-                color: '#FFF',
+                color: '#f4e9cd',
                 mb: 2,
                 boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.9)',
                 cursor: 'pointer',
@@ -34,7 +34,7 @@ export default function CardComponent() {
               onClick={() => navigate(routePage)}
             >
               <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <Typography variant="body1">{childName}</Typography>
+                <Typography variant="h6">{childName}</Typography>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                   {status === 'Aberto' ? (
                     <CheckCircleIcon sx={{ color: 'green', fontSize: 17, mr: 1 }} />

@@ -15,7 +15,7 @@ export default function Home() {
     <>
     <Box  style={{ maxWidth: '100%', margin: '0 auto', background: '#f3f3f3'}}>
       <TopBar title={"Hotel Itália"} rightComponent={<ButtonTranslate/>}/>
-          <Box style={{ background: '#000', height: 140 }}>
+          <Box style={{ background: '#031926', height: 140 }}>
             <ImageCard/>
           </Box>
           <Box sx={{mt:23}}>
