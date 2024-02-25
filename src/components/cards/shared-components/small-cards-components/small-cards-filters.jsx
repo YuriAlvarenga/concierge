@@ -16,11 +16,10 @@ export default function SmallCardFilters({ handleClick }) {
     >
       {dataOfSmallCardsFromBars.map(({ id, title, gradient }) => (
         <SwiperSlide key={id}>
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', background: gradient, ml: 1, color: '#FFF', borderRadius: 2, p: 2 }} onClick={() => handleClick(title)}>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', background: '#031926', ml: 1, color: '#FFF', borderRadius: 2, p: 2 }} onClick={() => handleClick(title)}>
             <Typography sx={{ fontSize: 14 }} component="div">
               {title}
             </Typography>
-            <Typography component="div"></Typography>
           </Box>
         </SwiperSlide>
       ))}

@@ -25,7 +25,7 @@ export default function CardComponent() {
             <Card
               key={id}
               sx={{
-                background: gradient,
+                background: '#1d404c',
                 color: '#FFF',
                 mb: 2,
                 boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.9)',
@@ -41,12 +41,12 @@ export default function CardComponent() {
                   ) : (
                     <RadioButtonUncheckedIcon sx={{ background:'red', color: 'red', borderRadius: '50%', fontSize: 14, mr: 1 }} />
                   )}
-                  <Typography variant="body2" sx={{ color: status === 'Aberto' ? '#000' : 'text.secondary' }}>{status}</Typography>
+                  <Typography variant="body2" sx={{ color: status === 'Aberto' ? '#FFF' : 'text.secondary' }}>{status}</Typography>
                 </Box>
               </CardContent>
               <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <Typography variant="body2" sx={{ color: 'text.secondary' }}>{horario}</Typography>
-                <EastIcon sx={{ color: 'text.secondary' }} />
+                <Typography variant="body2" sx={{ color: '#FFF' }}>{horario}</Typography>
+                <EastIcon sx={{ color: '#FFF'  }} />
               </CardContent>
             </Card>
           ))}
