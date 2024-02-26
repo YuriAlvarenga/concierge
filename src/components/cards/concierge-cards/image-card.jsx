@@ -36,7 +36,7 @@ export default function ImageCard(){
                 component="img"
                 alt={`Imagem ${index}`}
                 image={item.image} 
-                sx={{ height: 260, objectFit: 'fill' }}
+                sx={{ height: 200, objectFit: 'fill' }}
               />
             </Card>
           </Box>

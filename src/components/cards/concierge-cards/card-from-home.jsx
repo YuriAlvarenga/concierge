@@ -7,7 +7,7 @@ import dataOfSimpleCard from '../../../list-of-datas/list-of-data-page-home/list
 import SeeAll from '../../cards/shared-components/titles/seeAll'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-
+import AccessTimeIcon from '@mui/icons-material/AccessTime'
 
 export default function CardComponent() {
   const navigate = useNavigate();
@@ -45,7 +45,10 @@ export default function CardComponent() {
                 </Box>
               </CardContent>
               <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <Typography variant="body2" sx={{ color: '#FFF' }}>{horario}</Typography>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <AccessTimeIcon sx={{fontSize:16, mr:1, mb:0.3}}/>
+                  <Typography variant="body2" sx={{ color: '#FFF' }}>{horario}</Typography>
+                </Box>
                 <EastIcon sx={{ color: '#FFF'  }} />
               </CardContent>
             </Card>
