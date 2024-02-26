@@ -36,7 +36,7 @@ export default function Restaurantes(){
     return(
         <>
             <TopBar title={"Restaurantes"} leftComponent={<ArrowBackButton/>}/>
-            <Title title={"Explorar opções"}/>
+            <Toolbar/>
             <SmallCardFilters handleClick={handleClick} data={dataOfSmallCardsFromRestaurants} filteredData={filteredData} clearFilter={clearFilter}/>
             <Title title={clickedTitle}/>
             <CardAllRestaurants filteredData={filteredData}/>
