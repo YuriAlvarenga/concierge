@@ -14,7 +14,7 @@ export default function SmallCardServices(){
     <Grid container spacing={2} sx={{ padding: 2 }}>
       {dataOfSmallCards.map(({id,title, icon, gradient, route})=>(
         <Grid item xs={3} key={id} onClick={()=>navigate(route)}>
-            <Card sx={{background: gradient, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
+            <Card sx={{background: gradient, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', minHeight:80 }}>
               <CardContent>
                 <Typography sx={{fontSize:16}} component="div">
                   {icon}

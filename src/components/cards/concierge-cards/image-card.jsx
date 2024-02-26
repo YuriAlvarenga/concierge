@@ -15,7 +15,7 @@ export default function ImageCard(){
   ]
 
   const settings ={
-    dots: true,
+    
     infinity: true,
     speed: 500,
     slidesToShow: 1,
@@ -36,7 +36,7 @@ export default function ImageCard(){
                 component="img"
                 alt={`Imagem ${index}`}
                 image={item.image} 
-                sx={{ height: 200, objectFit: 'fill' }}
+                sx={{ height: 180, objectFit: 'fill' }}
               />
             </Card>
           </Box>
