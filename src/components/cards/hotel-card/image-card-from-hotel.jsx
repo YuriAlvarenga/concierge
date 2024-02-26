@@ -26,16 +26,16 @@ export default function ImageCardFromHotel() {
     <Box sx={{ mt: 2, mb: 1, overflow: 'hidden' }}>
       <Slider {...settings}>
         {images.map((item, index) => (
-          <Box key={item.title} sx={{ textAlign: 'center', margin: 0, padding: 0 }}>
+          <Box key={item.title} sx={{ position: 'relative', textAlign: 'center', margin: 0, padding: 0 }}>
             <Card sx={{ maxWidth: '100vw', margin: 0, padding: 0 }}>
               <CardMedia
                 component="img"
                 alt={`Imagem ${index}`}
                 image={item.image}
-                sx={{ height: 300, objectFit: 'fill', margin: 0, padding: 0 }}
+                sx={{ height: 300, objectFit: 'cover', margin: 0, padding: 0 }}
               />
+             <Typography variant="h6" sx={{ position: 'absolute', bottom: 0, right: 0, backgroundColor: 'rgba(255, 255, 255, 0.7)', padding: '8px 16px', borderRadius: '4px' }}>{item.title}</Typography>
             </Card>
-            <Typography variant="h6" sx={{ mt: 1 }}>{item.title}</Typography>
           </Box>
         ))}
       </Slider>
