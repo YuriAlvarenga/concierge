@@ -33,7 +33,7 @@ export default function MenuBottomNavigation() {
   }
 
   const itemsMenu = [
-    { id: 1, label: "Hotel", value: "/hotelpage", icon: <HomeIcon /> },
+    { id: 1, label: "Hotel", value: "/hotelpage/:hotelId", icon: <HomeIcon /> },
     { id: 2, label: "Concierge", value: "/", icon: <PersonIcon /> },
     { id: 4, label: "Categorias", value: "/categories", icon: <AddIcon /> }
   ]
