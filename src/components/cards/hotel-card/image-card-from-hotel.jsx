@@ -29,7 +29,7 @@ export default function ImageCardFromHotel() {
   }
 
   return (
-    <Box sx={{ mb: 1, overflow: 'hidden' }}>
+    <Box sx={{ mt: 2, mb: 1, overflow: 'hidden' }}>
       <Slider {...settings}>
         {images.map((item, index) => (
           <Box key={item.title} sx={{ position: 'relative', textAlign: 'center', margin: 0, padding: 0 }}>
@@ -38,7 +38,7 @@ export default function ImageCardFromHotel() {
                 component="img"
                 alt={`Imagem ${index}`}
                 image={item.image}
-                sx={{ height: 300, objectFit: 'cover', margin: 0, padding: 0 }}
+                sx={{ height: 300, objectFit: 'fill', margin: 0, padding: 0 }}
               />
              <Typography variant="h6" sx={{ position: 'absolute', width:'100%', bottom: 0, fontSize:16,  backgroundColor: 'rgba(255, 255, 255, 0.7)', padding: '8px 16px', borderRadius: '4px' }}>{t([item.title])}</Typography>
             </Card>
