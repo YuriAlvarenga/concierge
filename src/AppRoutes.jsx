@@ -30,7 +30,7 @@ export default function AppRoutes(){
             <Routes>
                  {/* rotas de menu bottom */}
                 <Route exact path="/" element={<Home/>}/>
-                <Route exact path="/hotelpage/:hotelId" element={<HotelPage/>}/>
+                <Route exact path="/:id" element={<HotelPage/>}/>
                 <Route exact path="/categories" element={<Categories/>}/>
                 <Route exact path="/highlight" element={<Highlight/>}/>
 

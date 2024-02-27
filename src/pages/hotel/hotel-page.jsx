@@ -13,37 +13,19 @@ import ButtonTranslate from "../../components/menu/top-bar/button-translate"
 import SocialMedia from "../../components/cards/shared-components/card-social-media/social-media"
 import { hotels } from "../../list-of-datas/list-of-data-hotel-page/list-of-hotels"
 
-
-
 export default function HotelPage(){
 
-    const [hotelData, setHotelData] = useState(null)
-    const { hotelId } = useParams()
+    const { id } = useParams()
+    const hotel = hotels.find((hotel) => hotel.id === parseInt(id))
+    console.log(hotel.id)
   
-    useEffect(() => {
-      // Encontrar o hotel com o ID correspondente
-      var hotel = hotels.find((hotel) => hotel.id == hotelId)
-  
-      // Verificar se o hotel foi encontrado
-      if (hotel) {
-        // Exibir os detalhes do hotel
-        console.log("Detalhes do Hotel:");
-        console.log("Nome:", hotel.name);
-        console.log("Localização:", hotel.location);
-        console.log("Classificação:", hotel.rating);
-  
-        // Atualizar o estado com os detalhes do hotel
-        setHotelData(hotel);
-      } else {
-        console.log("Hotel não encontrado.");
-      }
-    }, [hotelId]); // Adicionado hotelId às dependências
 
     return(
         <>
-             {hotelData && (
-                <TopBar title={hotelData.name} rightComponent={<ButtonTranslate/>}/>
-            )}
+                {hotel && (
+                    <TopBar title={hotel.name} rightComponent={<ButtonTranslate/>}/>
+                )}
+            
                 <ImageCardFromHotel/>
                 <SmallCard/>
                 <WifiCard/>
@@ -55,7 +37,7 @@ export default function HotelPage(){
                 />
                 <ServicesFromHotelCard/>
             <Toolbar/>
-            <MenuBottomNavigation/>
+            <MenuBottomNavigation hotelId={hotel.id}/>
         </>
     )
 }

@@ -17,7 +17,7 @@ const RootBottomNavigation = styled(BottomNavigation)({
   padding: 0
 })
 
-export default function MenuBottomNavigation() {
+export default function MenuBottomNavigation({ hotelId }) {
   const [value, setValue] = useState(null)
   const location = useLocation()
   const navigate = useNavigate()
@@ -33,7 +33,7 @@ export default function MenuBottomNavigation() {
   }
 
   const itemsMenu = [
-    { id: 1, label: "Hotel", value: "/hotelpage/:hotelId", icon: <HomeIcon /> },
+    { id: 1, label: "Hotel",  value:`/${hotelId}`, icon: <HomeIcon /> },
     { id: 2, label: "Concierge", value: "/", icon: <PersonIcon /> },
     { id: 4, label: "Categorias", value: "/categories", icon: <AddIcon /> }
   ]
