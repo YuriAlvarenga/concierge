@@ -1,0 +1,23 @@
+{
+    "hotels": [
+      {
+        "id": 123,
+        "name": "Hotel A",
+        "location": "Cidade A",
+        "rating": 4.5
+      },
+      {
+        "id": 456,
+        "name": "Hotel B",
+        "location": "Cidade B",
+        "rating": 4.2
+      },
+      {
+        "id": 789,
+        "name": "Hotel C",
+        "location": "Cidade C",
+        "rating": 4.8
+      }
+    ]
+}
+  
