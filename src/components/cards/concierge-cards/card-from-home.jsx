@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 
 export default function CardComponent() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const { t } = useTranslation()
 
   return (
@@ -41,7 +41,7 @@ export default function CardComponent() {
                   ) : (
                     <RadioButtonUncheckedIcon sx={{ background:'red', color: 'red', borderRadius: '50%', fontSize: 14, mr: 1 }} />
                   )}
-                  <Typography variant="body2" sx={{ color: status === 'Aberto' ? '#FFF' : '#FFF' }}>{status}</Typography>
+                  <Typography variant="body2" sx={{ color: status === 'Aberto' ? '#FFF' : '#FFF' }}>{t(status)}</Typography>
                 </Box>
               </CardContent>
               <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

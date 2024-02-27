@@ -18,6 +18,10 @@ import CarRentalPage from "./pages/services-from-concierge-and-home-page/car-ren
 import ShuttlePage from "./pages/services-from-concierge-and-home-page/shuttle-services/shuttle-services"
 import PageStrolls from "./pages/strolls-bc-sc/page-oceanic-aquarium-bc/oceanic-aquarium"
 import PizzariaDistrettoBC from "./pages/restaurantes-bc-sc/pizzarias-bc/distretto-pizzaria"
+import NewService from "./components/cards/concierge-cards/cards-from-services/cadastrar-serviço"
+import MeetingRoomPage from "./pages/services-from-concierge-and-home-page/meeting-room/meeting-room"
+import RoomServicePage from "./pages/services-from-concierge-and-home-page/room-service/room-service"
+import MinibarServicePage from "./pages/services-from-concierge-and-home-page/minibar-service/minibar-service"
 
 
 export default function AppRoutes(){
@@ -31,10 +35,14 @@ export default function AppRoutes(){
                 <Route exact path="/highlight" element={<Highlight/>}/>
 
                 {/* rotas de serviços small cards*/}
+
                 <Route exact path="/pharmacy" element={<PharmacyPage/>}/>
                 <Route exact path="/laundries" element={<LaundryPage/>}/>
                 <Route exact path="/car-rental-agency" element={<CarRentalPage/>}/>
                 <Route exact path="/shuttle-services" element={<ShuttlePage/>}/>
+                <Route exact path="/minibar-service" element={<MinibarServicePage/>}/>
+                <Route exact path="/room-service" element={<RoomServicePage/>}/>
+                <Route exact path="/meeting-room-service" element={<MeetingRoomPage/>}/>
 
                 {/* rotas de parceiros terceirizados página geral */}
                 <Route exact path="/strollsbc" element={<Strolls/>}/>

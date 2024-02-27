@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import { Grid, Card, CardContent, Typography, IconButton, Snackbar, Box } from '@mui/material'
 import FileCopyIcon from '@mui/icons-material/FileCopy'
 import dataOfWifiHotel from '../../../list-of-datas/list-of-data-hotel-page/list-of-data-wi-fi'
+import { useTranslation } from 'react-i18next'
+
 
 export default function WifiCard() {
   const [copied, setCopied] = useState(false);
   const [copiedNetwork, setCopiedNetwork] = useState('')
+  const { t } = useTranslation()
 
   const copyToClipboard = (text, network) => {
     navigator.clipboard.writeText(text)
@@ -26,18 +29,18 @@ export default function WifiCard() {
             <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <Typography sx={{ mr: 1 }}>
-                  Rede:
+                  {t("Rede")}:
                 </Typography>
                 <Typography color="text.secondary">
-                  {network}
+                  {t([network])}
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <Typography sx={{ mr: 1 }}>
-                  Senha:
+                {t("Senha")}:
                 </Typography>
                 <Typography color="text.secondary">
-                  {password}
+                  {t([password])}
                 </Typography>
                 <IconButton
                   aria-label="Copiar Senha"

@@ -5,8 +5,14 @@ import CardContent from '@mui/material/CardContent'
 import EastIcon from '@mui/icons-material/East'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
+import { useTranslation } from 'react-i18next'
+
+
 
 export default function ServicesFromHotelCard() {
+
+  const { t } = useTranslation()
+
   const handleWhatsAppClick = (phoneNumber, message) => {
     const encodedMessage = encodeURIComponent(message)
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
@@ -32,14 +38,14 @@ export default function ServicesFromHotelCard() {
                   ) : (
                     <RadioButtonUncheckedIcon sx={{ background: 'red', fontSize: 14, borderRadius: '50%', mr: 1, color:'red' }} />
                   )}
-                  <Typography variant="body2">{item.isOpen ? 'Aberto' : 'Fechado agora'}</Typography>
+                  <Typography variant="body2">{item.isOpen ? t('Aberto') : t('Fechado agora')}</Typography>
                 </Box>
                 <IconButton onClick={() => handleWhatsAppClick(item.phoneNumber, item.message)}>
                   <EastIcon sx={{ fontSize: 16, color: "#1d404c" }} />
                 </IconButton>
               </Box>
               <Button variant="contained" sx={{background:"#1d404c", mt: 1}} fullWidth onClick={() => handleWhatsAppClick(item.phoneNumber, item.message)}>
-                {item.title}
+                {t(item.title)}
               </Button>
             </CardContent>
           </Card>

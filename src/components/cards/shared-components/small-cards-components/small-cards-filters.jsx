@@ -6,13 +6,20 @@ import 'swiper/css'
 
 
 
-export default function SmallCardFilters({ handleClick, data, clearFilter, filteredData }) {
+export default function SmallCardFilters({ handleClick, data, clearFilter }) {
 
   const [clickedCard, setClickedCard] = useState(null)
 
   const handleCardClick = (id, title) => {
-    setClickedCard(id)
-    handleClick(title)
+    if (clickedCard === id) {
+      // Se o mesmo card for clicado novamente, limpe o filtro
+      setClickedCard(null)
+      clearFilter() // Limpa o filtro
+    } else {
+      // Caso contrário, aplique o filtro normalmente
+      setClickedCard(id)
+      handleClick(title)
+    }
   }
 
   return (
@@ -31,9 +38,6 @@ export default function SmallCardFilters({ handleClick, data, clearFilter, filte
           </SwiperSlide>
         ))}
       </Swiper>
-      <Box sx={{display:'flex', justifyContent:'flex-end', mb:0, mr:1}}>
-        {filteredData.length > 0 && <Button variant='outlined' onClick={clearFilter}>Limpar Filtro</Button>}
-      </Box>
     </>
   )
 }

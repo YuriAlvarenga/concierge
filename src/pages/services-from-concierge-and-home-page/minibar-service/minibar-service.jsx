@@ -7,10 +7,10 @@ import NewService from "../../../components/cards/concierge-cards/cards-from-ser
 
 
 
-export default function ShuttlePage(){
+export default function MinibarServicePage(){
     return(
         <>
-            <TopBar title={'Translados'} leftComponent={<ArrowBackButton/>}/>
+            <TopBar title={'Frigobar'} leftComponent={<ArrowBackButton/>}/>
             <Toolbar/>
                 <NewService/>
             <Toolbar/>

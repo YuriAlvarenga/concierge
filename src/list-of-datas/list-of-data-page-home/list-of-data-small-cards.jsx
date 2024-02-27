@@ -2,10 +2,10 @@ import MedicationLiquidIcon from '@mui/icons-material/MedicationLiquid'
 import LocalLaundryServiceIcon from '@mui/icons-material/LocalLaundryService'
 import CarRentalIcon from '@mui/icons-material/CarRental'
 import AirportShuttleIcon from '@mui/icons-material/AirportShuttle'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSignsPost } from '@fortawesome/free-solid-svg-icons'
 import RestaurantIcon from '@mui/icons-material/Restaurant'
-import LiquorIcon from '@mui/icons-material/Liquor'
+import KitchenIcon from '@mui/icons-material/Kitchen'
+import RoomServiceIcon from '@mui/icons-material/RoomService'
+import GroupsIcon from '@mui/icons-material/Groups'
 
 const dataOfSmallCards = 
     [
@@ -13,10 +13,10 @@ const dataOfSmallCards =
         { id: 2, title: 'Lavanderias', icon: <LocalLaundryServiceIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #1d404c 60%, #FFF 50%)', route:"/laundries"},
         { id: 3, title: 'Locadoras', icon: <CarRentalIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #1d404c 60%, #FFF 50%)', route:"/car-rental-agency"},
         { id: 4, title: 'Translados', icon: <AirportShuttleIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #1d404c 60%, #FFF 50%)', route:"/shuttle-services" },
-        { id: 5, title: 'Explorar', icon: <FontAwesomeIcon size='1x' icon={faSignsPost} style={{ color: '#FFF' }} />, gradient: 'linear-gradient(to bottom, #1d404c 60%, #FFF 50%)', route:"/shuttle-services" },
-        { id: 6, title: 'Passeios', icon: <AirportShuttleIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #1d404c 60%, #FFF 50%)', route:"/shuttle-services" },
-        { id: 7, title: 'Restaurantes', icon: <RestaurantIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #1d404c 60%, #FFF 50%)', route:"/shuttle-services" },
-        { id: 8, title: 'Baladas', icon: <LiquorIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #1d404c 60%, #FFF 50%)', route:"/shuttle-services" },
+        { id: 5, title: 'Room Service', icon: <RoomServiceIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #1d404c 60%, #FFF 50%)', route:"/room-service" },
+        { id: 6, title: 'Restaurantes', icon: <RestaurantIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #1d404c 60%, #FFF 50%)', route:"/restaurantesbc" },
+        { id: 7, title: 'Frigobar', icon: <KitchenIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #1d404c 60%, #FFF 50%)', route:"/minibar-service" },
+        { id: 8, title: 'Sala de Reunião', icon: <GroupsIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #1d404c 60%, #FFF 50%)', route:"/meeting-room-service" },
     ]
    
 

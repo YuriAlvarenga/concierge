@@ -12,7 +12,7 @@ export default function PharmacyCard(){
 
   return (
     <Grid container spacing={2} style={{ padding: 10 }}>
-      {dataOfPharmacies.map(({id,title, icon, status, gradient})=>(
+      {dataOfPharmacies.map(({id,title, status, gradient})=>(
         <Grid item xs={12} key={id}>
             <Card sx={{background: gradient, display:'flex', flexDirection:'column'}}>
               <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
@@ -25,7 +25,7 @@ export default function PharmacyCard(){
                 </Box>
               </CardContent>
                 <Typography sx={{fontSize:12, m: 1}} component="div">
-                  Compre agora com um de nossos especialistas
+                  cadastrar serviço
                 </Typography>
                 
             </Card>

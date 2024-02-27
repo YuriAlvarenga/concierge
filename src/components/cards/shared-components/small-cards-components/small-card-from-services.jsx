@@ -5,10 +5,11 @@ import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 import dataOfSmallCards from '../../../../list-of-datas/list-of-data-page-home/list-of-data-small-cards'
 import { useNavigate } from 'react-router-dom'
-
+import { useTranslation } from 'react-i18next'
 
 export default function SmallCardServices(){
   const navigate = useNavigate()
+  const { t } = useTranslation()
 
   return (
     <Grid container spacing={2} sx={{ padding: 2 }}>
@@ -21,7 +22,7 @@ export default function SmallCardServices(){
                 </Typography>
               </CardContent>
                 <Typography sx={{fontSize:12}} component="div">
-                  {title}
+                {t([title])}
                 </Typography>
             </Card>
         </Grid>

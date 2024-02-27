@@ -5,10 +5,13 @@ import MenuBottomNavigation from "../../components/menu/menu-bottom/menu-bottom"
 import allCategories from "../../list-of-datas/list-of-data-categories/list-of-data-all-categories"
 import { useNavigate } from "react-router-dom"
 import ButtonTranslate from "../../components/menu/top-bar/button-translate"
+import { useTranslation } from "react-i18next"
+
 
 export default function Categories(){
 
     const navigate = useNavigate()
+    const { t } = useTranslation()
 
     return(
         <>
@@ -20,7 +23,7 @@ export default function Categories(){
                         <Card sx={{background: gradient, color: '#FFF', display:'flex',alignItems:'center', justifyContent:'center' }}>
                             <CardContent>
                                 <Typography sx={{fontSize:16}} component="div">
-                                    {categorie}
+                                    {t(categorie)}
                                 </Typography>
                             </CardContent>
                         </Card>
