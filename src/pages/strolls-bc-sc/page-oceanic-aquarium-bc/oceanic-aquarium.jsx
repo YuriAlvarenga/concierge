@@ -20,7 +20,7 @@ export default function PageStrolls() {
     <>
         <TopBar title={"Oceanic Aquarium"} leftComponent={<ArrowBackButton/>}/>
         <Toolbar/>
-        <Stack direction="row" alignItems="center" justifyContent="flex-end" sx={{ position: 'fixed', top: 20, width:'100%', right:0, color:color,  background: 'rgba(0,0,0,0.5)', p:1 }}>
+        <Stack direction="row" alignItems="center" justifyContent="flex-end" sx={{ position: 'fixed', top: 26, width:'100%', right:0, color:color,  background: 'rgba(0,0,0,0.5)', p:1 }}>
         <Typography >
           {aquariumOceanicStatus}
         </Typography>

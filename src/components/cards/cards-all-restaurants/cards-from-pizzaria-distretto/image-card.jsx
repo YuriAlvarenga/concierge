@@ -19,7 +19,7 @@ export default function ImageCardFromPizzariaDistretto(){
           sx={{ height: 280, objectFit: 'fill', margin: 0, padding: 0 }}
         />
       </Card>
-      <Stack direction="row" alignItems="center" justifyContent="flex-end" sx={{ position: 'fixed', top: 20, width:'100%', right:0, color:color,  background: 'rgba(0,0,0,0.5)', p:1 }}>
+      <Stack direction="row" alignItems="center" justifyContent="flex-end" sx={{ position: 'fixed', top: 28, width:'100%', right:0, color:color,  background: 'rgba(0,0,0,0.5)', p:1 }}>
         <Typography >
           {restaurantStatus}
         </Typography>
