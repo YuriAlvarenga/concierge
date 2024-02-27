@@ -45,6 +45,7 @@ export default function HotelPage(){
             )}
         
             <ImageCardFromHotel/>
+            <Title title={"Serviços"}/>
             <SmallCard/>
             <WifiCard/>
             <HourCard/>

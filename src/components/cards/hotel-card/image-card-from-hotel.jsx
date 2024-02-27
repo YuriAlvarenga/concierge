@@ -40,7 +40,7 @@ export default function ImageCardFromHotel() {
                 image={item.image}
                 sx={{ height: 300, objectFit: 'fill', margin: 0, padding: 0 }}
               />
-             <Typography variant="h6" sx={{ position: 'absolute', width:'100%', bottom: 0, fontSize:16,  backgroundColor: 'rgba(255, 255, 255, 0.7)', padding: '8px 16px', borderRadius: '4px' }}>{t([item.title])}</Typography>
+             <Typography variant="h6" sx={{ position: 'absolute', width:'90%', left:8, top: 45, fontSize:16,  backgroundColor: 'rgba(255, 255, 255, 0.7)', padding: '8px 16px', borderRadius: '4px' }}>{t([item.title])}</Typography>
             </Card>
           </Box>
         ))}
