@@ -14,30 +14,48 @@ import SocialMedia from "../../components/cards/shared-components/card-social-me
 import { hotels } from "../../list-of-datas/list-of-data-hotel-page/list-of-hotels"
 
 export default function HotelPage(){
-
     const { id } = useParams()
-    const hotel = hotels.find((hotel) => hotel.id === parseInt(id))
-    console.log(hotel.id)
-  
+    const [hotel, setHotel] = useState(null)
+
+    useEffect(() => {
+        // Encontrar o hotel com o ID correspondente
+        const selectedHotel = hotels.find((hotel) => hotel.id === parseInt(id))
+    
+        // Verificar se o hotel foi encontrado
+        if (selectedHotel) {
+          setHotel(selectedHotel)
+          localStorage.setItem("selectedHotelId", id)
+        }
+      }, [id])
+
+    useEffect(() => {
+        const storedHotelId = localStorage.getItem("selectedHotelId")
+        if (storedHotelId && storedHotelId !== id) {
+          // Se o ID do hotel recuperado do localStorage for diferente do ID na URL,
+          // redirecionar para a página com o ID correto
+          window.location.href = `
+          /${storedHotelId}`
+        }
+    }, [id])
 
     return(
         <>
-                {hotel && (
-                    <TopBar title={hotel.name} rightComponent={<ButtonTranslate/>}/>
-                )}
-            
-                <ImageCardFromHotel/>
-                <SmallCard/>
-                <WifiCard/>
-                <HourCard/>
-                <Title title={"Serviços"}/>
-                <SocialMedia 
-                    instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
-                    facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
-                />
-                <ServicesFromHotelCard/>
+            {hotel && (
+                <TopBar title={hotel.name} rightComponent={<ButtonTranslate/>}/>
+            )}
+        
+            <ImageCardFromHotel/>
+            <SmallCard/>
+            <WifiCard/>
+            <HourCard/>
+            <Title title={"Serviços"}/>
+            <SocialMedia 
+                instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
+                facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
+            />
+            <ServicesFromHotelCard/>
             <Toolbar/>
-            <MenuBottomNavigation hotelId={hotel.id}/>
+            {hotel && <MenuBottomNavigation hotelId={hotel.id}/>}
         </>
     )
 }
