@@ -12,7 +12,7 @@ const RootBottomNavigation = styled(BottomNavigation)({
   width: '100%',
   position: 'fixed',
   bottom: 0,
-  background: '#031926',
+  background: '#19647e',
   margin: 0,
   padding: 0
 })
@@ -47,7 +47,12 @@ export default function MenuBottomNavigation({ hotelId }) {
           label={item.label}
           value={item.value}
           icon={item.icon}
-          sx={{ color: "#FFF"}}
+          sx={{
+            color: "#FFF",
+            "&.Mui-selected": { // Estilo aplicado quando o componente estiver selecionado
+              color: "#8BBEC7" // Cor de fundo quando selecionado
+            }
+          }}
         />
       ))}
     </RootBottomNavigation>

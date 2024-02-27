@@ -15,10 +15,8 @@ export default function Home() {
     <>
     <Box  style={{ maxWidth: '100%', margin: '0 auto', background: '#f3f3f3'}}>
       <TopBar title={"Concierge Virtual"} rightComponent={<ButtonTranslate/>}/>
-          <Box style={{ background: '#031926', height: 80 }}>
-            <ImageCard/>
-          </Box>
-          <Box sx={{mt:23}}>
+          <ImageCard/>
+          <Box>
             <Title title={t("Serviços")} />
             <SmallCardServices />
             <CardComponent />

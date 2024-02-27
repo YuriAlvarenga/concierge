@@ -44,7 +44,7 @@ export default function ServicesFromHotelCard() {
                   <EastIcon sx={{ fontSize: 16, color: "#1d404c" }} />
                 </IconButton>
               </Box>
-              <Button variant="contained" sx={{background:"#1d404c", mt: 1}} fullWidth onClick={() => handleWhatsAppClick(item.phoneNumber, item.message)}>
+              <Button variant="contained" sx={{background:"#19647e", mt: 1}} fullWidth onClick={() => handleWhatsAppClick(item.phoneNumber, item.message)}>
                 {t(item.title)}
               </Button>
             </CardContent>

@@ -30,7 +30,7 @@ export default function SmallCardFilters({ handleClick, data, clearFilter }) {
         >
         {data.map(({ id, title, gradient }) => (
           <SwiperSlide key={id}>
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around',  background: clickedCard === id ? '#1d404c' : '#FFF', ml: 1, color: clickedCard === id ? '#FFF' : '#000', borderRadius: 2, p: 2 }}  onClick={() => handleCardClick(id, title)}>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around',  background: clickedCard === id ? '#28afb0' : '#FFF', ml: 1, color: clickedCard === id ? '#FFF' : '#000', borderRadius: 2, p: 2 }}  onClick={() => handleCardClick(id, title)}>
               <Typography sx={{ fontSize: 14 }} component="div">
                 {title}
               </Typography>

@@ -25,7 +25,7 @@ export default function CardComponent() {
             <Card
               key={id}
               sx={{
-                background: '#1d404c',
+                background: '#28afb0',
                 color: '#FFF',
                 mb: 2,
                 boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.9)',

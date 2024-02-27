@@ -29,7 +29,7 @@ export default function ImageCardFromHotel() {
   }
 
   return (
-    <Box sx={{ mt: 2, mb: 1, overflow: 'hidden' }}>
+    <Box sx={{ mb: 1, overflow: 'hidden' }}>
       <Slider {...settings}>
         {images.map((item, index) => (
           <Box key={item.title} sx={{ position: 'relative', textAlign: 'center', margin: 0, padding: 0 }}>
