@@ -18,6 +18,7 @@ import RoomServicePage from "./pages/services-from-concierge-and-home-page/room-
 import MinibarServicePage from "./pages/services-from-concierge-and-home-page/minibar-service/minibar-service"
 
 import { HotelProvider } from "./context/context"
+import Home from "./pages/home"
 
 
 export default function AppRoutes(){
@@ -27,6 +28,7 @@ export default function AppRoutes(){
                 <Routes>
                     {/* rotas de menu bottom */}
                     
+                    <Route exact path="/" element={<Home/>}/>
                     <Route exact path="/:id" element={<HotelPage/>}/>
                     <Route exact path="/restaurantesbc" element={<Restaurantes/>}/>
                     <Route exact path="/strollsbc" element={<Strolls/>}/>
