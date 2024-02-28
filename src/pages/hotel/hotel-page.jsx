@@ -35,6 +35,7 @@ export default function HotelPage(){
         }
     }, [id])
 
+
     return(
         <>
           {hotel && (
@@ -46,14 +47,18 @@ export default function HotelPage(){
                             facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
                         />
                     </Box>
-                    <Title title={"Serviços"} />
-                    <SmallCard hotelSmallServices={hotel.services} />
+                    {hotel.services && (
+                        <>
+                            <Title title={"Serviços"} />
+                            <SmallCard hotelSmallServices={hotel.services} />
+                        </>
+                    )}
                     <WifiCard />
                     <HourCard />
                     <Title title={"Serviços"} />
                     <ServicesFromHotelCard />
                     <Toolbar />
-                    {hotel && <MenuBottomNavigation hotelId={hotel.id} />}
+                    <MenuBottomNavigation hotelId={hotel.id} />
                 </>
             )}
         </>

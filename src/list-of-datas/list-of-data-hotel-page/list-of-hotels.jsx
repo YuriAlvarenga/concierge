@@ -1,3 +1,19 @@
+import MedicationLiquidIcon from '@mui/icons-material/MedicationLiquid'
+import LocalLaundryServiceIcon from '@mui/icons-material/LocalLaundryService'
+import CarRentalIcon from '@mui/icons-material/CarRental'
+import AirportShuttleIcon from '@mui/icons-material/AirportShuttle'
+import RestaurantIcon from '@mui/icons-material/Restaurant'
+import KitchenIcon from '@mui/icons-material/Kitchen'
+import RoomServiceIcon from '@mui/icons-material/RoomService'
+import GroupsIcon from '@mui/icons-material/Groups'
+import DvrIcon from '@mui/icons-material/Dvr'
+import AttractionsIcon from '@mui/icons-material/Attractions'
+import ThermostatIcon from '@mui/icons-material/Thermostat'
+
+
+
+
+
 export const hotels = [
   {
     id: 1,
@@ -6,6 +22,8 @@ export const hotels = [
     services: [
       {
         title: "Farmácias", 
+        route: "/pharmacy",
+        icon: <MedicationLiquidIcon sx={{color:'#FFF'}} />,
         instances: [
           { name: "Farmácia A", contact: "123-456-7890" },
           { name: "Farmácia B", contact: "987-654-3210" }
@@ -13,6 +31,8 @@ export const hotels = [
       },
       {
         title: "Lavanderia", 
+        route: "/laundries",
+        icon: <LocalLaundryServiceIcon sx={{color:'#FFF'}}/>,
         instances: [
           { name: "Lavanderia X", contact: "456-789-0123" },
           { name: "Lavanderia Y", contact: "789-012-3456" }
@@ -20,6 +40,8 @@ export const hotels = [
       },
       {
         title: "Locadoras", 
+        route: "/car-rental-agency",
+        icon: <CarRentalIcon sx={{color:'#FFF'}}/>,
         instances: [
           { name: "Localiza", contact: "456-789-0123" },
           { name: "Unidas", contact: "789-012-3456" },
@@ -28,19 +50,52 @@ export const hotels = [
       },
       {
         title: "Translados", 
+        route: "/shuttle-services",
+        icon: <AirportShuttleIcon sx={{color:'#FFF'}}/>,
         instances: [
           { name: "Translado X", contact: "456-789-0123" },
           { name: "Translado Y", contact: "789-012-3456" }
         ]
       },
       {
-        title: "Frigobar", 
-        instances: [
+        title: "Room Service", 
+        route: "/room-service",
+        icon: <RoomServiceIcon sx={{color:'#FFF'}}/>,
+        items: [
           { name: "Refrigerante", price: 5 },
           { name: "Água Mineral", price: 3 },
           { name: "Chocolate", price: 8 }
         ]
-      }
+      },
+      {
+        title: "Frigobar", 
+        route: "/minibar-service",
+        icon: <KitchenIcon sx={{color:'#FFF'}}/>,
+        items: [
+          { name: "Refrigerante", price: 5 },
+          { name: "Água Mineral", price: 3 },
+          { name: "Chocolate", price: 8 }
+        ]
+      },
+      {
+        title: "Sala de Reuniões", 
+        route: "/meeting-room-service",
+        icon: <GroupsIcon sx={{color:'#FFF'}}/>,
+        instances: [
+          { name: "Translado X", contact: "456-789-0123" },
+          { name: "Translado Y", contact: "789-012-3456" }
+        ]
+      },
+      {
+        title: "Lista de Canais", 
+        route: "/meeting-room-service",
+        icon: <DvrIcon sx={{color:'#FFF'}}/>,
+        instances: [
+          { name: "Translado X", contact: "456-789-0123" },
+          { name: "Translado Y", contact: "789-012-3456" }
+        ]
+      },
+
     ],
     restaurant: {
       name: "Restaurante A",

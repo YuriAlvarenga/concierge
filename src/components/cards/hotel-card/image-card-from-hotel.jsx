@@ -7,10 +7,10 @@ import { useTranslation } from 'react-i18next'
 import ButtonTranslate from '../../menu/top-bar/button-translate'
 
 
-
 export default function ImageCardFromHotel({hotelName}) {
 
   const { t } = useTranslation()
+
   
   const images = [
     { title: "Lazer", image: "/hotels/hotel.jpg" },
@@ -31,7 +31,7 @@ export default function ImageCardFromHotel({hotelName}) {
 
   return (
     <Box sx={{mb: 1, overflow: 'hidden' }}>
-      <Typography variant="h6" sx={{ position: 'absolute', width: '90%',top:'5%', zIndex:9998, margin:1, color: '#19647e', backgroundColor: 'rgba(255, 255, 255, 0.7)', padding: '12px 16px', borderRadius: '4px'}}><ButtonTranslate color="#19647e" />{hotelName}</Typography>
+      <Typography variant="h6" sx={{ position: 'absolute', width: '86%',top:'5%', zIndex:9998, margin:2, color: '#19647e', backgroundColor: 'rgba(255, 255, 255, 0.7)', padding: '12px 16px', borderRadius: '4px'}}><ButtonTranslate color="#19647e" />{hotelName}</Typography>
       <Slider {...settings}>
         {images.map((item, index) => (
           <Box key={item.title} sx={{ position: 'relative', textAlign: 'center', margin: 0, padding: 0 }}>
