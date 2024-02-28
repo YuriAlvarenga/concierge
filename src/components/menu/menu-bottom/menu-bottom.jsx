@@ -22,6 +22,9 @@ export default function MenuBottomNavigation({ hotelId }) {
   const location = useLocation()
   const navigate = useNavigate()
 
+  const storedHotelId = localStorage.getItem("selectedHotelId")
+
+
   //verifica a rota atual e atribui o novo valor a value, faz com que o item do menu clicado fique ativo
   useEffect(() => {
     setValue(location.pathname)
@@ -33,7 +36,7 @@ export default function MenuBottomNavigation({ hotelId }) {
   }
 
   const itemsMenu = [
-    { id: 1, label: "Hotel",  value:`/${hotelId}`, icon: <HomeIcon /> },
+    { id: 1, label: "Hotel",  value:`/${storedHotelId}`, icon: <HomeIcon /> },
     { id: 2, label: "Restaurante", value: "/restaurantesbc", icon: <RestaurantIcon/>},
     { id: 3, label: "Passeios", value: "/strollsbc", icon: <AttractionsIcon/>},
     { id: 4, label: "Categorias", value: "/categories", icon: <AddIcon /> }

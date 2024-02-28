@@ -26,7 +26,7 @@ export default function AppRoutes(){
             <HotelProvider>
                 <Routes>
                     {/* rotas de menu bottom */}
-                    <Route exact path="/" element={<HotelPage/>}/>
+                    
                     <Route exact path="/:id" element={<HotelPage/>}/>
                     <Route exact path="/restaurantesbc" element={<Restaurantes/>}/>
                     <Route exact path="/strollsbc" element={<Strolls/>}/>

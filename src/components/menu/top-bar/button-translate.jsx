@@ -13,7 +13,7 @@ export default function ButtonTranslate({color}){
         if (savedLanguage) {
             i18n.changeLanguage(savedLanguage)
         }
-    }, [])
+    }, [i18n.language])
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget)

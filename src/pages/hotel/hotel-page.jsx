@@ -1,4 +1,5 @@
-import React, { useContext, useEffect} from "react"
+import React, { useContext, useState, useEffect} from "react"
+
 import MenuBottomNavigation from "../../components/menu/menu-bottom/menu-bottom"
 import { Toolbar, Box } from "@mui/material"
 import WifiCard from "../../components/cards/hotel-card/wi-fi-card"
@@ -10,33 +11,25 @@ import HourCard from "../../components/cards/hotel-card/hour-card-hotel"
 import SocialMedia from "../../components/cards/shared-components/card-social-media/social-media"
 import { HotelContext } from "../../context/context"
 
-
-
 export default function HotelPage(){
-    const { selectedHotel } = useContext(HotelContext)
 
-    useEffect(() => {
-        // Aqui você pode adicionar qualquer lógica específica para a página do hotel, se necessário
-        console.log("Hotel selecionado:", selectedHotel)
-      }, [selectedHotel])
-
-
+    const {hotel} = useContext(HotelContext)
 
     return(
         <>
-          {selectedHotel  && (
+          {hotel && (
                 <>
-                    <ImageCardFromHotel hotelName={selectedHotel.name} />
+                    <ImageCardFromHotel hotelName={hotel.name} />
                     <Box sx={{ position: "absolute", top: 240, right: 0 }}>
                         <SocialMedia
                             instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
                             facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
                         />
                     </Box>
-                    {selectedHotel .services && (
+                    {hotel.services && (
                         <>
                             <Title title={"Serviços"} />
-                            <SmallCard hotelSmallServices={selectedHotel.services} />
+                            <SmallCard hotelSmallServices={hotel.services} />
                         </>
                     )}
                     <WifiCard />
@@ -44,7 +37,7 @@ export default function HotelPage(){
                     <Title title={"Serviços"} />
                     <ServicesFromHotelCard />
                     <Toolbar />
-                    <MenuBottomNavigation hotelId={selectedHotel.id} />
+                    <MenuBottomNavigation/>
                 </>
             )}
         </>
