@@ -3,10 +3,10 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
 import HomeIcon from '@mui/icons-material/Home'
-import PersonIcon from '@mui/icons-material/Person'
 import { styled } from '@mui/system'
 import AddIcon from '@mui/icons-material/Add'
-import StarPurple500Icon from '@mui/icons-material/StarPurple500'
+import AttractionsIcon from '@mui/icons-material/Attractions'
+import RestaurantIcon from '@mui/icons-material/Restaurant'
 
 const RootBottomNavigation = styled(BottomNavigation)({
   width: '100%',
@@ -34,7 +34,8 @@ export default function MenuBottomNavigation({ hotelId }) {
 
   const itemsMenu = [
     { id: 1, label: "Hotel",  value:`/${hotelId}`, icon: <HomeIcon /> },
-    { id: 2, label: "Concierge", value: "/", icon: <PersonIcon /> },
+    { id: 2, label: "Restaurante", value: "/restaurantesbc", icon: <RestaurantIcon/>},
+    { id: 3, label: "Passeios", value: "/strollsbc", icon: <AttractionsIcon/>},
     { id: 4, label: "Categorias", value: "/categories", icon: <AddIcon /> }
   ]
 
@@ -48,9 +49,9 @@ export default function MenuBottomNavigation({ hotelId }) {
           value={item.value}
           icon={item.icon}
           sx={{
-            color: "#FFF",
+            color: "#8BBEC7",
             "&.Mui-selected": { // Estilo aplicado quando o componente estiver selecionado
-              color: "#8BBEC7" // Cor de fundo quando selecionado
+              color: "#FFF" // Cor de fundo quando selecionado
             }
           }}
         />

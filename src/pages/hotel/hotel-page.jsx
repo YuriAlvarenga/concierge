@@ -41,10 +41,9 @@ export default function HotelPage(){
     return(
         <>
             {hotel && (
-                <TopBar title={hotel.name} rightComponent={<ButtonTranslate/>}/>
+                <ImageCardFromHotel hotelName={hotel.name}/>
             )}
         
-            <ImageCardFromHotel/>
             <Title title={"Serviços"}/>
             <SmallCard/>
             <WifiCard/>

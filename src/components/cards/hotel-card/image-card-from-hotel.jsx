@@ -4,10 +4,11 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { Box, Card, CardMedia, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
+import ButtonTranslate from '../../menu/top-bar/button-translate'
 
 
 
-export default function ImageCardFromHotel() {
+export default function ImageCardFromHotel({hotelName}) {
 
   const { t } = useTranslation()
   
@@ -29,7 +30,8 @@ export default function ImageCardFromHotel() {
   }
 
   return (
-    <Box sx={{ mt: 2, mb: 1, overflow: 'hidden' }}>
+    <Box sx={{mb: 1, overflow: 'hidden' }}>
+      <Typography variant="h6" sx={{ position: 'absolute', width: '90%',top:'5%', zIndex:9998, left:8, color: '#19647e', backgroundColor: 'rgba(255, 255, 255, 0.7)', padding: '12px 16px', borderRadius: '4px'}}><ButtonTranslate color="#19647e" />{hotelName}</Typography>
       <Slider {...settings}>
         {images.map((item, index) => (
           <Box key={item.title} sx={{ position: 'relative', textAlign: 'center', margin: 0, padding: 0 }}>
@@ -40,7 +42,6 @@ export default function ImageCardFromHotel() {
                 image={item.image}
                 sx={{ height: 300, objectFit: 'fill', margin: 0, padding: 0 }}
               />
-             <Typography variant="h6" sx={{ position: 'absolute', width:'90%', left:8, top: 45, fontSize:16,  backgroundColor: 'rgba(255, 255, 255, 0.7)', padding: '8px 16px', borderRadius: '4px' }}>{t([item.title])}</Typography>
             </Card>
           </Box>
         ))}

@@ -15,7 +15,7 @@ export default function Categories(){
 
     return(
         <>
-            <TopBar title={"Categorias"} rightComponent={<ButtonTranslate/>}/>
+            <TopBar title={"Categorias"} rightComponent={<ButtonTranslate color="#FFF"/>}/>
             <Toolbar/>
             {allCategories.map(({id, categorie, gradient, route})=>(
                 <Grid container spacing={2} style={{ padding: 10 }} key={id} onClick={()=>navigate(route)}>

@@ -4,7 +4,7 @@ import { IconButton, Menu, MenuItem } from "@mui/material"
 import { useTranslation } from 'react-i18next'
 
 
-export default function ButtonTranslate(){
+export default function ButtonTranslate({color}){
     const [anchorEl, setAnchorEl] = useState(null)
     const { i18n } = useTranslation()
   
@@ -24,7 +24,7 @@ export default function ButtonTranslate(){
 
     return(
         <>
-            <IconButton onClick={handleClick} style={{ position: 'absolute', right: 1, top: '50%', transform: 'translateY(-50%)', color:'#FFF'}} >
+            <IconButton onClick={handleClick} style={{ position: 'absolute', right: 1, top: '50%', transform: 'translateY(-50%)', color: color}} >
                 <LanguageIcon sx={{fontSize:25}} />
             </IconButton>
             <Menu
