@@ -3,7 +3,8 @@ import { Grid, Card, CardContent, Typography, IconButton, Snackbar, Box } from '
 import FileCopyIcon from '@mui/icons-material/FileCopy'
 import dataOfWifiHotel from '../../../list-of-datas/list-of-data-hotel-page/list-of-data-wi-fi'
 import { useTranslation } from 'react-i18next'
-
+import HttpsIcon from '@mui/icons-material/Https'
+import WifiIcon from '@mui/icons-material/Wifi'
 
 export default function WifiCard() {
   const [copied, setCopied] = useState(false);
@@ -28,7 +29,8 @@ export default function WifiCard() {
           <Card key={id} sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2 }}>
             <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Typography sx={{ mr: 1 }}>
+                <Typography sx={{ display: 'flex', alignItems: 'center', mr: 1 }}>
+                  <WifiIcon sx={{fontSize:16, mr: 0.5}}/>
                   {t("Rede")}:
                 </Typography>
                 <Typography color="text.secondary">
@@ -36,7 +38,8 @@ export default function WifiCard() {
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Typography sx={{ mr: 1 }}>
+                <Typography sx={{display: 'flex', alignItems: 'center',  mr: 1 }}>
+                <HttpsIcon sx={{fontSize:16, mr: 0.5}}/>
                 {t("Senha")}:
                 </Typography>
                 <Typography color="text.secondary">

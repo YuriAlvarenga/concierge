@@ -18,12 +18,10 @@ const dataOfSmallCards =
         { id: 3, title: 'Locadoras', icon: <CarRentalIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', route:"/car-rental-agency"},
         { id: 4, title: 'Translados', icon: <AirportShuttleIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', route:"/shuttle-services" },
         { id: 5, title: 'Room Service', icon: <RoomServiceIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', route:"/room-service" },
-        { id: 6, title: 'Restaurantes', icon: <RestaurantIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', route:"/restaurantesbc" },
-        { id: 7, title: 'Frigobar', icon: <KitchenIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', route:"/minibar-service" },
-        { id: 8, title: 'Sala de Reunião', icon: <GroupsIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', route:"/meeting-room-service" },
-        { id: 9, title: 'Lista de Canais', icon: <DvrIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', route:"/meeting-room-service" },
-        { id: 10, title: 'Tempo', icon: <ThermostatIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', route:"/meeting-room-service" },
-        { id: 11, title: 'Passeios', icon: <AttractionsIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', route:"/meeting-room-service" },
+        { id: 6, title: 'Frigobar', icon: <KitchenIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', route:"/minibar-service" },
+        { id: 7, title: 'Sala de Reunião', icon: <GroupsIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', route:"/meeting-room-service" },
+        { id: 8, title: 'Lista de Canais', icon: <DvrIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', route:"/meeting-room-service" },
+        // { id: 9, title: 'Tempo', icon: <ThermostatIcon sx={{color:'#FFF'}}/>, gradient: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', route:"/meeting-room-service" },
     ]
    
 
