@@ -1,15 +1,13 @@
 import React, { useState, useEffect} from "react"
 import { useParams } from "react-router-dom"
-import TopBar from "../../components/menu/top-bar/top-bar"
 import MenuBottomNavigation from "../../components/menu/menu-bottom/menu-bottom"
-import { Toolbar } from "@mui/material"
+import { Toolbar, Box } from "@mui/material"
 import WifiCard from "../../components/cards/hotel-card/wi-fi-card"
 import SmallCard from "../../components/cards/shared-components/small-cards-components/small-card-from-services"
 import Title from "../../components/cards/shared-components/titles/title"
 import ServicesFromHotelCard from "../../components/cards/hotel-card/cards-services-from-hotel"
 import ImageCardFromHotel from "../../components/cards/hotel-card/image-card-from-hotel"
 import HourCard from "../../components/cards/hotel-card/hour-card-hotel"
-import ButtonTranslate from "../../components/menu/top-bar/button-translate"
 import SocialMedia from "../../components/cards/shared-components/card-social-media/social-media"
 import { hotels } from "../../list-of-datas/list-of-data-hotel-page/list-of-hotels"
 
@@ -33,29 +31,31 @@ export default function HotelPage(){
         if (storedHotelId && storedHotelId !== id) {
           // Se o ID do hotel recuperado do localStorage for diferente do ID na URL,
           // redirecionar para a página com o ID correto
-          window.location.href = `
-          /${storedHotelId}`
+          window.location.href = `/${storedHotelId}`
         }
     }, [id])
 
     return(
         <>
-            {hotel && (
-                <ImageCardFromHotel hotelName={hotel.name}/>
+          {hotel && (
+                <>
+                    <ImageCardFromHotel hotelName={hotel.name} />
+                    <Box sx={{ position: "absolute", top: 240, right: 0 }}>
+                        <SocialMedia
+                            instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
+                            facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
+                        />
+                    </Box>
+                    <Title title={"Serviços"} />
+                    <SmallCard hotelSmallServices={hotel.services} />
+                    <WifiCard />
+                    <HourCard />
+                    <Title title={"Serviços"} />
+                    <ServicesFromHotelCard />
+                    <Toolbar />
+                    {hotel && <MenuBottomNavigation hotelId={hotel.id} />}
+                </>
             )}
-        
-            <Title title={"Serviços"}/>
-            <SmallCard/>
-            <WifiCard/>
-            <HourCard/>
-            <Title title={"Serviços"}/>
-            <SocialMedia 
-                instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
-                facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
-            />
-            <ServicesFromHotelCard/>
-            <Toolbar/>
-            {hotel && <MenuBottomNavigation hotelId={hotel.id}/>}
         </>
     )
 }

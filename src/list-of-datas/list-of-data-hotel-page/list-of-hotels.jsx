@@ -1,10 +1,47 @@
-// hotelsData.js
 export const hotels = [
   {
-    id: 123,
-    name: "Hotel A",
+    id: 1,
+    name: "Hotel Ibis",
     location: "Cidade A",
-    rating: 4.5,
+    services: [
+      {
+        title: "Farmácias", 
+        instances: [
+          { name: "Farmácia A", contact: "123-456-7890" },
+          { name: "Farmácia B", contact: "987-654-3210" }
+        ]
+      },
+      {
+        title: "Lavanderia", 
+        instances: [
+          { name: "Lavanderia X", contact: "456-789-0123" },
+          { name: "Lavanderia Y", contact: "789-012-3456" }
+        ]
+      },
+      {
+        title: "Locadoras", 
+        instances: [
+          { name: "Localiza", contact: "456-789-0123" },
+          { name: "Unidas", contact: "789-012-3456" },
+          { name: "Movida", contact: "789-012-3456" }
+        ]
+      },
+      {
+        title: "Translados", 
+        instances: [
+          { name: "Translado X", contact: "456-789-0123" },
+          { name: "Translado Y", contact: "789-012-3456" }
+        ]
+      },
+      {
+        title: "Frigobar", 
+        instances: [
+          { name: "Refrigerante", price: 5 },
+          { name: "Água Mineral", price: 3 },
+          { name: "Chocolate", price: 8 }
+        ]
+      }
+    ],
     restaurant: {
       name: "Restaurante A",
       items: [
@@ -12,16 +49,11 @@ export const hotels = [
         { name: "Prato B", price: 15 },
         { name: "Prato C", price: 20 }
       ]
-    },
-    minibar: [
-      { name: "Refrigerante", price: 5 },
-      { name: "Água Mineral", price: 3 },
-      { name: "Chocolate", price: 8 }
-    ]
+    }
   },
   {
-    id: 456,
-    name: "Hotel B",
+    id: 2,
+    name: "Hotel Itália",
     location: "Cidade B",
     rating: 4.2,
     restaurant: {
@@ -39,8 +71,8 @@ export const hotels = [
     ]
   },
   {
-    id: 789,
-    name: "Hotel C",
+    id:3 ,
+    name: "Hotel Slaviero",
     location: "Cidade C",
     rating: 4.8,
     restaurant: {
@@ -57,4 +89,4 @@ export const hotels = [
       { name: "Biscoito", price: 6 }
     ]
   }
-];
+]

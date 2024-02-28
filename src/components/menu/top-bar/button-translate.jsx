@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import LanguageIcon from '@mui/icons-material/Language'
 import { IconButton, Menu, MenuItem } from "@mui/material"
 import { useTranslation } from 'react-i18next'
@@ -8,6 +8,12 @@ export default function ButtonTranslate({color}){
     const [anchorEl, setAnchorEl] = useState(null)
     const { i18n } = useTranslation()
   
+    useEffect(() => {
+        const savedLanguage = localStorage.getItem('selectedLanguage')
+        if (savedLanguage) {
+            i18n.changeLanguage(savedLanguage)
+        }
+    }, [])
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget)
@@ -19,6 +25,7 @@ export default function ButtonTranslate({color}){
 
     const changeLanguageAndNavigate = (language) => {
         i18n.changeLanguage(language)
+        localStorage.setItem('selectedLanguage', language)
         handleClose() // Feche o menu após a mudança de idioma
     }
 

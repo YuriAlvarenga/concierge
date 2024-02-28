@@ -21,7 +21,6 @@ export default function ServicesFromHotelCard() {
 
   const serviceItems = [
     { title: 'Reservas', phoneNumber: '+5547997815538', message: 'Olá, gostaria de fazer uma reserva.', isOpen: false, color: 'red'  },
-    { title: 'Room Service', phoneNumber: '+5547997815538', message: 'Mensagem para o serviço de quarto.', isOpen: true, color: 'green'  },
     { title: 'Recepção', phoneNumber: '+5547997815538', message: 'Mensagem para a recepção.', isOpen: true, color: 'green'  },
   ]
 

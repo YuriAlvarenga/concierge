@@ -7,7 +7,8 @@ import dataOfSmallCards from '../../../../list-of-datas/list-of-data-page-home/l
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-export default function SmallCardServices(){
+export default function SmallCardServices({hotelSmallServices}){
+  console.log(hotelSmallServices)
   const navigate = useNavigate()
   const { t } = useTranslation()
 
