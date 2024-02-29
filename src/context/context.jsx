@@ -1,6 +1,6 @@
 
 import React, { createContext, useState, useEffect } from "react"
-import { hotels } from "../list-of-datas/list-of-data-hotel-page/list-of-hotels"
+import { hotels } from "../list-of-datas/list-of-data-hotel-page/list-of-hotel"
 import { useLocation } from "react-router-dom"
 
 export const HotelContext = createContext()
@@ -15,6 +15,7 @@ export const HotelProvider = ({ children }) => {
     useEffect(() => {
         // Encontrar o hotel com o ID correspondente
         const selectedHotel = hotels.find((hotel) => hotel.id === parseInt(id))
+      
     
         // Verificar se o hotel foi encontrado
         if (selectedHotel) {
@@ -22,6 +23,7 @@ export const HotelProvider = ({ children }) => {
           localStorage.setItem("selectedHotelId", id)
         }
       }, [id])
+
 
   return (
     <HotelContext.Provider value={{ hotel }}>

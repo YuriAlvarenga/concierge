@@ -2,17 +2,18 @@ import React from "react"
 import TopBar from "../../../components/menu/top-bar/top-bar"
 import MenuBottomNavigation from "../../../components/menu/menu-bottom/menu-bottom"
 import { Toolbar } from "@mui/material"
+import PharmacyCard from "../../../components/cards/shared-components/small-cards-components/cards-from-services/pharmacy-card"
 import ArrowBackButton from "../../../components/menu/top-bar/arrow-back-button"
-import ShuttleCard from "../../../components/cards/shared-components/small-cards-components/cards-from-services/shuttles-card"
+import ChannelListCard from "../../../components/cards/shared-components/small-cards-components/cards-from-services/channel-list-card"
 
 
 
-export default function ShuttlePage(){
+export default function PharmacyPage(){
     return(
         <>
-            <TopBar title={'Translados'} leftComponent={<ArrowBackButton/>}/>
+            <TopBar title={'Lista de Canais'} leftComponent={<ArrowBackButton/>}/>
             <Toolbar/>
-                <ShuttleCard/>
+                <ChannelListaCard/>
             <Toolbar/>
             <MenuBottomNavigation/>
         </>

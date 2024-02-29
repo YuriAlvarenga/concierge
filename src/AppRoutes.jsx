@@ -19,6 +19,7 @@ import MinibarServicePage from "./pages/services-from-concierge-and-home-page/mi
 
 import { HotelProvider } from "./context/context"
 import Home from "./pages/home"
+import ChannelListCard from "./components/cards/shared-components/small-cards-components/cards-from-services/channel-list-card"
 
 
 export default function AppRoutes(){
@@ -43,6 +44,7 @@ export default function AppRoutes(){
                     <Route exact path="/minibar-service" element={<MinibarServicePage/>}/>
                     <Route exact path="/room-service" element={<RoomServicePage/>}/>
                     <Route exact path="/meeting-room-service" element={<MeetingRoomPage/>}/>
+                    <Route exact path="/channel-list-card" element={<ChannelListCard/>}/>
 
                     {/* rotas de parceiros terceirizados página geral */}
                     <Route exact path="/barsbc" element={<Bars/>}/>

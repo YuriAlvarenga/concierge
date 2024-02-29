@@ -19,7 +19,7 @@ export default function Home(){
       if (storedHotelId) {
         navigate(`/${storedHotelId}`)
       }
-    }, 5000) 
+    }, 3000) 
 
     return () => clearTimeout(timer)
   }, [navigate])

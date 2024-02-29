@@ -1,0 +1,141 @@
+{
+    "hotels": [
+      {
+        "id": 1,
+        "name": "Hotel Ibis",
+        "location": "Cidade A",
+        "services": [
+          {
+            "title": "Farmácias",
+            "route": "/pharmacy",
+            "icon": "MedicationLiquidIcon",
+            "instances": [
+              {"name": "Farmácia Preço Popular", "status": "00:00 às 23:59h", "contact": "456-789-0123"},
+              {"name": "Farmácia Panvel", "status": "09:00h às 21:00h", "contact": "456-789-0123"},
+              {"name": "Farmácia Noite e Dia", "status": "09:00h às 21:00h", "contact": "456-789-0123"},
+              {"name": "Drogaria Raia", "status": "09:00h às 21:00h", "contact": "456-789-0123"},
+              {"name": "Farmácia São João", "status": "09:00h às 21:00h", "contact": "456-789-0123"}
+            ]
+          },
+          {
+            "title": "Lavanderia",
+            "route": "/laundries",
+            "icon": "LocalLaundryServiceIcon",
+            "instances": [
+              {"name": "Lavanderia X", "status": "09:00h às 21:00h", "contact": "456-789-0123"},
+              {"name": "Lavanderia Y", "status": "09:00h às 21:00h", "contact": "789-012-3456"}
+            ]
+          },
+          {
+            "title": "Locadoras",
+            "route": "/car-rental-agency",
+            "icon": "CarRentalIcon",
+            "instances": [
+              {"name": "Localiza Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/localiza-bc.jpg"},
+              {"name": "Movidas Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/movidas-bc.jpg"},
+              {"name": "Unidas Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/unidas-bc.jpg"}
+            ]
+          },
+          {
+            "title": "Translados",
+            "route": "/shuttle-services",
+            "icon": "AirportShuttleIcon",
+            "instances": [
+              {"name": "Translado X", "contact": "456-789-0123"},
+              {"name": "Translado Y", "contact": "789-012-3456"}
+            ]
+          },
+          {
+            "title": "Room Service",
+            "route": "/room-service",
+            "icon": "RoomServiceIcon",
+            "items": [
+              {"name": "Refrigerante", "price": 5},
+              {"name": "Água Mineral", "price": 3},
+              {"name": "Chocolate", "price": 8}
+            ]
+          },
+          {
+            "title": "Frigobar",
+            "route": "/minibar-service",
+            "icon": "KitchenIcon",
+            "items": [
+              {"name": "Refrigerante", "price": 5},
+              {"name": "Água Mineral", "price": 3},
+              {"name": "Chocolate", "price": 8},
+              {"name": "Refrigerante", "price": 5},
+              {"name": "Água Mineral", "price": 3},
+              {"name": "Chocolate", "price": 8}
+            ]
+          },
+          {
+            "title": "Sala de Reunião",
+            "route": "/meeting-room-service",
+            "icon": "GroupsIcon",
+            "instances": [
+              {"name": "Salão Brut", "contact": "456-789-0123"},
+              {"name": "Sala VIP", "contact": "789-012-3456"}
+            ]
+          },
+          {
+            "title": "Lista de Canais",
+            "route": "/channel-list-card",
+            "icon": "DvrIcon",
+            "instances": [
+              {"name": "HBO", "channel": "004"},
+              {"name": "Globo ", "channel": "010"},
+              {"name": "SBT ", "channel": "011"},
+              {"name": "Record ", "channel": "012"}
+            ]
+          }
+        ],
+        "restaurant": {
+          "name": "Restaurante A",
+          "items": [
+            {"name": "Prato A", "price": 10},
+            {"name": "Prato B", "price": 15},
+            {"name": "Prato C", "price": 20}
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "name": "Hotel Itália",
+        "location": "Cidade B",
+        "rating": 4.2,
+        "restaurant": {
+          "name": "Restaurante B",
+          "items": [
+            {"name": "Prato D", "price": 12},
+            {"name": "Prato E", "price": 18},
+            {"name": "Prato F", "price": 22}
+          ]
+        },
+        "minibar": [
+          {"name": "Refrigerante", "price": 5},
+          {"name": "Água Mineral", "price": 3},
+          {"name": "Salgadinho", "price": 7}
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Hotel Slaviero",
+        "location": "Cidade C",
+        "rating": 4.8,
+        "restaurant": {
+          "name": "Restaurante C",
+          "items": [
+            {"name": "Prato G", "price": 14},
+            {"name": "Prato H", "price": 20},
+            {"name": "Prato I", "price": 25}
+          ]
+        },
+        "minibar": [
+          {"name": "Refrigerante", "price": 5},
+          {"name": "Água Mineral", "price": 3},
+          {"name": "Biscoito", "price": 6}
+        ]
+      }
+    ]
+  }
+  
