@@ -25,7 +25,7 @@ export default function ServicesFromHotelCard() {
   ]
 
   return (
-    <Grid container spacing={2} sx={{ padding: 2 }}>
+    <Grid container spacing={2} sx={{ padding: 1 }}>
       {serviceItems.map((item, index) => (
         <Grid item xs={12} sm={6} key={index}>
           <Card sx={{ boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2 }}>

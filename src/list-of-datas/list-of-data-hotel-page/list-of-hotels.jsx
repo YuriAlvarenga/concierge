@@ -9,6 +9,7 @@ import GroupsIcon from '@mui/icons-material/Groups'
 import DvrIcon from '@mui/icons-material/Dvr'
 import AttractionsIcon from '@mui/icons-material/Attractions'
 import ThermostatIcon from '@mui/icons-material/Thermostat'
+import { calculateStatus } from '../function-calculate-hour-of-status-from-lists/status-utils'
 
 
 
@@ -25,8 +26,11 @@ export const hotels = [
         route: "/pharmacy",
         icon: <MedicationLiquidIcon sx={{color:'#FFF'}} />,
         instances: [
-          { name: "Farmácia A", contact: "123-456-7890" },
-          { name: "Farmácia B", contact: "987-654-3210" }
+          {name: 'Farmácia Preço Popular', status: calculateStatus("00:00 às 23:59h")},
+          {name: 'Farmácia Panvel', status: calculateStatus("09:00h às 21:00h")},
+          {name: 'Farmácia Noite e Dia', status: calculateStatus("09:00h às 21:00h")},
+          {name: 'Drogaria Raia', status: calculateStatus("09:00h às 21:00h")},
+          {name: 'Farmácia São João', status: calculateStatus("09:00h às 21:00h")}
         ]
       },
       {
@@ -43,9 +47,10 @@ export const hotels = [
         route: "/car-rental-agency",
         icon: <CarRentalIcon sx={{color:'#FFF'}}/>,
         instances: [
-          { name: "Localiza", contact: "456-789-0123" },
-          { name: "Unidas", contact: "789-012-3456" },
-          { name: "Movida", contact: "789-012-3456" }
+          {name:"Localiza Locadora de Veículos", horario:"09:00h às 21:00h", status: calculateStatus("09:00h às 21:00h"), image: "/car-rental/localiza-bc.jpg"},
+          {name:"Movidas Locadora de Veículos", horario:"09:00h às 20:00h", status: calculateStatus("09:00h às 21:00h"), image: "/car-rental/movidas-bc.jpg"},
+          {name:"Unidas Locadora de Veículos", horario:"09:00h às 21:30h", status: calculateStatus("09:00h às 21:00h"), gradient: ['#ff6888', '#ff6888'], image:"/car-rental/unidas-bc.jpg"},
+  
         ]
       },
       {
@@ -78,7 +83,7 @@ export const hotels = [
         ]
       },
       {
-        title: "Sala de Reuniões", 
+        title: "Sala de Reunião", 
         route: "/meeting-room-service",
         icon: <GroupsIcon sx={{color:'#FFF'}}/>,
         instances: [

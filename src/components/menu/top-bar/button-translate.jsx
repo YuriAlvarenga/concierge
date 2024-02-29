@@ -40,12 +40,13 @@ export default function ButtonTranslate({color}){
                 onClose={handleClose}
                 anchorOrigin={{
                     vertical: 'top',
-                    horizontal: 'right',
+                    horizontal: 'left',
                 }}
                 transformOrigin={{
                     vertical: 'top',
                     horizontal: 'right',
                 }}
+                style={{ zIndex: 9999,  marginTop: 25}} 
             >
                 <MenuItem onClick={() => changeLanguageAndNavigate('pt-BR')}>Português</MenuItem>
                 <MenuItem onClick={() => changeLanguageAndNavigate('es')}>Español</MenuItem>

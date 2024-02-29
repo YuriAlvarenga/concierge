@@ -3,12 +3,12 @@ import React, { createContext, useState, useEffect } from "react"
 import { hotels } from "../list-of-datas/list-of-data-hotel-page/list-of-hotels"
 import { useLocation } from "react-router-dom"
 
-export const HotelContext = createContext();
+export const HotelContext = createContext()
 
 export const HotelProvider = ({ children }) => {
-    const location = useLocation();
-    const pathname = location.pathname;
-    const id = pathname.substring(1); // Remove a barra inicial para obter apenas o ID
+    const location = useLocation()
+    const pathname = location.pathname
+    const id = pathname.substring(1) // Remove a barra inicial para obter apenas o ID
 
     const [hotel, setHotel] = useState(null)
 
@@ -27,5 +27,5 @@ export const HotelProvider = ({ children }) => {
     <HotelContext.Provider value={{ hotel }}>
       {children}
     </HotelContext.Provider>
-  );
-};
+  )
+}
