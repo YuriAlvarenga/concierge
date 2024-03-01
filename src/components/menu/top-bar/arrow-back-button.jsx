@@ -6,8 +6,10 @@ import { useNavigate } from 'react-router-dom'
 export default function ArrowBackButton() {
   const navigate = useNavigate()
 
+  const storedHotelId = localStorage.getItem("selectedHotelId")
+
   const handleBackButtonClick = () => {
-    navigate(-1)
+    navigate(`/${storedHotelId}`)
   }
 
   return (

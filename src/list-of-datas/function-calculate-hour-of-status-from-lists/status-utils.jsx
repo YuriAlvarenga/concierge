@@ -17,8 +17,8 @@ export const calculateStatus = (horario) => {
       (horaAbertura > horaFechamento && (horaAtual >= horaAbertura || horaAtual < horaFechamento)) ||
       (horaAbertura === horaFechamento && (horaAtual === horaAbertura && minutoAtual >= minutoAbertura && minutoAtual < minutoFechamento))
   ) {
-      return "Aberto"
+      return "Aberto agora"
   } else {
-      return "Fechado"
+      return "Fechado agora"
   }
 }

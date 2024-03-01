@@ -10,7 +10,7 @@
             "route": "/pharmacy",
             "icon": "MedicationLiquidIcon",
             "instances": [
-              {"name": "Farmácia Preço Popular", "status": "Aberto agora", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega", "gradient": "#ff6888"},
+              {"name": "Farmácia Preço Popular", "status": "14:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega", "gradient": "#ff6888"},
               {"name": "Farmácia Panvel", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "Av. Central, 540 - Centro, Balneário Camboriú - SC, 88330-668", "content": "Compras na loja·Retirada na loja·Entrega", "gradient": "#1fe4f5"},
               {"name": "Farmácia Noite e Dia", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega", "gradient": "#60efbc"},
               {"name": "Drogaria Raia", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega","gradient": "#b07eb9"},
@@ -22,8 +22,8 @@
             "route": "/laundries",
             "icon": "LocalLaundryServiceIcon",
             "instances": [
-              {"name": "5àsec Lavanderia", "status": "00:00 às 23:59h", "contact": "456-789-0123", "gradient": "linear-gradient(to bottom, #ff6888 60%, transparent 50%)"},
-              {"name": "Lavanderia Dimensão", "status": "09:00h às 21:00h", "contact": "456-789-0123", "gradient": "linear-gradient(to bottom, #1fe4f5 60%, transparent 50%)"}
+              {"name": "5àsec Lavanderia", "status": "00:00 às 23:59h", "contact": "456-789-0123", "gradient": "linear-gradient(to bottom, #ff6888 60%, transparent 50%)", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": ["Retirar sacola da lavanderia com a recepção.","Verificar"]},
+              {"name": "Lavanderia Dimensão", "status": "09:00h às 21:00h", "contact": "456-789-0123", "gradient": "linear-gradient(to bottom, #1fe4f5 60%, transparent 50%)", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega"}
             ]
           },
           {
