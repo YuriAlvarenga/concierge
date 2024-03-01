@@ -19,18 +19,18 @@ export default function HourCard() {
         <Card sx={{ backgroundColor: '#FFF', borderRadius: 2 }}>
           <CardContent>
             <Grid container spacing={2}>
-              <Grid container item xs={12} spacing={2} sx={{display: 'flex',  justifyContent: 'space-between'}}>
+              <Grid container item xs={12} spacing={10} sx={{display: 'flex',  justifyContent: 'space-between'}}>
                 <HourRow icon={<FreeBreakfastIcon sx={{mr:1, fontSize:18}}/>} title={t("Café")} time="07:00h às 11:00h" />
                 <HourRow icon={<DinnerDiningIcon sx={{mr:1, fontSize:18}}/>} title={t("Almoço")} time="12:00h às 14:30h" />
               </Grid>
-              <Grid container item xs={12} spacing={2}>
+              <Grid container item xs={12} spacing={10}>
                 <HourRow icon={<BrunchDiningIcon sx={{mr:1, fontSize:18}}/>} title={t("Jantar")} time="07:00h às 11:00h" />
               </Grid>
-              <Grid container item xs={12} spacing={2} sx={{display: 'flex',  justifyContent: 'space-between'}}>
+              <Grid container item xs={12} spacing={10} sx={{display: 'flex',  justifyContent: 'space-between'}}>
                 <HourRow icon={<PoolIcon sx={{mr:1, fontSize:18}}/>} title={t("Piscina")} time="09:00h às 20:00h" />
                 <HourRow icon={<FitnessCenterIcon sx={{mr:1, fontSize:18}}/>} title={t("Academia")} time="09:00h às 20:00h" />
               </Grid>
-              <Grid container item xs={12} spacing={0} sx={{display: 'flex',  justifyContent: 'space-between'}}>
+              <Grid container item xs={12} spacing={10} sx={{display: 'flex',  justifyContent: 'space-between'}}>
                 <HourRow icon={<MeetingRoomIcon sx={{mr:1, fontSize:18}}/>} title={t("Check-in")} time="A partir das 14:00h" />
                 <HourRow icon={<DoorBackIcon sx={{mr:1, fontSize:18}}/>} title={t("Check-out")} time="Até às 12:00h" />
               </Grid>
@@ -45,7 +45,7 @@ export default function HourCard() {
 function HourRow({ icon, title, time }) {
   return (
     <Grid item xs={6} sm={4}>
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems:'center', justifyContent: 'space-between', py: 1 }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems:'start', justifyContent: 'space-between', py: 1 }}>
         <Box sx={{ display: 'flex', alignItems:'center', justifyContent: 'space-between'}}>
           {icon}
           <Typography variant="body1">{title}</Typography>

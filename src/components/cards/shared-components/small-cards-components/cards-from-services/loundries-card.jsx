@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { Grid, Box } from '@mui/material'
+import { Grid, Box, Button  } from '@mui/material'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
@@ -27,38 +27,45 @@ export default function LaundryCard(){
     }
   }, [hotel])
 
+  const openWhatsApp = (contact) => {
+    const phoneNumber = '+5547997815538'
+    window.open(`https://wa.me/${phoneNumber}`)
+  }
+
   return (
     <>
-    {loadedHotel && (
-      <Grid container spacing={2} style={{ padding: 10 }}>
-        <Grid item xs={12}>
-          <Typography sx={{ fontSize: 18, color: '#000' }} variant="h6" component="div">
-            Lavanderias
-          </Typography>
+      {loadedHotel && (
+        <Grid container spacing={2} sx={{ padding: 1 }}>
+          {loadedHotel.services.map((service, index) => (
+            <Grid item xs={12} key={index} onClick={() => navigate(service.route)}>
+              {service.title === 'Lavanderia' && (
+                <>
+                  {service.instances && service.instances.map((instance, i) => (
+                    <Card key={i} sx={{ marginBottom: 2 }}> 
+                      <CardContent sx={{ p:1, background: instance.gradient, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}> 
+                        <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between', width:'100%', pb:3}}>
+                          <Typography sx={{ fontSize: 16, color:"#FFF" }} component="div">
+                            {instance.name}
+                          </Typography>
+                          <Typography sx={{ fontSize: 12, color:"#FFF" }} component="div">
+                            {instance.status}
+                          </Typography>
+                        </Box>
+                      </CardContent>
+                      <Box sx={{display:'flex', m:1, justifyContent:'space-between'}}>
+                        Endereço aqui, Promoção redes sociais
+                        <Button variant="contained" onClick={() => openWhatsApp(instance.contact)}>
+                          WhatsApp
+                        </Button>
+                      </Box>
+                    </Card>
+                  ))}
+                </>
+              )}
+            </Grid>
+          ))}
         </Grid>
-        {loadedHotel.services.map((service, index)=>(
-          <Grid item xs={12} key={index}>
-            {service.title === "Lavanderia" && (
-              <Card sx={{ background: '#FFF', color: '#000', display:'flex', flexDirection:'column'}}>
-                {service.instances && service.instances.map((instance, i) => (
-                  <CardContent key={i} sx={{ borderBottom: '1px solid #ccc' }}>
-                    <Typography sx={{ fontSize: 16 }} component="div">
-                      {instance.name}
-                    </Typography>
-                    <Typography sx={{ fontSize: 14 }} component="div">
-                      Status: {instance.status}
-                    </Typography>
-                    <Typography sx={{ fontSize: 14 }} component="div">
-                      Contact: {instance.contact}
-                    </Typography>
-                  </CardContent>
-                ))}
-              </Card>
-            )}
-          </Grid>
-        ))}
-      </Grid>
-    )}
+      )}
     </>
   )
 }

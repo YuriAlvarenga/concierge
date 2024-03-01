@@ -27,8 +27,8 @@ export default function WifiCard() {
         <Typography variant="h6" sx={{ mb: 1 }}>Wi-Fi</Typography>
         {dataOfWifiHotel.map(({ id, network, password }) => (
           <Card key={id} sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2 }}>
-            <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <CardContent sx={{ display: 'flex',  alignItems: 'center', justifyContent: 'space-between' }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', flexWrap:'wrap' }}>
                 <Typography sx={{ display: 'flex', alignItems: 'center', mr: 1 }}>
                   <WifiIcon sx={{fontSize:16, mr: 0.5}}/>
                   {t("Rede")}:
@@ -45,11 +45,8 @@ export default function WifiCard() {
                 <Typography color="text.secondary">
                   {t([password])}
                 </Typography>
-                <IconButton
-                  aria-label="Copiar Senha"
-                  onClick={() => copyToClipboard(password, network)}
-                >
-                  <FileCopyIcon />
+                <IconButton aria-label="Copiar Senha" onClick={() => copyToClipboard(password, network)}>
+                  <FileCopyIcon  />
                 </IconButton>
               </Box>
             </CardContent>

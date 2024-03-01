@@ -38,7 +38,7 @@ export default function PharmacyCard() {
                   {service.instances && service.instances.map((instance, i) => (
                     <Card key={i} sx={{ marginBottom: 2 }}> 
                       <CardContent sx={{ p:1, background: instance.gradient, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}> 
-                        <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between', width:'100%', pb:3}}>
+                        <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between', width:'100%', pb:0}}>
                           <Typography sx={{ fontSize: 16, color:"#FFF" }} component="div">
                             {instance.name}
                           </Typography>
@@ -46,13 +46,20 @@ export default function PharmacyCard() {
                             {instance.status}
                           </Typography>
                         </Box>
+                        <Box sx={{display:'flex', flexDirection:'column'}}>
+                          <Typography sx={{ fontSize: 14 }} component="div">
+                            Endereço: {instance.address} 
+                          </Typography>
+                          <Typography sx={{ fontSize: 14 }} component="div">
+                            {instance.content} 
+                          </Typography>
+                        </Box>
                       </CardContent>
-                      <Box sx={{display:'flex', m:1, justifyContent:'space-between'}}>
-                        Endereço aqui, Promoção redes sociais
-                        <Button variant="contained" onClick={() => openWhatsApp(instance.contact)}>
-                          WhatsApp
-                        </Button>
+                      <Box sx={{display:'flex', alignItems:'center', justifyContent:'flex-end', m:1}}>
+                        <Button sx={{fontSize:10, mr:1}} variant='outlined'>WhatsApp</Button>
+                        <Button sx={{fontSize:10}} variant='outlined'>Navegar</Button>
                       </Box>
+                    
                     </Card>
                   ))}
                 </>

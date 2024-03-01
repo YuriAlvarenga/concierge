@@ -15,7 +15,6 @@ export default function ImageCardFromHotel({hotelName}) {
   const images = [
     { title: "Lazer", image: "/hotels/hotel.jpg" },
     { title: "Café na cama", image: "/hotels/cafe-na-cama.jpg" },
-    { title: "Estenda sua reserva", image: "/hotels/promocao-fique-mais-um-dia.jpg" },
     { title: "Conheça nossas salas de reuniões", image: "/hotels/sala-de-reuniao.jpg" },
   ]
 
