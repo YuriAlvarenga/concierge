@@ -31,7 +31,7 @@
             "route": "/car-rental-agency",
             "icon": "CarRentalIcon",
             "instances": [
-              {"name": "Localiza Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/localiza-bc.jpg"},
+              {"name": "Localiza Locadora de Veículos", "status": "19:00h às 21:00h", "image": "/car-rental/localiza-bc.jpg"},
               {"name": "Movidas Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/movidas-bc.jpg"},
               {"name": "Unidas Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/unidas-bc.jpg"}
             ]
@@ -41,8 +41,8 @@
             "route": "/shuttle-services",
             "icon": "AirportShuttleIcon",
             "instances": [
-              {"name": "Translado X", "contact": "456-789-0123"},
-              {"name": "Translado Y", "contact": "789-012-3456"}
+              {"name": "Motorista X", "contact": "456-789-0123", "image": "/car-rental/localiza-bc.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Branco"},
+              {"name": "Motorista Y", "contact": "789-012-3456", "image": "/car-rental/localiza-bc.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Azul"}
             ]
           },
           {

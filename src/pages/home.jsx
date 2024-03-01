@@ -37,7 +37,7 @@ export default function Home(){
           bgcolor="#f3f3f3"
         >
           <Typography variant="h3" gutterBottom align="center">
-            Seja bem-vindo ao Concierge Virtual!
+            Bem-vindo ao Concierge Virtual!
           </Typography>
           {isLoading && (
             <Box mt={2}>
