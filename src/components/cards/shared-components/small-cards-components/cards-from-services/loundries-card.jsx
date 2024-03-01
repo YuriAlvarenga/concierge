@@ -89,10 +89,15 @@ export default function PharmacyCard() {
                           </Typography>
                         </Box>
                       </CardContent>
-                      <Box sx={{display:'flex', alignItems:'center', justifyContent:'flex-end', m:1, minWidth: 150}}>
-                        <Button sx={{fontSize:10, mr:1, width: 80, color:'#28afb0', borderColor:'#28afb0'}} variant='outlined' onClick={openWhatsApp}>Menu</Button>
-                        <Button sx={{fontSize:10, mr:1, width: 80, color:'#28afb0', borderColor:'#28afb0'}} onClick={openWhatsApp} variant='outlined'>WhatsApp</Button>
-                        <Button sx={{fontSize:10, width: 80, color:'#28afb0', borderColor:'#28afb0'}} variant='outlined' onClick={() => openNavigationApp(instance.address)}>Navegar</Button>
+                      <Box sx={{display:'flex', alignItems:'center', justifyContent: 'space-between', m:1}}>
+                        <Box sx={{ml:1}}> 
+                          {instance.status}
+                        </Box>  
+                        <Box>
+                          <Button sx={{fontSize:10, mr:1, width: 80, color:'#28afb0', borderColor:'#28afb0'}} variant='outlined' onClick={openWhatsApp}>Menu</Button>
+                          <Button sx={{fontSize:10, mr:1, color:'#28afb0', borderColor:'#28afb0'}} onClick={openWhatsApp} variant='outlined'>WhatsApp</Button>
+                          <Button sx={{fontSize:10, color:'#28afb0', borderColor:'#28afb0'}} variant='outlined' onClick={() => openNavigationApp(instance.address)}>Navegar</Button>
+                        </Box> 
                       </Box>
                     
                     </Card>
