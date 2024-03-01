@@ -4,6 +4,7 @@ import { HotelContext } from '../../../../../context/context'
 import { useNavigate } from 'react-router-dom'
 import { calculateStatus } from '../../../../../list-of-datas/function-calculate-hour-of-status-from-lists/status-utils'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
+import AccessTimeIcon from '@mui/icons-material/AccessTime'
 
 export default function PharmacyCard() {
   const { hotel } = useContext(HotelContext)
@@ -83,9 +84,10 @@ export default function PharmacyCard() {
                         </Box>
                       </CardContent>
                       <Box sx={{display:'flex', alignItems:'center', justifyContent: 'space-between', m:1}}>
-                        <Box sx={{ml:1}}> 
+                        <Box sx={{display:'flex', alignItems:'center', ml:1, fontSize:12}}> 
+                          <AccessTimeIcon sx={{fontSize:14, mr:1}}/>
                           {instance.status}
-                        </Box>  
+                        </Box>   
                         <Box>
                           <Button sx={{fontSize:10, mr:1, color:'#28afb0', borderColor:'#28afb0'}} onClick={openWhatsApp} variant='outlined'>WhatsApp</Button>
                           <Button sx={{fontSize:10, color:'#28afb0', borderColor:'#28afb0'}} variant='outlined' onClick={() => openNavigationApp(instance.address)}>Navegar</Button>
