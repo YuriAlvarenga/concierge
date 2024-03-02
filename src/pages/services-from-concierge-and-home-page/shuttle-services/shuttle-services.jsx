@@ -11,8 +11,8 @@ export default function ShuttlePage(){
     return(
         <>
             <TopBar title={'Translados'} leftComponent={<ArrowBackButton/>}/>
-            <Toolbar/>
-                <ShuttleCard/>
+           
+            <ShuttleCard/>
             <Toolbar/>
             <MenuBottomNavigation/>
         </>

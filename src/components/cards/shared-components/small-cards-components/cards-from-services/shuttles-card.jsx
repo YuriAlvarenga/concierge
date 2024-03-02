@@ -23,7 +23,7 @@ export default function ShuttleCard() {
   return (
     <>
       {loadedHotel && (
-        <Grid container spacing={2} style={{ padding: 10 }}>
+        <Grid container spacing={2} style={{ padding: 15 }}>
           {loadedHotel.services.map((service, index)=>(
             <Grid item xs={12} key={index}>
               {service.title === "Translados" && (
@@ -35,7 +35,7 @@ export default function ShuttleCard() {
                           component="img"
                           image={instance.image} // supondo que haja uma propriedade para a foto do motorista
                           alt={instance.name} // supondo que instance.name é o nome do motorista
-                          sx={{ width: 100, height: 100, borderRadius: '50%', marginRight: 2 }}
+                          sx={{ width: 100, height: 100, borderRadius: '50%', m:2 }}
                         />
                         <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                           <CardContent>
@@ -45,10 +45,10 @@ export default function ShuttleCard() {
                             <Typography sx={{ fontSize: 14 }} component="div">
                               Carro: {instance.car} | Placa: {instance.licensePlate} | Cor: {instance.carColor}
                             </Typography>
-                          </CardContent>
-                          <Button variant="outlined"  sx={{ alignSelf: 'flex-end', m: 1, color:'#28afb0', borderColor:'#28afb0'}}>
-                            WhatsApp
+                          <Button variant="outlined"  sx={{ alignSelf: 'flex-end', ml: 3, color:'#28afb0', borderColor:'#28afb0'}}>
+                            solicitar motorista
                           </Button>
+                          </CardContent>
                         </Box>
                       </Card>
                     </Grid>

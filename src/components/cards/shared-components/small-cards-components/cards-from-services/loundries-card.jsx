@@ -56,10 +56,10 @@ export default function PharmacyCard() {
                     <Card key={i} sx={{ marginBottom: 2 }}> 
                       <CardContent sx={{  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}> 
                         <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between', width:'100%', p:1, background: instance.gradient, }}>
-                          <Typography sx={{ fontSize: 16, color:"#FFF", pb:2 }} component="div">
+                          <Typography sx={{ fontSize: 16, color:"#FFF", pb:4 }} component="div">
                             {instance.name}
                           </Typography>
-                          <Box sx={{ display: 'flex', alignItems: 'center', pb:2  }}>
+                          <Box sx={{ display: 'flex', alignItems: 'center', pb:4  }}>
                             {instance.status ? (
                               calculateStatus(instance.status) === "Aberto agora" ? (
                                 <RadioButtonUncheckedIcon sx={{fontSize: 14, background:' green', color: 'green', mr: 1, borderRadius:'50%' }} />
@@ -79,7 +79,7 @@ export default function PharmacyCard() {
                           <Typography sx={{ fontSize: 14 }} component="div">
                             Endereço: {instance.address} 
                           </Typography>
-                          <Typography sx={{ fontSize: 14 }} component="div">
+                          <Typography sx={{ fontSize: 14, mt:1 }} component="div">
                             Instruções:
                            <List>
                             <ListItem>- Retirar sacola da lavanderia com a recepção</ListItem>

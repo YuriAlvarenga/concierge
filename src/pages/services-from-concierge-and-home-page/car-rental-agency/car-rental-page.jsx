@@ -13,8 +13,7 @@ export default function CarRentalPage(){
     return(
         <>
             <TopBar title={'Locadoras de Veículos'} leftComponent={<ArrowBackButton/>}/>
-            <Toolbar/>
-                <CarRentalCard/>
+            <CarRentalCard/>
             <Toolbar/>
             <MenuBottomNavigation/>
         </>

@@ -41,8 +41,8 @@
             "route": "/shuttle-services",
             "icon": "AirportShuttleIcon",
             "instances": [
-              {"name": "Motorista X", "contact": "456-789-0123", "image": "/car-rental/localiza-bc.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Branco"},
-              {"name": "Motorista Y", "contact": "789-012-3456", "image": "/car-rental/localiza-bc.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Azul"}
+              {"name": "Motorista X", "contact": "456-789-0123", "image": "/driver.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Branco"},
+              {"name": "Motorista Y", "contact": "789-012-3456", "image": "/woman-driver.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Azul"}
             ]
           },
           {
