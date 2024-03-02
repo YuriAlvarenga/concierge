@@ -1,24 +1,31 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Grid, Card, CardContent, CardMedia, Typography, Button, Box } from '@mui/material';
-import { HotelContext } from '../../../../../context/context';
+import React, { useContext, useEffect, useState } from 'react'
+import { Grid, Card, CardContent, CardMedia, Typography, Button, Box } from '@mui/material'
+import { HotelContext } from '../../../../../context/context'
 
 export default function ShuttleCard() {
-  const { hotel } = useContext(HotelContext);
-  const [loadedHotel, setLoadedHotel] = useState(null);
+  const { hotel } = useContext(HotelContext)
+  const [loadedHotel, setLoadedHotel] = useState(null)
 
   useEffect(() => {
-    const storedHotel = JSON.parse(localStorage.getItem("selectedHotel"));
+    const storedHotel = JSON.parse(localStorage.getItem("selectedHotel"))
     if (storedHotel) {
       setLoadedHotel(storedHotel);
     }
-  }, []);
+  }, [])
 
   useEffect(() => {
     if (hotel) {
       setLoadedHotel(hotel);
-      localStorage.setItem("selectedHotel", JSON.stringify(hotel));
+      localStorage.setItem("selectedHotel", JSON.stringify(hotel))
     }
-  }, [hotel]);
+  }, [hotel])
+
+   //whatspp function
+   const handleWhatsAppClick = (phoneNumber, message) => {
+    const encodedMessage = encodeURIComponent(message)
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
+  }
+
 
   return (
     <>
@@ -39,16 +46,16 @@ export default function ShuttleCard() {
                             sx={{ width: 80, height: 80, borderRadius: '50%' }}
                           />
                         </Box>
-                        <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                        <Box sx={{ display: 'flex', flexDirection: 'column'}}>
                           <CardContent>
-                            <Typography sx={{ fontSize: 16 }} component="div">
+                            <Typography sx={{ fontSize: 16, mt:2 }} component="div">
                               {instance.name}
                             </Typography>
                             <Typography sx={{ fontSize: 14 }} component="div">
                               Carro: {instance.car} | Placa: {instance.licensePlate} | Cor: {instance.carColor}
                             </Typography>
                             <Box sx={{display:'flex', flexDirection:'row-reverse', mt:1}}>
-                              <Button sx={{color:'#28afb0'}} size="small">Solicitar Motorista</Button>  
+                              <Button sx={{color:'#28afb0'}} size="small" onClick={() => handleWhatsAppClick(instance.phoneNumber, instance.message)}>Solicitar Motorista</Button>  
                             </Box>
                           </CardContent>
                         </Box>
@@ -62,5 +69,5 @@ export default function ShuttleCard() {
         </Grid>
       )}
     </>
-  );
+  )
 }

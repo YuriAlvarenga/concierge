@@ -20,6 +20,12 @@ export default function MeetingRoomCard() {
     }
   }, [hotel])
 
+  //whatspp function
+   const handleWhatsAppClick = (phoneNumber, message) => {
+    const encodedMessage = encodeURIComponent(message)
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
+  }
+
   return (
     <>
       {loadedHotel && (
@@ -45,7 +51,7 @@ export default function MeetingRoomCard() {
                           </Typography>
                         </CardContent>
                         <CardActions>
-                          <Button sx={{color:'#28afb0'}} size="small">Solicitar Orçamento</Button>
+                          <Button sx={{color:'#28afb0'}} size="small" onClick={() => handleWhatsAppClick(instance.phoneNumber, instance.message)}>Solicitar Orçamento</Button>
                         </CardActions>
                       </Card>
                     </Grid>

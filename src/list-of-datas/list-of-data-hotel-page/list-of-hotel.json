@@ -10,36 +10,36 @@
             "subTitle": "Farmácias",
             "route": "/pharmacy",
             "instances": [
-              {"name": "Farmácia Preço Popular", "status": "14:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega", "gradient": "#ff6888"},
-              {"name": "Farmácia Panvel", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "Av. Central, 540 - Centro, Balneário Camboriú - SC, 88330-668", "content": "Compras na loja·Retirada na loja·Entrega", "gradient": "#1fe4f5"},
-              {"name": "Farmácia Noite e Dia", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega", "gradient": "#60efbc"},
-              {"name": "Drogaria Raia", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega","gradient": "#b07eb9"},
-              {"name": "Farmácia São João", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega", "gradient": "#ff6888"}
+              {"name": "Farmácia Preço Popular", "status": "14:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer um pedido.", "gradient": "#ff6888"},
+              {"name": "Farmácia Panvel", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "Av. Central, 540 - Centro, Balneário Camboriú - SC, 88330-668", "content": "Compras na loja·Retirada na loja·Entrega", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer um pedido.", "gradient": "#1fe4f5"},
+              {"name": "Farmácia Noite e Dia", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer um pedido.", "gradient": "#60efbc"},
+              {"name": "Drogaria Raia", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega",  "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer um pedido.", "gradient": "#b07eb9"},
+              {"name": "Farmácia São João", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega",  "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer um pedido.", "gradient": "#ff6888"}
             ]
           },
           {
             "subTitle": "Lavanderia",
             "route": "/laundries",
             "instances": [
-              {"name": "5àsec Lavanderia", "status": "00:00 às 23:59h", "contact": "456-789-0123", "gradient": "linear-gradient(to bottom, #ff6888 60%, transparent 50%)", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": ["Retirar sacola da lavanderia com a recepção.","Verificar"]},
-              {"name": "Lavanderia Dimensão", "status": "09:00h às 21:00h", "contact": "456-789-0123", "gradient": "linear-gradient(to bottom, #1fe4f5 60%, transparent 50%)", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega"}
+              {"name": "5àsec Lavanderia", "status": "00:00 às 23:59h", "contact": "456-789-0123", "gradient": "linear-gradient(to bottom, #ff6888 60%, transparent 50%)", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar o serviço de lavanderia."},
+              {"name": "Lavanderia Dimensão", "status": "09:00h às 21:00h", "contact": "456-789-0123", "gradient": "linear-gradient(to bottom, #1fe4f5 60%, transparent 50%)", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar o serviço de lavanderia."}
             ]
           },
           {
             "subTitle": "Locadoras",
             "route": "/car-rental-agency",
             "instances": [
-              {"name": "Localiza Locadora de Veículos", "status": "19:00h às 21:00h", "image": "/car-rental/localiza-bc.jpg"},
-              {"name": "Movidas Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/movidas-bc.jpg"},
-              {"name": "Unidas Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/unidas-bc.jpg"}
+              {"name": "Localiza Locadora de Veículos", "status": "19:00h às 21:00h", "image": "/car-rental/localiza-bc.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de alugar um veículo com vocês."},
+              {"name": "Movidas Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/movidas-bc.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de alugar um veículo com vocês."},
+              {"name": "Unidas Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/unidas-bc.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de alugar um veículo com vocês."}
             ]
           },
           {
             "subTitle": "Translados",
             "route": "/shuttle-services",
             "instances": [
-              {"name": "Motorista X", "contact": "456-789-0123", "image": "/driver.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Branco"},
-              {"name": "Motorista Y", "contact": "789-012-3456", "image": "/woman-driver.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Azul"}
+              {"name": "Motorista X", "contact": "456-789-0123", "image": "/driver.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Branco", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar o serviço de transfer."},
+              {"name": "Motorista Y", "contact": "789-012-3456", "image": "/woman-driver.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Azul", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar o serviço de transfer."}
             ]
           },
           {
@@ -104,8 +104,8 @@
             "subTitle": "Sala de Reunião",
             "route": "/meeting-room-service",
             "instances": [
-              {"name": "Salão Brut", "content": "Nosso auditório tem a capacidade para 300 pessoas", "image": "/meeting-room/brut-meeting.jpg"},
-              {"name": "Sala VIP", "content": "Nossa sala tem a capacidade para 150 pessoas", "image": "/meeting-room/vip-meeting.jpg"}
+              {"name": "Salão Brut", "content": "Nosso auditório tem a capacidade para 300 pessoas", "image": "/meeting-room/brut-meeting.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar um orçamento da sala de eventos."},
+              {"name": "Sala VIP", "content": "Nossa sala tem a capacidade para 150 pessoas", "image": "/meeting-room/vip-meeting.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar um orçamento da sala de eventos."}
             ]
           },
           {
@@ -133,13 +133,13 @@
           }
         ],
         "internet": {
-          "name": "Wifi",
+          "title": "Wifi",
           "items": [
             {"network": "Hotel Ibis", "password": "senhadohotel"}
           ]
         },
         "hours": {
-          "name": "Horários",
+          "title": "Horários",
           "items": [
             {"name": "Café", "horario": "07:00h às 11:00h"},
             {"name": "Almoço", "horario": "12:00h às 14:30h"},
@@ -150,6 +150,13 @@
             {"name": "Check-in", "horario": "A partir das 14h"},
             {"name": "Check-out", "horario": "Até às 12h"}
             
+          ]
+        },
+        "contacts": {
+          "title": "Contatos",
+          "items": [
+            { "name": "Reservas", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer uma reserva.", "status": "09:00h às 17:00h" },
+            { "name": "Recepção", "phoneNumber": "+5547920025230", "message": "Mensagem para a recepção.", "status": "00:01h às 23:59h"}
           ]
         }
       },

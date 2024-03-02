@@ -25,6 +25,12 @@ export default function CarRentalCard() {
     }
   }, [hotel])
 
+   //whatspp function
+   const handleWhatsAppClick = (phoneNumber, message) => {
+    const encodedMessage = encodeURIComponent(message)
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
+  }
+
   return (
     <>
     {loadedHotel && (
@@ -46,7 +52,7 @@ export default function CarRentalCard() {
                     </Box>
                   </Box>
                 )}
-                  <Card key={i} sx={{ position: 'relative', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', marginBottom: 2 }}>
+                  <Card key={i} sx={{ position: 'relative', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', marginBottom: 2 }} onClick={() => handleWhatsAppClick(instance.phoneNumber, instance.message)}>
                     <CardMedia component="img" image={instance.image} alt={instance.name} sx={{ height: 220, objectFit: 'fill' }}/>
                     <Box sx={{ position: 'absolute', bottom: 0, left: 0, right: 0, p: 2, color: '#FFF'}}>
                       {calculateStatus(instance.status) !== "Aberto agora" && (

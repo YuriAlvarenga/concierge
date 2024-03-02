@@ -24,22 +24,25 @@ export default function PharmacyCard() {
       localStorage.setItem('selectedHotel', JSON.stringify(hotel))
     }
   }, [hotel])
-  //whatasapp
-  const openWhatsApp = (contact) => {
-    const phoneNumber = '+5547997815538'
-    window.open(`https://wa.me/${phoneNumber}`)
-  }
-  //navegar até o local
 
+  //whatspp function
+  const handleWhatsAppClick = (phoneNumber, message) => {
+    const encodedMessage = encodeURIComponent(message)
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
+  }
+
+  //navegar até o local
   const openNavigationApp = (endereco) => {
     const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(endereco)}`
-    
+    const geoUrl = `geo:0,0?q=${encodeURIComponent(endereco)}`
 
     if ("geolocation" in navigator) {
       // Abre o endereço no aplicativo de mapas
+      window.location.href = geoUrl
+    } else {
+      // Abre o endereço no navegador
       window.open(googleMapsUrl, '_blank')
-     
-    } 
+    }
 
   }
 
@@ -89,7 +92,7 @@ export default function PharmacyCard() {
                           {instance.status}
                         </Box>   
                         <Box>
-                          <Button sx={{fontSize:10, mr:1, color:'#28afb0', borderColor:'#28afb0'}} onClick={openWhatsApp} variant='outlined'>WhatsApp</Button>
+                          <Button sx={{fontSize:10, mr:1, color:'#28afb0', borderColor:'#28afb0'}} onClick={() => handleWhatsAppClick(instance.phoneNumber, instance.message)} variant='outlined'>WhatsApp</Button>
                           <Button sx={{fontSize:10, color:'#28afb0', borderColor:'#28afb0'}} variant='outlined' onClick={() => openNavigationApp(instance.address)}>Navegar</Button>
                         </Box> 
                       </Box>

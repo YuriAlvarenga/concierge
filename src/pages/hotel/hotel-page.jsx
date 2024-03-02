@@ -29,7 +29,6 @@ export default function HotelPage(){
                     <SmallCard/>
                     <WifiCard />
                     <HourCard />
-                    <Title title={"Serviços"} />
                     <ServicesFromHotelCard />
                     <Toolbar />
                     <MenuBottomNavigation/>

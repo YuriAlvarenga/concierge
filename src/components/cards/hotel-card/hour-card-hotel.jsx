@@ -7,19 +7,17 @@ import DinnerDiningIcon from '@mui/icons-material/DinnerDining'
 import PoolIcon from '@mui/icons-material/Pool'
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter'
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom'
-import HotTubIcon from '@mui/icons-material/HotTub'
 import DoorBackIcon from '@mui/icons-material/DoorBack'
 import { HotelContext } from '../../../context/context'
 
 const iconMap = {
-  "Café": <FreeBreakfastIcon sx={{ mr: 1, fontSize: 18,   }} />,
-  "Almoço": <DinnerDiningIcon sx={{ mr: 1, fontSize: 18, color:'orange'  }} />,
-  "Jantar": <BrunchDiningIcon sx={{ mr: 1, fontSize: 18, color:'red' }} />,
-  "Piscina": <PoolIcon sx={{ mr: 1, fontSize: 18, color:'blue'  }} />,
+  "Café da manhã": <FreeBreakfastIcon sx={{ mr: 1, fontSize: 18 }} />,
+  "Almoço": <DinnerDiningIcon sx={{ mr: 1, fontSize: 18 }} />,
+  "Jantar": <BrunchDiningIcon sx={{ mr: 1, fontSize: 18 }} />,
+  "Piscina": <PoolIcon sx={{ mr: 1, fontSize: 18 }} />,
   "Academia": <FitnessCenterIcon sx={{ mr: 1, fontSize: 18 }} />,
-  "Sauna": <HotTubIcon sx={{ mr: 1, fontSize: 18, color:'red'  }} />,
-  "Check-in": <MeetingRoomIcon sx={{ mr: 1, fontSize: 18, color:'brown'  }} />,
-  "Check-out": <DoorBackIcon sx={{ mr: 1, fontSize: 18, color:'brown'  }} />
+  "Check-in": <MeetingRoomIcon sx={{ mr: 1, fontSize: 18 }} />,
+  "Check-out": <DoorBackIcon sx={{ mr: 1, fontSize: 18 }} />
 }
 
 export default function HourCard() {
@@ -47,7 +45,7 @@ export default function HourCard() {
       {loadedHotel && (
         <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 }}>
           <Grid item xs={12}>
-            <Typography variant="h6" sx={{ mb: 1 }}>{loadedHotel.hours.name}</Typography>
+            <Typography variant="h6" sx={{ mb: 1 }}>{loadedHotel.hours.title}</Typography>
             <Card sx={{ backgroundColor: '#FFF', borderRadius: 2 }}>
               <CardContent>
                 <Grid container spacing={2}>
@@ -68,12 +66,12 @@ export default function HourCard() {
 
 function HourRow({ icon, title, time }) {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
         {icon}
-        <Typography variant="body1">{title}</Typography>
+        <Typography variant="body1">{title}:</Typography>
       </Box>
-      <Typography variant="body2" color="text.secondary">{time}</Typography>
+      <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>{time}</Typography>
     </Box>
   )
 }
