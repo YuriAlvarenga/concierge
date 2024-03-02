@@ -31,12 +31,14 @@ export default function ShuttleCard() {
                   {service.instances && service.instances.map((instance, i) => (
                     <Grid item xs={12} key={i} style={{ marginBottom: 10 }}>
                       <Card sx={{ background: '#FFF', color: '#000', display:'flex', flexDirection:'row', alignItems: 'center' }}>
-                        <CardMedia
-                          component="img"
-                          image={instance.image} // supondo que haja uma propriedade para a foto do motorista
-                          alt={instance.name} // supondo que instance.name é o nome do motorista
-                          sx={{ width: 80, height: 80, borderRadius: '50%', m:2 }}
-                        />
+                        <Box sx={{ m: 1 }}>
+                          <CardMedia
+                            component="img"
+                            image={instance.image} 
+                            alt={instance.name} 
+                            sx={{ width: 80, height: 80, borderRadius: '50%' }}
+                          />
+                        </Box>
                         <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                           <CardContent>
                             <Typography sx={{ fontSize: 16 }} component="div">

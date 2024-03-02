@@ -54,7 +54,7 @@ export default function WifiCard() {
                     <CardContent sx={{ display: 'flex',  alignItems: 'center', justifyContent: 'space-between' }}>
                       <Box sx={{ display: 'flex', alignItems: 'center', flexWrap:'wrap' }}>
                         <Typography sx={{ display: 'flex', alignItems: 'center', mr: 1 }}>
-                          <WifiIcon sx={{fontSize:16, mr: 0.5}}/>
+                          <WifiIcon sx={{fontSize:16, mr: 0.5, color:'#28afb0'}}/>
                           {t("Rede")}:
                         </Typography>
                         <Typography color="text.secondary">
@@ -63,7 +63,7 @@ export default function WifiCard() {
                       </Box>
                       <Box sx={{ display: 'flex', alignItems: 'center' }}>
                         <Typography sx={{display: 'flex', alignItems: 'center',  mr: 1 }}>
-                        <HttpsIcon sx={{fontSize:16, mr: 0.5}}/>
+                        <HttpsIcon sx={{fontSize:16, mr: 0.5, color:'#28afb0'}}/>
                         {t("Senha")}:
                         </Typography>
                         <Typography color="text.secondary">

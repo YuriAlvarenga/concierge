@@ -141,13 +141,14 @@
         "hours": {
           "name": "Horários",
           "items": [
-            {"breakfast": "Café da manhã", "horario": "07:00h às 11:00h"},
-            {"lunch": "Almoço", "horario": "12:00h às 14:30h"},
-            {"dinner": "Jantar", "horario": "19:00h às 22:00h"},
-            {"swimmingPool": "Piscina", "horario": "09:00h às 19:00h"},
-            {"gym": "Academia", "horario": "09:00h às 19:00h"},
-            {"checkIn": "Check-im", "horario": "A partir das 14h"},
-            {"CheckOut": "Check-out", "horario": "Até às 12h"}
+            {"name": "Café", "horario": "07:00h às 11:00h"},
+            {"name": "Almoço", "horario": "12:00h às 14:30h"},
+            {"name": "Jantar", "horario": "19:00h às 22:00h"},
+            {"name": "Piscina", "horario": "09:00h às 19:00h"},
+            {"name": "Academia", "horario": "09:00h às 19:00h"},
+            {"name": "Sauna", "horario": "09:00h às 19:00h"},
+            {"name": "Check-in", "horario": "A partir das 14h"},
+            {"name": "Check-out", "horario": "Até às 12h"}
             
           ]
         }

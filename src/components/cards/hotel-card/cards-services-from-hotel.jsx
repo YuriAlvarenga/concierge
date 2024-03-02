@@ -40,12 +40,10 @@ export default function ServicesFromHotelCard() {
                   <Typography variant="body2">{item.isOpen ? t('Aberto') : t('Fechado agora')}</Typography>
                 </Box>
                 <IconButton onClick={() => handleWhatsAppClick(item.phoneNumber, item.message)}>
-                  <EastIcon sx={{ fontSize: 16, color: "#1d404c" }} />
+                  <EastIcon sx={{ fontSize: 16, color: "#28afb0" }} />
                 </IconButton>
               </Box>
-              <Button variant="contained" sx={{background:"#19647e", mt: 1}} fullWidth onClick={() => handleWhatsAppClick(item.phoneNumber, item.message)}>
-                {t(item.title)}
-              </Button>
+              <Button sx={{background:'#28afb0'}} variant='contained' fullWidth onClick={() => handleWhatsAppClick(item.phoneNumber, item.message)}>{t(item.title)}</Button>
             </CardContent>
           </Card>
         </Grid>
