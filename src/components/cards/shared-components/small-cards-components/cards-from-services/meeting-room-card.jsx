@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
-import {Grid, Card, CardMedia, CardContent, Typography } from '@mui/material'
+import { Grid, Card, CardMedia, CardContent, Typography, CardActions, Button } from '@mui/material'
 import { HotelContext } from '../../../../../context/context'
-
 
 export default function MeetingRoomCard() {
   const { hotel } = useContext(HotelContext)
@@ -23,30 +22,40 @@ export default function MeetingRoomCard() {
 
   return (
     <>
-    {loadedHotel && (
-      <Grid container spacing={2} style={{ padding: 10 }}>
-        <Grid item xs={12}>
-          <Typography sx={{ fontSize: 18, color: '#000' }} variant="h6" component="div">
-          Sala de Reuniões/Eventos
-          </Typography>
+      {loadedHotel && (
+        <Grid container spacing={1} style={{ padding: 10 }}>
+          {loadedHotel.services.map((service, serviceIndex) => (
+            <Grid item xs={12} key={serviceIndex}>
+              {service.title === "Sala de Reunião" && (
+                <>
+                  {service.instances.map((instance, instanceIndex) => (
+                    <Grid item xs={12} key={instanceIndex}>
+                      <Card sx={{ mb:3 }}>
+                        <CardMedia
+                          sx={{ height: 140 }}
+                          image={instance.image}
+                          title="green iguana"
+                        />
+                        <CardContent>
+                          <Typography gutterBottom variant="h5" component="div">
+                            {instance.name}
+                          </Typography>
+                          <Typography variant="body2" color="text.secondary">
+                            {instance.content}
+                          </Typography>
+                        </CardContent>
+                        <CardActions>
+                          <Button sx={{color:'#28afb0'}} size="small">Solicitar Orçamento</Button>
+                        </CardActions>
+                      </Card>
+                    </Grid>
+                  ))}
+                </>
+              )}
+            </Grid>
+          ))}
         </Grid>
-        {loadedHotel.services.map((service, index)=>(
-          <Grid item xs={12} key={index}>
-            {service.title === "Sala de Reunião" && (
-              <Card sx={{ background: '#FFF', color: '#000', display:'flex', flexDirection:'column'}}>
-                {service.instances && service.instances.map((instance, i) => (
-                  <CardContent key={i} sx={{ borderBottom: '1px solid #ccc' }}>
-                    <Typography sx={{ fontSize: 16 }} component="div">
-                      {instance.name}
-                    </Typography>
-                  </CardContent>
-                ))}
-              </Card>
-            )}
-          </Grid>
-        ))}
-      </Grid>
-    )}
+      )}
     </>
   )
 }

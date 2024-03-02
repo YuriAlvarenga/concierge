@@ -11,8 +11,7 @@ export default function MeetingRoomPage(){
     return(
         <>
             <TopBar title={'Sala de Reunião'} leftComponent={<ArrowBackButton/>}/>
-            <Toolbar/>
-                <MeetingRoomCard/>
+            <MeetingRoomCard/>
             <Toolbar/>
             <MenuBottomNavigation/>
         </>

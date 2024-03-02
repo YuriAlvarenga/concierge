@@ -8,7 +8,6 @@
           {
             "title": "Farmácias",
             "route": "/pharmacy",
-            "icon": "MedicationLiquidIcon",
             "instances": [
               {"name": "Farmácia Preço Popular", "status": "14:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega", "gradient": "#ff6888"},
               {"name": "Farmácia Panvel", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "Av. Central, 540 - Centro, Balneário Camboriú - SC, 88330-668", "content": "Compras na loja·Retirada na loja·Entrega", "gradient": "#1fe4f5"},
@@ -20,7 +19,6 @@
           {
             "title": "Lavanderia",
             "route": "/laundries",
-            "icon": "LocalLaundryServiceIcon",
             "instances": [
               {"name": "5àsec Lavanderia", "status": "00:00 às 23:59h", "contact": "456-789-0123", "gradient": "linear-gradient(to bottom, #ff6888 60%, transparent 50%)", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": ["Retirar sacola da lavanderia com a recepção.","Verificar"]},
               {"name": "Lavanderia Dimensão", "status": "09:00h às 21:00h", "contact": "456-789-0123", "gradient": "linear-gradient(to bottom, #1fe4f5 60%, transparent 50%)", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega"}
@@ -29,7 +27,6 @@
           {
             "title": "Locadoras",
             "route": "/car-rental-agency",
-            "icon": "CarRentalIcon",
             "instances": [
               {"name": "Localiza Locadora de Veículos", "status": "19:00h às 21:00h", "image": "/car-rental/localiza-bc.jpg"},
               {"name": "Movidas Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/movidas-bc.jpg"},
@@ -39,7 +36,6 @@
           {
             "title": "Translados",
             "route": "/shuttle-services",
-            "icon": "AirportShuttleIcon",
             "instances": [
               {"name": "Motorista X", "contact": "456-789-0123", "image": "/driver.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Branco"},
               {"name": "Motorista Y", "contact": "789-012-3456", "image": "/woman-driver.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Azul"}
@@ -48,56 +44,116 @@
           {
             "title": "Room Service",
             "route": "/room-service",
-            "icon": "RoomServiceIcon",
-            "items": [
-              {"name": "Refrigerante", "price": 5},
-              {"name": "Água Mineral", "price": 3},
-              {"name": "Chocolate", "price": 8}
+            "categories": [
+              {
+                "categoryTitle": "Bebidas",
+                "items": [
+                  {"name": "Coca-cola", "price": "09,00"},
+                  {"name": "Guaraná Antártica", "price": "09,00"},
+                  {"name": "Água Mineral sem gás", "price": "05,00"},
+                  {"name": "Água Mineral com gás", "price": "05,00"}
+                ]
+              },
+              {
+                "categoryTitle": "Lanches",
+                "items": [
+                  {"name": "Hambúrguer Tradicional", "price": "32,00"},
+                  {"name": "Hambúrguer Americano", "price": "28,00"},
+                  {"name": "Torradão", "price": "25,00"}
+                ]
+              },
+              {
+                "categoryTitle": "Alcoólicos",
+                "items": [
+                  {"name": "Vinho", "price": "85,00"},
+                  {"name": "Cerveja", "price": "08,00"}
+                ]
+              }
             ]
           },
           {
             "title": "Frigobar",
             "route": "/minibar-service",
-            "icon": "KitchenIcon",
-            "items": [
-              {"name": "Refrigerante", "price": 5},
-              {"name": "Água Mineral", "price": 3},
-              {"name": "Chocolate", "price": 8},
-              {"name": "Refrigerante", "price": 5},
-              {"name": "Água Mineral", "price": 3},
-              {"name": "Chocolate", "price": 8}
+            "categories": [
+              {
+                "categoryTitle": "Bebidas",
+                "items": [
+                  {"name": "Coca-cola", "price": "09,00"},
+                  {"name": "Guaraná Antártica", "price": "09,00"},
+                  {"name": "Água Mineral sem gás", "price": "05,00"},
+                  {"name": "Água Mineral com gás", "price": "05,00"}
+                ]
+              },
+              {
+                "categoryTitle": "Chocolates",
+                "items": [
+                  {"name": "Kit Kat", "price": "14,00"}
+                ]
+              },
+              {
+                "categoryTitle": "Alcoólicos",
+                "items": [
+                  {"name": "Vinho", "price": "85,00"},
+                  {"name": "Cerveja", "price": "08,00"}
+                ]
+              }
             ]
           },
           {
             "title": "Sala de Reunião",
             "route": "/meeting-room-service",
-            "icon": "GroupsIcon",
             "instances": [
-              {"name": "Salão Brut", "contact": "456-789-0123"},
-              {"name": "Sala VIP", "contact": "789-012-3456"}
+              {"name": "Salão Brut", "content": "Nosso auditório tem a capacidade para 300 pessoas", "image": "/meeting-room/brut-meeting.jpg"},
+              {"name": "Sala VIP", "content": "Nossa sala tem a capacidade para 150 pessoas", "image": "/meeting-room/vip-meeting.jpg"}
             ]
           },
           {
             "title": "Lista de Canais",
             "route": "/channel-list-card",
-            "icon": "DvrIcon",
-            "instances": [
-              {"name": "HBO", "channel": "004"},
-              {"name": "Globo ", "channel": "010"},
-              {"name": "SBT ", "channel": "011"},
-              {"name": "Record ", "channel": "012"}
+            "categories": [
+              {
+                "categoryTitle": "Canais Abertos",
+                "items": [
+                  {"name": "Globo ", "channel": "010"},
+                  {"name": "SBT ", "channel": "011"},
+                  {"name": "Record ", "channel": "012"}
+                ]
+              },
+              {
+                "categoryTitle": "Canais de Fechados",
+                "items": [
+                  {"name": "HBO", "channel": "104"},
+                  {"name": "Cartoon Network ", "channel": "110"},
+                  {"name": "News ", "channel": "111"},
+                  {"name": "HBO + ", "channel": "112"}
+                ]
+              }
             ]
           }
         ],
-        "restaurant": {
-          "name": "Restaurante A",
+        "internet": {
+          "name": "Wifi",
           "items": [
-            {"name": "Prato A", "price": 10},
-            {"name": "Prato B", "price": 15},
-            {"name": "Prato C", "price": 20}
+            {"network": "Hotel Ibis", "password": "senhadohotel"}
+          ]
+        },
+        "hours": {
+          "name": "Horários",
+          "items": [
+            {"breakfast": "Café da manhã", "horario": "07:00h às 11:00h"},
+            {"lunch": "Almoço", "horario": "12:00h às 14:30h"},
+            {"dinner": "Jantar", "horario": "19:00h às 22:00h"},
+            {"swimmingPool": "Piscina", "horario": "09:00h às 19:00h"},
+            {"gym": "Academia", "horario": "09:00h às 19:00h"},
+            {"checkIn": "Check-im", "horario": "A partir das 14h"},
+            {"CheckOut": "Check-out", "horario": "Até às 12h"}
+            
           ]
         }
       },
+
+
+
       {
         "id": 2,
         "name": "Hotel Itália",
@@ -117,6 +173,9 @@
           {"name": "Salgadinho", "price": 7}
         ]
       },
+
+
+
       {
         "id": 3,
         "name": "Hotel Slaviero",

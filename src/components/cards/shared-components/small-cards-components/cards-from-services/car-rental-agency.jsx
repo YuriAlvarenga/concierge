@@ -28,7 +28,7 @@ export default function CarRentalCard() {
   return (
     <>
     {loadedHotel && (
-      <Grid container spacing={2} style={{ padding: 10 }}>
+      <Grid container spacing={2} style={{ padding: 15 }}>
         {loadedHotel.services.map((service, index)=>(
           <Grid item xs={12} key={index}>
             {service.title === "Locadoras" && (

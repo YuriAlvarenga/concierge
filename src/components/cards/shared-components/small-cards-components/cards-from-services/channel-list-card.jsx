@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import {Grid, Card, CardMedia, CardContent, Typography } from '@mui/material'
+import {Grid, Card, CardContent, Typography, Box } from '@mui/material'
 import { HotelContext } from '../../../../../context/context'
 
 
@@ -23,33 +23,37 @@ export default function ChannelListCard() {
 
   return (
     <>
-    {loadedHotel && (
-      <Grid container spacing={2} style={{ padding: 10 }}>
-        <Grid item xs={12}>
-          <Typography sx={{ fontSize: 18, color: '#000' }} variant="h6" component="div">
-            Lista de Canais
-          </Typography>
+      {loadedHotel && (
+        <Grid container spacing={1} style={{ padding: 10, paddingTop:0, marginTop:0 }}>
+          {loadedHotel.services.map((service, index) => (
+            <Grid item xs={12} key={index}>
+              {service.title === "Lista de Canais" && (
+                <Box>
+                  {service.categories && service.categories.map((category, catIndex) => (
+                    <React.Fragment key={catIndex}>
+                    <Typography variant="subtitle1" sx={{ fontWeight: 'bold', marginBottom: 1 }}>{category.categoryTitle}</Typography>
+                    <Card sx={{ background: '#FFF', color: '#000', display: 'flex', flexDirection: 'column', mb:5 }}>
+                        <Box key={catIndex}>
+                          {category.items && category.items.map((item, itemIndex) => (
+                            <CardContent key={itemIndex} sx={{ borderBottom: '1px solid #ccc', display:'flex', alignItems:'center', justifyContent:'space-between' }}>
+                              <Typography sx={{ fontSize: 16 }} component="div">
+                                {item.name}
+                              </Typography>
+                              <Typography sx={{ fontSize: 14 }} component="div">
+                                {item.channel}
+                              </Typography>
+                            </CardContent>
+                        ))}
+                        </Box>
+                    </Card>
+                    </React.Fragment>
+                  ))}
+                </Box>
+              )}
+            </Grid>
+          ))}
         </Grid>
-        {loadedHotel.services.map((service, index)=>(
-          <Grid item xs={12} key={index}>
-            {service.title === "Lista de Canais" && (
-              <Card sx={{ background: '#FFF', color: '#000', display:'flex', flexDirection:'column'}}>
-                {service.instances && service.instances.map((instance, i) => (
-                  <CardContent key={i} sx={{ borderBottom: '1px solid #ccc' }}>
-                    <Typography sx={{ fontSize: 16 }} component="div">
-                      {instance.name}
-                    </Typography>
-                    <Typography sx={{ fontSize: 14 }} component="div">
-                      {instance.channel}
-                    </Typography>
-                  </CardContent>
-                ))}
-              </Card>
-            )}
-          </Grid>
-        ))}
-      </Grid>
-    )}
+      )}
     </>
   )
 }

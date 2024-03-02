@@ -11,8 +11,7 @@ export default function MinibarServicePage(){
     return(
         <>
             <TopBar title={'Frigobar'} leftComponent={<ArrowBackButton/>}/>
-            <Toolbar/>
-                <MinibarCard/>
+            <MinibarCard/>
             <Toolbar/>
             <MenuBottomNavigation/>
         </>

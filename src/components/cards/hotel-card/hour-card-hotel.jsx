@@ -13,7 +13,7 @@ export default function HourCard() {
   const { t } = useTranslation()
 
   return (
-    <Grid container spacing={2} sx={{ padding: 1 }}>
+    <Grid container spacing={1} sx={{ padding: 2 }}>
       <Grid item xs={12}>
         <Typography variant="h6" sx={{ mb: 1 }}>Horários</Typography>
         <Card sx={{ backgroundColor: '#FFF', borderRadius: 2 }}>

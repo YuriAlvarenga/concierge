@@ -11,8 +11,7 @@ export default function RoomServicePage(){
     return(
         <>
             <TopBar title={'Room Service'} leftComponent={<ArrowBackButton/>}/>
-            <Toolbar/>
-                <RoomServiceCard/>
+            <RoomServiceCard/>
             <Toolbar/>
             <MenuBottomNavigation/>
         </>
