@@ -6,16 +6,18 @@ import BrunchDiningIcon from '@mui/icons-material/BrunchDining'
 import DinnerDiningIcon from '@mui/icons-material/DinnerDining'
 import PoolIcon from '@mui/icons-material/Pool'
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter'
+import HotTubIcon from '@mui/icons-material/HotTub'
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom'
 import DoorBackIcon from '@mui/icons-material/DoorBack'
 import { HotelContext } from '../../../context/context'
 
 const iconMap = {
-  "Café da manhã": <FreeBreakfastIcon sx={{ mr: 1, fontSize: 18 }} />,
+  "Café": <FreeBreakfastIcon sx={{ mr: 1, fontSize: 18 }} />,
   "Almoço": <DinnerDiningIcon sx={{ mr: 1, fontSize: 18 }} />,
   "Jantar": <BrunchDiningIcon sx={{ mr: 1, fontSize: 18 }} />,
   "Piscina": <PoolIcon sx={{ mr: 1, fontSize: 18 }} />,
   "Academia": <FitnessCenterIcon sx={{ mr: 1, fontSize: 18 }} />,
+  "Sauna": <HotTubIcon sx={{ mr: 1, fontSize: 18 }} />,
   "Check-in": <MeetingRoomIcon sx={{ mr: 1, fontSize: 18 }} />,
   "Check-out": <DoorBackIcon sx={{ mr: 1, fontSize: 18 }} />
 }
@@ -66,7 +68,7 @@ export default function HourCard() {
 
 function HourRow({ icon, title, time }) {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
         {icon}
         <Typography variant="body1">{title}:</Typography>
