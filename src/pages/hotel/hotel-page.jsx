@@ -19,19 +19,14 @@ export default function HotelPage(){
         <>
           {hotel && (
                 <>
-                    <ImageCardFromHotel hotelName={hotel.name} />
+                    <ImageCardFromHotel hotelName={hotel.nameHotel} />
                     <Box sx={{ position: "absolute", top: 240, right: 0 }}>
                         <SocialMedia
                             instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
                             facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
                         />
                     </Box>
-                    {hotel.services && (
-                        <>
-                            <Title title={"Serviços"} />
-                            <SmallCard hotelSmallServices={hotel.services} />
-                        </>
-                    )}
+                    <SmallCard/>
                     <WifiCard />
                     <HourCard />
                     <Title title={"Serviços"} />

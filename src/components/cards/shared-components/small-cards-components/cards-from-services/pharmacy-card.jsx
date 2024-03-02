@@ -50,7 +50,7 @@ export default function PharmacyCard() {
         <Grid container spacing={2} sx={{ padding: 1 }}>
           {loadedHotel.services.map((service, index) => (
             <Grid item xs={12} key={index} onClick={() => navigate(service.route)}>
-              {service.title === 'Farmácias' && (
+              {service.subTitle === 'Farmácias' && (
                 <>
                   {service.instances && service.instances.map((instance, i) => (
                     <Card key={i} sx={{ marginBottom: 2 }}> 

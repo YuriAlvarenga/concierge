@@ -26,7 +26,7 @@ export default function RoomServiceCard() {
         <Grid container spacing={2} style={{ padding: 10 }}>
           {loadedHotel.services.map((service, index) => (
             <Grid item xs={12} key={index}>
-              {service.title === "Room Service" && (
+              {service.subTitle === "Room Service" && (
                 <Box>
                   {service.categories && service.categories.map((category, catIndex) => (
                     <React.Fragment key={catIndex}>

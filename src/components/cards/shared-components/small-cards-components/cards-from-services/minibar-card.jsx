@@ -22,12 +22,12 @@ export default function MinibarCard() {
   }, [hotel])
 
   return (
-    <>
+    <React.Fragment>
       {loadedHotel && (
         <Grid container spacing={1} style={{ padding: 10 }}>
           {loadedHotel.services.map((service, index) => (
             <Grid item xs={12} key={index}>
-              {service.title === "Frigobar" && (
+              {service.subTitle === "Frigobar" && (
                 <Box>
                   {service.categories && service.categories.map((category, catIndex) => (
                     <React.Fragment key={catIndex}>
@@ -54,6 +54,6 @@ export default function MinibarCard() {
           ))}
         </Grid>
       )}
-    </>
+    </React.Fragment>
   )
 }

@@ -26,7 +26,7 @@ export default function ShuttleCard() {
         <Grid container spacing={2} style={{ padding: 15 }}>
           {loadedHotel.services.map((service, index)=>(
             <Grid item xs={12} key={index}>
-              {service.title === "Translados" && (
+              {service.subTitle === "Translados" && (
                 <>
                   {service.instances && service.instances.map((instance, i) => (
                     <Grid item xs={12} key={i} style={{ marginBottom: 10 }}>

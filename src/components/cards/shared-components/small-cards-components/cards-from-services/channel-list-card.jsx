@@ -27,7 +27,7 @@ export default function ChannelListCard() {
         <Grid container spacing={1} style={{ padding: 10, paddingTop:0, marginTop:0 }}>
           {loadedHotel.services.map((service, index) => (
             <Grid item xs={12} key={index}>
-              {service.title === "Lista de Canais" && (
+              {service.subTitle === "Lista de Canais" && (
                 <Box>
                   {service.categories && service.categories.map((category, catIndex) => (
                     <React.Fragment key={catIndex}>

@@ -2,11 +2,12 @@
     "hotels": [
       {
         "id": 1,
-        "name": "Hotel Ibis",
+        "nameHotel": "Hotel Ibis",
         "location": "Cidade A",
         "services": [
           {
-            "title": "Farmácias",
+            "title": "Serviços",
+            "subTitle": "Farmácias",
             "route": "/pharmacy",
             "instances": [
               {"name": "Farmácia Preço Popular", "status": "14:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega", "gradient": "#ff6888"},
@@ -17,7 +18,7 @@
             ]
           },
           {
-            "title": "Lavanderia",
+            "subTitle": "Lavanderia",
             "route": "/laundries",
             "instances": [
               {"name": "5àsec Lavanderia", "status": "00:00 às 23:59h", "contact": "456-789-0123", "gradient": "linear-gradient(to bottom, #ff6888 60%, transparent 50%)", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": ["Retirar sacola da lavanderia com a recepção.","Verificar"]},
@@ -25,7 +26,7 @@
             ]
           },
           {
-            "title": "Locadoras",
+            "subTitle": "Locadoras",
             "route": "/car-rental-agency",
             "instances": [
               {"name": "Localiza Locadora de Veículos", "status": "19:00h às 21:00h", "image": "/car-rental/localiza-bc.jpg"},
@@ -34,7 +35,7 @@
             ]
           },
           {
-            "title": "Translados",
+            "subTitle": "Translados",
             "route": "/shuttle-services",
             "instances": [
               {"name": "Motorista X", "contact": "456-789-0123", "image": "/driver.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Branco"},
@@ -42,7 +43,7 @@
             ]
           },
           {
-            "title": "Room Service",
+            "subTitle": "Room Service",
             "route": "/room-service",
             "categories": [
               {
@@ -72,7 +73,7 @@
             ]
           },
           {
-            "title": "Frigobar",
+            "subTitle": "Frigobar",
             "route": "/minibar-service",
             "categories": [
               {
@@ -100,7 +101,7 @@
             ]
           },
           {
-            "title": "Sala de Reunião",
+            "subTitle": "Sala de Reunião",
             "route": "/meeting-room-service",
             "instances": [
               {"name": "Salão Brut", "content": "Nosso auditório tem a capacidade para 300 pessoas", "image": "/meeting-room/brut-meeting.jpg"},
@@ -108,7 +109,7 @@
             ]
           },
           {
-            "title": "Lista de Canais",
+            "subTitle": "Lista de Canais",
             "route": "/channel-list-card",
             "categories": [
               {
@@ -156,7 +157,7 @@
 
       {
         "id": 2,
-        "name": "Hotel Itália",
+        "nameHotel": "Hotel Itália",
         "location": "Cidade B",
         "rating": 4.2,
         "restaurant": {
@@ -178,7 +179,7 @@
 
       {
         "id": 3,
-        "name": "Hotel Slaviero",
+        "nameHotel": "Hotel Slaviero",
         "location": "Cidade C",
         "rating": 4.8,
         "restaurant": {

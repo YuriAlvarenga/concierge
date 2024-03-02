@@ -31,7 +31,7 @@ export default function CarRentalCard() {
       <Grid container spacing={2} style={{ padding: 15 }}>
         {loadedHotel.services.map((service, index)=>(
           <Grid item xs={12} key={index}>
-            {service.title === "Locadoras" && (
+            {service.subTitle === "Locadoras" && (
               <Box>
                 {service.instances && service.instances.map((instance, i) => (
                   <React.Fragment key={`${index}-${i}`}>
