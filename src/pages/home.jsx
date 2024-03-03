@@ -34,9 +34,9 @@ export default function Home(){
           alignItems="center"
           bgcolor="#f3f3f3"
         >
-          <Box sx={{display:'flex', alignItems:'center'}}>
+          <Box sx={{display:'flex', alignItems:'center', mb: 1}}>
             <img src="logo-app/concierge-logo.png" alt="Concierge Virtual" style={{ height:80, width:80, borderRadius:10}} />
-            <Typography variant="h6" gutterBottom align="center" sx={{ml:2}}>
+            <Typography variant="h6" gutterBottom align="center" sx={{ml:1}}>
               Concierge Virtual
             </Typography>
           </Box>
