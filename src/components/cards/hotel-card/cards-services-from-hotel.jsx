@@ -44,7 +44,7 @@ export default function ServicesFromHotelCard() {
         <Grid container spacing={2} sx={{ padding: 2, mt:1 }}>
            {loadedHotel.contacts && (
             <Grid item xs={12} sm={6}>
-              <Typography variant="h6" sx={{ mb: 1 }}>{loadedHotel.contacts.title}</Typography>
+              <Typography variant="h6" sx={{ mb: 1 }}>{t(loadedHotel.contacts.title)}</Typography>
               {loadedHotel.contacts.items.map((item, idx) => (
                 <Card key={idx} sx={{ boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2, mb: 2 }}>
                   <CardContent>
@@ -60,7 +60,7 @@ export default function ServicesFromHotelCard() {
                           <></>
                           )}
                         <Typography sx={{ fontSize: 14}} component="div">
-                          {item.status ? calculateStatus(item.status) : 'Horário não especificado'}
+                          {t(item.status ? calculateStatus(item.status) : 'Horário não especificado')}
                         </Typography>
                       </Box>
                       <IconButton onClick={() => handleWhatsAppClick(item.phoneNumber, item.message)}>

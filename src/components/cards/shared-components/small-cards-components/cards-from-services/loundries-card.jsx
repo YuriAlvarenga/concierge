@@ -5,9 +5,11 @@ import { useNavigate } from 'react-router-dom'
 import { calculateStatus } from '../../../../../list-of-datas/function-calculate-hour-of-status-from-lists/status-utils'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
+import { useTranslation } from 'react-i18next'
 
 export default function PharmacyCard() {
   const { hotel } = useContext(HotelContext)
+  const { t } = useTranslation()
   const [loadedHotel, setLoadedHotel] = useState(null)
   const navigate = useNavigate()
 
@@ -61,7 +63,7 @@ export default function PharmacyCard() {
                       <CardContent sx={{  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}> 
                         <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between', width:'100%', p:1, background: instance.gradient, }}>
                           <Typography sx={{ fontSize: 16, color:"#FFF", pb:4 }} component="div">
-                            {instance.name}
+                            {t(instance.name)}
                           </Typography>
                           <Box sx={{ display: 'flex', alignItems: 'center', pb:4  }}>
                             {instance.status ? (
@@ -74,7 +76,7 @@ export default function PharmacyCard() {
                               <></>
                             )}
                             <Typography sx={{ fontSize: 12, color: "#FFF"}} component="div">
-                              {instance.status ? calculateStatus(instance.status) : 'Horário não especificado'}
+                              {t(instance.status ? calculateStatus(instance.status) : 'Horário não especificado')}
                             </Typography>
                           </Box>
                         </Box>
@@ -101,7 +103,7 @@ export default function PharmacyCard() {
                         <Box>
                           <Button sx={{fontSize:10, mr:1, width: 80, color:'#28afb0', borderColor:'#28afb0'}} variant='outlined' onClick={() => handleWhatsAppClick(instance.phoneNumber, instance.message)}>Menu</Button>
                           <Button sx={{fontSize:10, mr:1, color:'#28afb0', borderColor:'#28afb0'}} onClick={() => handleWhatsAppClick(instance.phoneNumber, instance.message)} variant='outlined'>WhatsApp</Button>
-                          <Button sx={{fontSize:10, color:'#28afb0', borderColor:'#28afb0'}} variant='outlined' onClick={() => openNavigationApp(instance.address)}>Navegar</Button>
+                          <Button sx={{fontSize:10, color:'#28afb0', borderColor:'#28afb0'}} variant='outlined' onClick={() => openNavigationApp(instance.address)}>{t("Navegar")}</Button>
                         </Box> 
                       </Box>
                     

@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Grid, Card, CardContent, CardMedia, Typography, Button, Box } from '@mui/material'
 import { HotelContext } from '../../../../../context/context'
+import { useTranslation } from 'react-i18next'
 
 export default function ShuttleCard() {
   const { hotel } = useContext(HotelContext)
+  const { t } = useTranslation()
   const [loadedHotel, setLoadedHotel] = useState(null)
 
   useEffect(() => {
@@ -55,7 +57,7 @@ export default function ShuttleCard() {
                               Carro: {instance.car} | Placa: {instance.licensePlate} | Cor: {instance.carColor}
                             </Typography>
                             <Box sx={{display:'flex', flexDirection:'row-reverse', mt:1}}>
-                              <Button sx={{color:'#28afb0'}} size="small" onClick={() => handleWhatsAppClick(instance.phoneNumber, instance.message)}>Solicitar Motorista</Button>  
+                              <Button sx={{color:'#28afb0'}} size="small" onClick={() => handleWhatsAppClick(instance.phoneNumber, instance.message)}>{t("Solicitar Motorista")}</Button>  
                             </Box>
                           </CardContent>
                         </Box>

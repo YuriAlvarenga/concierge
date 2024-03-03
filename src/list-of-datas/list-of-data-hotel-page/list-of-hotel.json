@@ -104,8 +104,8 @@
             "subTitle": "Sala de Reunião",
             "route": "/meeting-room-service",
             "instances": [
-              {"name": "Salão Brut", "content": "Nosso auditório tem a capacidade para 300 pessoas", "image": "/meeting-room/brut-meeting.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar um orçamento da sala de eventos."},
-              {"name": "Sala VIP", "content": "Nossa sala tem a capacidade para 150 pessoas", "image": "/meeting-room/vip-meeting.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar um orçamento da sala de eventos."}
+              {"name": "Salão Brut", "content": "Um excelente espaço para seus eventos, nossa sala de eventos Sala Brut é climatizada, com telão retrátil, projetor datashow , sonorização embutida,  frigobar, pé direito de 3m de altura, existe a possibilidade de abrir a parede lateral e transformar em uma sala maior, caso a sala ao lado esteja disponível, solicite um orçamento.", "image": "/meeting-room/brut-meeting.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar um orçamento da sala de eventos."},
+              {"name": "Sala VIP", "content": "Esse espaço incrível para seus eventos, nossa sala de eventos Sala VIP é climatizada, com telão retrátil, projetor datashow, sonorização embutida,  frigobar, pé direito de 3m de altura, existe a possibilidade de abrir a parede lateral e transformar em uma sala maior, caso a sala ao lado esteja disponível, solicite um orçamento. ", "image": "/meeting-room/vip-meeting.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar um orçamento da sala de eventos."}
             ]
           },
           {
@@ -158,7 +158,25 @@
             { "name": "Reservas", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer uma reserva.", "status": "09:00h às 17:00h" },
             { "name": "Recepção", "phoneNumber": "+5547920025230", "message": "Mensagem para a recepção.", "status": "00:01h às 23:59h"}
           ]
-        }
+        },
+        "restaurants": {
+          "items": [
+            { "name":"Brava Sushi", "status": "19:00h às 00:00h", "image": "/restaurants/sushi-bc.jpg"},
+            {"name":"Heróis da Pizza","status": "09:00h às 21:00h", "image": "/restaurants/herois-da-pizza-bc.jpg", "tag": ["aberto agora"]},
+            { "name":"Distretto Trattoria","status": "19:00h às 00:00h", "image": "/restaurants/distretto.jpg", "routePage": "/distretto-tratoria"}
+          ]
+        },
+      "strolls": {
+        "items": [
+          { "name":"Space Adventure", "status": "19:00h às 21:00h", "image": "/strolls-bc/images-from-cards-bc/space-adventure-bc.jpg"},
+          {  "name":"Beto Carrero World", "status": "09:00h às 20:00h", "image": "/strolls-bc/images-from-cards-bc/beto-carrero-world.jpg"},
+          { "name":"Oceanic Aquarium", "status": "09:00h às 21:00h", "image": "/strolls-bc/images-from-cards-bc/aquario-bc.jpg", "routePage":"/strolls-oceanic-aquarium-page-bc"},
+          {  "name":"Jurassic Park", "status": "09:00h às 20:00h", "image": "/strolls-bc/images-from-cards-bc/aventura-jurassica.jpg"},
+          {  "name":"Roda Gigante", "status": "09:00h às 21:30h", "image":"/strolls-bc/images-from-cards-bc/big-weel.jpg"},
+          {  "name":"Muve indoor", "status": "09:00h às 20:00h", "image":"/strolls-bc/images-from-cards-bc/muve-indoor.png"},
+          {  "name":"Hollywood-bowl", "status": "09:00h às 20:00h", "image":"/strolls-bc/images-from-cards-bc/hollywood-bowl.jpg"}
+        ]
+      }
       },
 
 

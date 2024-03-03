@@ -52,7 +52,7 @@ export default function SmallCardServices() {
       {loadedHotel && (
          <React.Fragment>
          <Typography variant="h6" sx={{ml: 1, mt: 2, pt:2}}>
-           {loadedHotel.services[0].title}
+           {t(loadedHotel.services[0].title)}
          </Typography>
         <Grid container spacing={1} sx={{ padding: 2 }}>
           {loadedHotel.services.map((service, index) => (

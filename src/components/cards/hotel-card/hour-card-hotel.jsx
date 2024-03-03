@@ -47,7 +47,7 @@ export default function HourCard() {
       {loadedHotel && (
         <Grid container spacing={2} style={{ padding: 15, paddingBottom: 0 , marginTop:1}}>
           <Grid item xs={12}>
-            <Typography variant="h6" sx={{ mb: 1 }}>{loadedHotel.hours.title}</Typography>
+            <Typography variant="h6" sx={{ mb: 1 }}>{t(loadedHotel.hours.title)}</Typography>
             <Card sx={{ backgroundColor: '#FFF', borderRadius: 2 }}>
               <CardContent>
                 <Grid container spacing={2}>
