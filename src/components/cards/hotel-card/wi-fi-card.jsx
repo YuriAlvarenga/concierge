@@ -44,7 +44,7 @@ export default function WifiCard() {
   return (
     <React.Fragment>
       {loadedHotel && (
-        <Grid container spacing={2} style={{ padding: 15, paddingBottom: 0 }}>
+        <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0, marginTop:1 }}>
           {loadedHotel.internet && (
             <Grid item xs={12}>
               <Typography variant="h6" sx={{ mb: 1 }}>{loadedHotel.internet.title}</Typography>

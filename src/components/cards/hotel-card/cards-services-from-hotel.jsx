@@ -6,7 +6,6 @@ import EastIcon from '@mui/icons-material/East'
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import { useTranslation } from 'react-i18next'
 import { HotelContext } from '../../../context/context'
-import zIndex from '@mui/material/styles/zIndex'
 import { calculateStatus } from '../../../list-of-datas/function-calculate-hour-of-status-from-lists/status-utils'
 
 
@@ -39,15 +38,10 @@ export default function ServicesFromHotelCard() {
   }
   
 
-  const serviceItems = [
-    { title: 'Reservas', phoneNumber: '+5547997815538', message: 'Olá, gostaria de fazer uma reserva.', isOpen: false, color: 'red'  },
-    { title: 'Recepção', phoneNumber: '+5547997815538', message: 'Mensagem para a recepção.', isOpen: true, color: 'green'  },
-  ]
-
   return (
     <React.Fragment>
       {loadedHotel && (
-        <Grid container spacing={2} sx={{ padding: 2 }}>
+        <Grid container spacing={2} sx={{ padding: 1, mt:1 }}>
            {loadedHotel.contacts && (
             <Grid item xs={12} sm={6}>
               <Typography variant="h6" sx={{ mb: 1 }}>{loadedHotel.contacts.title}</Typography>
