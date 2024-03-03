@@ -54,7 +54,7 @@ export default function SmallCardServices() {
          <Typography variant="h6" sx={{ml: 1, mt: 2, pt:2}}>
            {loadedHotel.services[0].title}
          </Typography>
-        <Grid container spacing={2} sx={{ padding: 2 }}>
+        <Grid container spacing={1} sx={{ padding: 2 }}>
           {loadedHotel.services.map((service, index) => (
             <Grid item xs={3} key={index} onClick={() => navigate(service.route)}>
               <Card sx={{ background: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: 80 }}>
@@ -63,7 +63,7 @@ export default function SmallCardServices() {
                     {iconMap[service.subTitle]}
                   </Typography>
                 </CardContent>
-                <Typography sx={{ fontSize: 12 }} component="div">
+                <Typography sx={{ fontSize: 12 }} alignItems='center' component="div">
                   {t(service.subTitle)}
                 </Typography>
               </Card>
