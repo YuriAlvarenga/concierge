@@ -25,7 +25,6 @@ export default function Home(){
 
   return (
     <>
-      <TopBar title="Concierge Virtual" />
       <Fade in={showWelcomeMessage} timeout={1000}>
         <Box
           minHeight="100vh"
@@ -35,15 +34,12 @@ export default function Home(){
           alignItems="center"
           bgcolor="#f3f3f3"
         >
-          <Typography variant="h3" gutterBottom align="center">
-            Bem-vindo
-          </Typography>
-          <Typography variant="h3" gutterBottom align="center">
-            ao
-          </Typography>
-          <Typography variant="h3" gutterBottom align="center">
-            Concierge Virtual!
-          </Typography>
+          <Box sx={{display:'flex', alignItems:'center'}}>
+            <img src="logo-app/concierge-logo.png" alt="Concierge Virtual" style={{ height:80, width:80, borderRadius:10}} />
+            <Typography variant="h6" gutterBottom align="center" sx={{ml:2}}>
+              Concierge Virtual
+            </Typography>
+          </Box>
           {isLoading && (
             <Box mt={2}>
               <Typography variant="body1" align="center">Carregando...</Typography>
