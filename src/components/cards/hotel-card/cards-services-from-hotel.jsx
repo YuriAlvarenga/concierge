@@ -41,7 +41,7 @@ export default function ServicesFromHotelCard() {
   return (
     <React.Fragment>
       {loadedHotel && (
-        <Grid container spacing={2} sx={{ padding: 1, mt:1 }}>
+        <Grid container spacing={2} sx={{ padding: 2, mt:1 }}>
            {loadedHotel.contacts && (
             <Grid item xs={12} sm={6}>
               <Typography variant="h6" sx={{ mb: 1 }}>{loadedHotel.contacts.title}</Typography>

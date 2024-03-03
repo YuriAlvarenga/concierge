@@ -45,12 +45,12 @@ export default function HourCard() {
   return (
     <React.Fragment>
       {loadedHotel && (
-        <Grid container spacing={2} style={{ padding: 10, paddingBottom: 0 , marginTop:1}}>
+        <Grid container spacing={2} style={{ padding: 15, paddingBottom: 0 , marginTop:1}}>
           <Grid item xs={12}>
             <Typography variant="h6" sx={{ mb: 1 }}>{loadedHotel.hours.title}</Typography>
             <Card sx={{ backgroundColor: '#FFF', borderRadius: 2 }}>
               <CardContent>
-                <Grid container spacing={3}>
+                <Grid container spacing={2}>
                   {loadedHotel.hours.items.map((item, index) => (
                     <Grid item xs={4} key={index}>
                       <HourRow icon={iconMap[item.name]} title={t(item.name)} time={item.horario} />
