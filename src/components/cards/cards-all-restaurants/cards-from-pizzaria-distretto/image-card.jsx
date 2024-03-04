@@ -16,7 +16,7 @@ export default function ImageCardFromPizzariaDistretto(){
           component="img"
           alt='Imagem'
           image="/restaurants/distretto-tratoria/pizza-no-forno.jpg" 
-          sx={{ height: 280, objectFit: 'fill', margin: 0, padding: 0 }}
+          sx={{ height: 240, objectFit: 'fill', margin: 0, padding: 0 }}
         />
       </Card>
       <Stack direction="row" alignItems="center" justifyContent="flex-end" sx={{ position: 'fixed', top: 28, width:'100%', right:0, color:color,  background: 'rgba(0,0,0,0.5)', p:1 }}>

@@ -4,6 +4,12 @@
         "id": 1,
         "nameHotel": "Hotel Ibis",
         "location": "Cidade A",
+        "socialMedia": {
+          "items": [
+            {"instagram": "https://www.instagram.com/ibiscriciuma/"},
+            {"facebook": "https://www.facebook.com/hotelibiscriciuma/"}
+          ]
+        },
         "internet": {
           "title": "Wifi",
           "items": [

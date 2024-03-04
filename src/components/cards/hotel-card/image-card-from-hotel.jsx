@@ -13,9 +13,9 @@ export default function ImageCardFromHotel({hotelName}) {
 
   
   const images = [
-    { title: "Lazer", image: "/hotels/hotel.jpg" },
-    { title: "Café na cama", image: "/hotels/cafe-na-cama.jpg" },
     { title: "Conheça nossas salas de reuniões", image: "/hotels/sala-de-reuniao.jpg" },
+    { title: "Lazer", image: "/hotels/hotel.jpg" },
+    { title: "Café na cama", image: "/hotels/cafe-na-cama.jpg" }
   ]
 
   const settings = {
@@ -43,7 +43,7 @@ export default function ImageCardFromHotel({hotelName}) {
                 component="img"
                 alt={`Imagem ${index}`}
                 image={item.image}
-                sx={{ height: 300, objectFit: 'fill', margin: 0, padding: 0 }}
+                sx={{ height: 240, objectFit: 'fill', margin: 0, padding: 0 }}
               />
             </Card>
           </Box>

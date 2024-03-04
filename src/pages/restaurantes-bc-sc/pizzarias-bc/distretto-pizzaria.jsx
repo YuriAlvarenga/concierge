@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Box, Toolbar } from "@mui/material"
+import { Box, Toolbar, Typography } from "@mui/material"
 import MenuBottomNavigation from "../../../components/menu/menu-bottom/menu-bottom"
 import TopBar from "../../../components/menu/top-bar/top-bar"
 import ImageCardFromPizzariaDistretto from "../../../components/cards/cards-all-restaurants/cards-from-pizzaria-distretto/image-card"
@@ -20,18 +20,15 @@ export default function PizzariaDistrettoBC(){
         <>
             <TopBar title={"Distretto Tratoria"} leftComponent={<ArrowBackButton/>}/>
             <ImageCardFromPizzariaDistretto/>
+            <Typography variant="h6" sx={{m:1}}>Distretto Tratoria</Typography>
             <Box sx={{position:'absolute', top: 250, right: 0}}>
                 <SocialMedia 
                         instagramUrl={"https://www.instagram.com/distrettobartrattoria/"} 
                         facebookUrl={"https://www.facebook.com/DistrettoDItalia/?locale=pt_BR"}
                 /> 
             </Box>
-            <Title title={"Menus"}/>
-            <MenuBook/>
-            <Title title={"Sobre nós"} />
-            <AboutUsDistretto/> 
             <CardAddressNavigation endereco = {"3ª Avenida, 1112 - Centro, Balneário-SC"}/>
-            <FixedButton/>
+            <AboutUsDistretto/> 
             <Toolbar/>
             <MenuBottomNavigation/>
         </>

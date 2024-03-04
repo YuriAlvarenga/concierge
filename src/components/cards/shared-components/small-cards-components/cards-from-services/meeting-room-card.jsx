@@ -38,7 +38,7 @@ export default function MeetingRoomCard() {
                     <Grid item xs={12} key={instanceIndex}>
                       <Card>
                         <CardMedia
-                          sx={{ height: 180}}
+                          sx={{ height: 240}}
                           image={instance.image}
                           title="events rooms"
                         />
