@@ -49,13 +49,13 @@ export default function SmallCardServices() {
 
   return (
     <React.Fragment>
-      {loadedHotel && (
+      {loadedHotel && loadedHotel.services && loadedHotel.services.length > 0 && (
          <React.Fragment>
          <Typography variant="h6" sx={{ml: 1, mt: 2, pt:2}}>
            {t(loadedHotel.services[0].title)}
          </Typography>
         <Grid container spacing={1} sx={{ padding: 2 }}>
-          {loadedHotel.services.map((service, index) => (
+          { loadedHotel.services.map((service, index) => (
             <Grid item xs={3} key={index} onClick={() => navigate(service.route)}>
               <Card sx={{ background: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: 80 }}>
                 <CardContent>

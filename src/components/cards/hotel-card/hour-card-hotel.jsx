@@ -44,7 +44,7 @@ export default function HourCard() {
 
   return (
     <React.Fragment>
-      {loadedHotel && (
+      {loadedHotel && loadedHotel.hours && loadedHotel.hours.items && loadedHotel.hours.items.length > 0 && (
         <Grid container spacing={2} style={{ padding: 15, paddingBottom: 0 , marginTop:1}}>
           <Grid item xs={12}>
             <Typography variant="h6" sx={{ mb: 1 }}>{t(loadedHotel.hours.title)}</Typography>

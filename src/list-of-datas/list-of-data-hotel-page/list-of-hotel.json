@@ -4,6 +4,232 @@
         "id": 1,
         "nameHotel": "Hotel Ibis",
         "location": "Cidade A",
+        "internet": {
+          "title": "Wifi",
+          "items": [
+            {"network": "Hotel Ibis", "password": "senhadohotel"}
+          ]
+        },
+        "hours": {
+          "title": "Horários",
+          "items": [
+            {"name": "Café", "horario": "07:00h às 11:00h"},
+            {"name": "Almoço", "horario": "12:00h às 14:30h"},
+            {"name": "Jantar", "horario": "19:00h às 22:00h"},
+            {"name": "Piscina", "horario": "09:00h às 19:00h"},
+            {"name": "Academia", "horario": "09:00h às 19:00h"},
+            {"name": "Sauna", "horario": "09:00h às 19:00h"},
+            {"name": "Check-in", "horario": "A partir das 14h"},
+            {"name": "Check-out", "horario": "Até às 12h"}
+            
+          ]
+        },
+        "contacts": {
+          "title": "Contatos",
+          "items": [
+            { "name": "Reservas", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer uma reserva.", "status": "09:00h às 17:00h" },
+            { "name": "Recepção", "phoneNumber": "+5547920025230", "message": "Mensagem para a recepção.", "status": "00:01h às 23:59h"}
+          ]
+        },
+        "restaurants": {
+          "items": [
+            { "name":"Brava Sushi", "status": "19:00h às 00:00h", "image": "/restaurants/sushi-bc.jpg"},
+            {"name":"Heróis da Pizza","status": "09:00h às 21:00h", "image": "/restaurants/herois-da-pizza-bc.jpg", "tag": ["aberto agora"]},
+            { "name":"Distretto Trattoria","status": "19:00h às 00:00h", "image": "/restaurants/distretto.jpg", "routePage": "/distretto-tratoria"}
+          ]
+        },
+        "strolls": {
+          "items": [
+            { "name":"Space Adventure", "status": "19:00h às 21:00h", "image": "/strolls-bc/images-from-cards-bc/space-adventure-bc.jpg"},
+            {  "name":"Beto Carrero World", "status": "09:00h às 20:00h", "image": "/strolls-bc/images-from-cards-bc/beto-carrero-world.jpg"},
+            { "name":"Oceanic Aquarium", "status": "09:00h às 21:00h", "image": "/strolls-bc/images-from-cards-bc/aquario-bc.jpg", "routePage":"/strolls-oceanic-aquarium-page-bc"},
+            {  "name":"Jurassic Park", "status": "09:00h às 20:00h", "image": "/strolls-bc/images-from-cards-bc/aventura-jurassica.jpg"},
+            {  "name":"Roda Gigante", "status": "09:00h às 21:30h", "image":"/strolls-bc/images-from-cards-bc/big-weel.jpg"},
+            {  "name":"Muve indoor", "status": "09:00h às 20:00h", "image":"/strolls-bc/images-from-cards-bc/muve-indoor.png"},
+            {  "name":"Hollywood-bowl", "status": "09:00h às 20:00h", "image":"/strolls-bc/images-from-cards-bc/hollywood-bowl.jpg"}
+          ]
+        },
+        "services": [
+          {
+            "title": "Serviços",
+            "subTitle": "Farmácias",
+            "route": "/pharmacy",
+            "instances": [
+              {"name": "Farmácia Preço Popular", "status": "14:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer um pedido.", "gradient": "#ff6888"},
+              {"name": "Farmácia Panvel", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "Av. Central, 540 - Centro, Balneário Camboriú - SC, 88330-668", "content": "Compras na loja·Retirada na loja·Entrega", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer um pedido.", "gradient": "#1fe4f5"},
+              {"name": "Farmácia Noite e Dia", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer um pedido.", "gradient": "#60efbc"},
+              {"name": "Drogaria Raia", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega",  "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer um pedido.", "gradient": "#b07eb9"},
+              {"name": "Farmácia São João", "status": "09:00h às 21:00h", "contact": "456-789-0123", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "content": "Compras na loja·Retirada na loja·Entrega",  "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer um pedido.", "gradient": "#ff6888"}
+            ]
+          },
+          {
+            "subTitle": "Lavanderia",
+            "route": "/laundries",
+            "instances": [
+              {"name": "5àsec Lavanderia", "status": "00:00 às 23:59h", "contact": "456-789-0123", "gradient": "linear-gradient(to bottom, #ff6888 60%, transparent 50%)", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar o serviço de lavanderia."},
+              {"name": "Lavanderia Dimensão", "status": "09:00h às 21:00h", "contact": "456-789-0123", "gradient": "linear-gradient(to bottom, #1fe4f5 60%, transparent 50%)", "address": "R. Dr. Reinaldo Schmithausen - Cordeiros, Itajaí - SC, 88310-004", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar o serviço de lavanderia."}
+            ]
+          },
+          {
+            "subTitle": "Locadoras",
+            "route": "/car-rental-agency",
+            "instances": [
+              {"name": "Localiza Locadora de Veículos", "status": "19:00h às 21:00h", "image": "/car-rental/localiza-bc.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de alugar um veículo com vocês."},
+              {"name": "Movidas Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/movidas-bc.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de alugar um veículo com vocês."},
+              {"name": "Unidas Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/unidas-bc.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de alugar um veículo com vocês."}
+            ]
+          },
+          {
+            "subTitle": "Translados",
+            "route": "/shuttle-services",
+            "instances": [
+              {"name": "Motorista X", "contact": "456-789-0123", "image": "/driver.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Branco", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar o serviço de transfer."},
+              {"name": "Motorista Y", "contact": "789-012-3456", "image": "/woman-driver.jpg", "car": "Onix", "licensePlate":"xxxx-xxx", "carColor":"Azul", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar o serviço de transfer."}
+            ]
+          },
+          {
+            "subTitle": "Room Service",
+            "route": "/room-service",
+            "categories": [
+              {
+                "categoryTitle": "Bebidas",
+                "items": [
+                  {"name": "Coca-cola", "price": "09,00"},
+                  {"name": "Guaraná Antártica", "price": "09,00"},
+                  {"name": "Água Mineral sem gás", "price": "05,00"},
+                  {"name": "Água Mineral com gás", "price": "05,00"}
+                ]
+              },
+              {
+                "categoryTitle": "Lanches",
+                "items": [
+                  {"name": "Hambúrguer Tradicional", "price": "32,00"},
+                  {"name": "Hambúrguer Americano", "price": "28,00"},
+                  {"name": "Torradão", "price": "25,00"}
+                ]
+              },
+              {
+                "categoryTitle": "Alcoólicos",
+                "items": [
+                  {"name": "Vinho", "price": "85,00"},
+                  {"name": "Cerveja", "price": "08,00"}
+                ]
+              }
+            ]
+          },
+          {
+            "subTitle": "Frigobar",
+            "route": "/minibar-service",
+            "categories": [
+              {
+                "categoryTitle": "Bebidas",
+                "items": [
+                  {"name": "Coca-cola", "price": "09,00"},
+                  {"name": "Guaraná Antártica", "price": "09,00"},
+                  {"name": "Água Mineral sem gás", "price": "05,00"},
+                  {"name": "Água Mineral com gás", "price": "05,00"}
+                ]
+              },
+              {
+                "categoryTitle": "Chocolates",
+                "items": [
+                  {"name": "Kit Kat", "price": "14,00"}
+                ]
+              },
+              {
+                "categoryTitle": "Alcoólicos",
+                "items": [
+                  {"name": "Vinho", "price": "85,00"},
+                  {"name": "Cerveja", "price": "08,00"}
+                ]
+              }
+            ]
+          },
+          {
+            "subTitle": "Sala de Reunião",
+            "route": "/meeting-room-service",
+            "instances": [
+              {"name": "Salão Brut", "content": "Um excelente espaço para seus eventos, nossa sala de eventos Sala Brut é climatizada, com telão retrátil, projetor datashow , sonorização embutida,  frigobar, pé direito de 3m de altura, existe a possibilidade de abrir a parede lateral e transformar em uma sala maior, caso a sala ao lado esteja disponível, solicite um orçamento.", "image": "/meeting-room/brut-meeting.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar um orçamento da sala de eventos."},
+              {"name": "Sala VIP", "content": "Esse espaço incrível para seus eventos, nossa sala de eventos Sala VIP é climatizada, com telão retrátil, projetor datashow, sonorização embutida,  frigobar, pé direito de 3m de altura, existe a possibilidade de abrir a parede lateral e transformar em uma sala maior, caso a sala ao lado esteja disponível, solicite um orçamento. ", "image": "/meeting-room/vip-meeting.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar um orçamento da sala de eventos."}
+            ]
+          },
+          {
+            "subTitle": "Lista de Canais",
+            "route": "/channel-list-card",
+            "categories": [
+              {
+                "categoryTitle": "Canais Abertos",
+                "items": [
+                  {"name": "Globo ", "channel": "010"},
+                  {"name": "SBT ", "channel": "011"},
+                  {"name": "Record ", "channel": "012"}
+                ]
+              },
+              {
+                "categoryTitle": "Canais Fechados",
+                "items": [
+                  {"name": "HBO", "channel": "104"},
+                  {"name": "Cartoon Network ", "channel": "110"},
+                  {"name": "News ", "channel": "111"},
+                  {"name": "HBO + ", "channel": "112"}
+                ]
+              }
+            ]
+          }
+        ]
+       
+      },
+
+
+      {
+        "id": 2,
+        "nameHotel": "Hotel Itália",
+        "location": "Cidade A",
+        "internet": {
+          "title": "Wifi",
+          "items": [
+            {"network": "Hotel Itália", "password": "senhadohotel"}
+          ]
+        },
+        "hours": {
+          "title": "Horários",
+          "items": [
+            {"name": "Café", "horario": "07:00h às 11:00h"},
+            {"name": "Almoço", "horario": "12:00h às 14:30h"},
+            {"name": "Jantar", "horario": "19:00h às 22:00h"},
+            {"name": "Piscina", "horario": "09:00h às 19:00h"},
+            {"name": "Academia", "horario": "09:00h às 19:00h"},
+            {"name": "Sauna", "horario": "09:00h às 19:00h"},
+            {"name": "Check-in", "horario": "A partir das 14h"},
+            {"name": "Check-out", "horario": "Até às 12h"}
+            
+          ]
+        },
+        "contacts": {
+          "title": "Contatos",
+          "items": [
+            { "name": "Reservas", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer uma reserva.", "status": "09:00h às 17:00h" },
+            { "name": "Recepção", "phoneNumber": "+5547920025230", "message": "Mensagem para a recepção.", "status": "00:01h às 23:59h"}
+          ]
+        },
+        "restaurants": {
+          "items": [
+            { "name":"Brava Sushi", "status": "19:00h às 00:00h", "image": "/restaurants/sushi-bc.jpg"},
+            {"name":"Heróis da Pizza","status": "09:00h às 21:00h", "image": "/restaurants/herois-da-pizza-bc.jpg", "tag": ["aberto agora"]},
+            { "name":"Distretto Trattoria","status": "19:00h às 00:00h", "image": "/restaurants/distretto.jpg", "routePage": "/distretto-tratoria"}
+          ]
+        },
+        "strolls": {
+          "items": [
+            { "name":"Space Adventure", "status": "19:00h às 21:00h", "image": "/strolls-bc/images-from-cards-bc/space-adventure-bc.jpg"},
+            {  "name":"Beto Carrero World", "status": "09:00h às 20:00h", "image": "/strolls-bc/images-from-cards-bc/beto-carrero-world.jpg"},
+            { "name":"Oceanic Aquarium", "status": "09:00h às 21:00h", "image": "/strolls-bc/images-from-cards-bc/aquario-bc.jpg", "routePage":"/strolls-oceanic-aquarium-page-bc"},
+            {  "name":"Jurassic Park", "status": "09:00h às 20:00h", "image": "/strolls-bc/images-from-cards-bc/aventura-jurassica.jpg"},
+            {  "name":"Roda Gigante", "status": "09:00h às 21:30h", "image":"/strolls-bc/images-from-cards-bc/big-weel.jpg"},
+            {  "name":"Muve indoor", "status": "09:00h às 20:00h", "image":"/strolls-bc/images-from-cards-bc/muve-indoor.png"},
+            {  "name":"Hollywood-bowl", "status": "09:00h às 20:00h", "image":"/strolls-bc/images-from-cards-bc/hollywood-bowl.jpg"}
+          ]
+        },
         "services": [
           {
             "title": "Serviços",
@@ -131,96 +357,8 @@
               }
             ]
           }
-        ],
-        "internet": {
-          "title": "Wifi",
-          "items": [
-            {"network": "Hotel Ibis", "password": "senhadohotel"}
-          ]
-        },
-        "hours": {
-          "title": "Horários",
-          "items": [
-            {"name": "Café", "horario": "07:00h às 11:00h"},
-            {"name": "Almoço", "horario": "12:00h às 14:30h"},
-            {"name": "Jantar", "horario": "19:00h às 22:00h"},
-            {"name": "Piscina", "horario": "09:00h às 19:00h"},
-            {"name": "Academia", "horario": "09:00h às 19:00h"},
-            {"name": "Sauna", "horario": "09:00h às 19:00h"},
-            {"name": "Check-in", "horario": "A partir das 14h"},
-            {"name": "Check-out", "horario": "Até às 12h"}
-            
-          ]
-        },
-        "contacts": {
-          "title": "Contatos",
-          "items": [
-            { "name": "Reservas", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer uma reserva.", "status": "09:00h às 17:00h" },
-            { "name": "Recepção", "phoneNumber": "+5547920025230", "message": "Mensagem para a recepção.", "status": "00:01h às 23:59h"}
-          ]
-        },
-        "restaurants": {
-          "items": [
-            { "name":"Brava Sushi", "status": "19:00h às 00:00h", "image": "/restaurants/sushi-bc.jpg"},
-            {"name":"Heróis da Pizza","status": "09:00h às 21:00h", "image": "/restaurants/herois-da-pizza-bc.jpg", "tag": ["aberto agora"]},
-            { "name":"Distretto Trattoria","status": "19:00h às 00:00h", "image": "/restaurants/distretto.jpg", "routePage": "/distretto-tratoria"}
-          ]
-        },
-      "strolls": {
-        "items": [
-          { "name":"Space Adventure", "status": "19:00h às 21:00h", "image": "/strolls-bc/images-from-cards-bc/space-adventure-bc.jpg"},
-          {  "name":"Beto Carrero World", "status": "09:00h às 20:00h", "image": "/strolls-bc/images-from-cards-bc/beto-carrero-world.jpg"},
-          { "name":"Oceanic Aquarium", "status": "09:00h às 21:00h", "image": "/strolls-bc/images-from-cards-bc/aquario-bc.jpg", "routePage":"/strolls-oceanic-aquarium-page-bc"},
-          {  "name":"Jurassic Park", "status": "09:00h às 20:00h", "image": "/strolls-bc/images-from-cards-bc/aventura-jurassica.jpg"},
-          {  "name":"Roda Gigante", "status": "09:00h às 21:30h", "image":"/strolls-bc/images-from-cards-bc/big-weel.jpg"},
-          {  "name":"Muve indoor", "status": "09:00h às 20:00h", "image":"/strolls-bc/images-from-cards-bc/muve-indoor.png"},
-          {  "name":"Hollywood-bowl", "status": "09:00h às 20:00h", "image":"/strolls-bc/images-from-cards-bc/hollywood-bowl.jpg"}
         ]
-      }
-      },
-
-
-
-      {
-        "id": 2,
-        "nameHotel": "Hotel Itália",
-        "location": "Cidade B",
-        "rating": 4.2,
-        "restaurant": {
-          "name": "Restaurante B",
-          "items": [
-            {"name": "Prato D", "price": 12},
-            {"name": "Prato E", "price": 18},
-            {"name": "Prato F", "price": 22}
-          ]
-        },
-        "minibar": [
-          {"name": "Refrigerante", "price": 5},
-          {"name": "Água Mineral", "price": 3},
-          {"name": "Salgadinho", "price": 7}
-        ]
-      },
-
-
-
-      {
-        "id": 3,
-        "nameHotel": "Hotel Slaviero",
-        "location": "Cidade C",
-        "rating": 4.8,
-        "restaurant": {
-          "name": "Restaurante C",
-          "items": [
-            {"name": "Prato G", "price": 14},
-            {"name": "Prato H", "price": 20},
-            {"name": "Prato I", "price": 25}
-          ]
-        },
-        "minibar": [
-          {"name": "Refrigerante", "price": 5},
-          {"name": "Água Mineral", "price": 3},
-          {"name": "Biscoito", "price": 6}
-        ]
+        
       }
     ]
   }
