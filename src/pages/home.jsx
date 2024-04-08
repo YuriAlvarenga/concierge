@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Box, Typography, Fade, CircularProgress  } from '@mui/material'
-import TopBar from '../components/menu/top-bar/top-bar'
+
 
 
 export default function Home(){
@@ -10,17 +10,13 @@ export default function Home(){
   const [showWelcomeMessage, setShowWelcomeMessage] = useState(true)
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowWelcomeMessage(false)
-      setIsLoading(true)
-      const storedHotelId = localStorage.getItem("selectedHotelId")
+    setShowWelcomeMessage(false)
+    setIsLoading(true)
+    const storedHotelId = localStorage.getItem("selectedHotelId")
 
-      if (storedHotelId) {
-        navigate(`/${storedHotelId}`)
-      }
-    }, 2000) 
-
-    return () => clearTimeout(timer)
+    if (storedHotelId) {
+      navigate(`/${storedHotelId}`)
+    }
   }, [navigate])
 
   return (

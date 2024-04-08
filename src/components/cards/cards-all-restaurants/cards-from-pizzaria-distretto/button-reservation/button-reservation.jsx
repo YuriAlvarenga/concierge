@@ -1,19 +1,10 @@
 import React from 'react'
 import { Button } from '@mui/material'
 
-export default function FixedButton() {
-  const buttonStyle = {
-    position: 'fixed',
-    bottom: '9.5rem',
-    right: '1rem',
-    padding: '15px 20px',
-    cursor: 'pointer',
-    fontSize: "10px",
-    background:'#000'
-  }
+export default function ReservationButton() {
 
   return (
-    <Button variant="contained" style={buttonStyle}>
+    <Button sx={{m:1, width:'90%'}} variant="outlined" >
       Faça uma reserva
     </Button>
   )

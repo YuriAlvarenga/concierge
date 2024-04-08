@@ -15,8 +15,6 @@ export const HotelProvider = ({ children }) => {
     useEffect(() => {
         // Encontrar o hotel com o ID correspondente
         const selectedHotel = hotels.find((hotel) => hotel.id === parseInt(id))
-      
-    
         // Verificar se o hotel foi encontrado
         if (selectedHotel) {
           setHotel(selectedHotel)
