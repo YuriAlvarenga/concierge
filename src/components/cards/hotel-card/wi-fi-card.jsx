@@ -51,29 +51,29 @@ export default function WifiCard() {
               {loadedHotel.internet.items.map((item, index) => (
                 <React.Fragment key={index}>
                   <Card sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2 }}>
-                    <CardContent sx={{ display: 'flex',  alignItems: 'center', justifyContent: 'space-between' }}>
-                      <Box sx={{ display: 'flex', alignItems: 'center', flexWrap:'wrap' }}>
-                        <Typography sx={{ display: 'flex', alignItems: 'center', mr: 1 }}>
-                          <WifiIcon sx={{fontSize:17, mr: 0.5, color:'#28afb0'}}/>
-                          {t("Rede")}:
-                        </Typography>
-                        <Typography color="text.secondary">
-                          {item.network}
-                        </Typography>
-                      </Box>
-                      <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <Typography sx={{display: 'flex', alignItems: 'center',  mr: 1 }}>
-                        <HttpsIcon sx={{fontSize:16, mr: 0.5, color:'#28afb0'}}/>
-                          {t("Senha")}:
-                        </Typography>
-                        <Typography color="text.secondary">
-                          {item.password}
-                        </Typography>
+                  <CardContent sx={{ display: 'grid', gridTemplateColumns: 'auto auto', justifyContent:'space-around'}}>
+                    <Box>
+                      <Typography sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb:1 }}>
+                        <WifiIcon sx={{ fontSize: 17, color: '#28afb0' }} />
+                        {t("Rede")}
+                      </Typography>
+                      <Typography color="text.secondary">{item.network}</Typography>
+                    </Box>
+
+                    <Box>
+                      <Typography sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                        <HttpsIcon sx={{ fontSize: 16, color: '#28afb0' }} />
+                        {t("Senha")}
+                      </Typography>
+                      <Box display={'flex'} alignItems={'center'}>
+                        <Typography color="text.secondary">{item.password}</Typography>
                         <IconButton aria-label="Copiar Senha" onClick={() => copyToClipboard(item.password, item.network)}>
-                          <FileCopyIcon sx={{ color:'#28afb0'}}  />
+                          <FileCopyIcon sx={{ color: '#28afb0' }} />
                         </IconButton>
                       </Box>
-                    </CardContent>
+                    </Box>
+
+                  </CardContent>
                   </Card>
                 </React.Fragment>
               ))}
