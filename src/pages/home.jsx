@@ -10,9 +10,9 @@ export default function Home(){
   const [showWelcomeMessage, setShowWelcomeMessage] = useState(true)
 
   useEffect(() => {
+    const storedHotelId = localStorage.getItem("selectedHotelId")
     setShowWelcomeMessage(false)
     setIsLoading(true)
-    const storedHotelId = localStorage.getItem("selectedHotelId")
 
     if (storedHotelId) {
       navigate(`/${storedHotelId}`)
