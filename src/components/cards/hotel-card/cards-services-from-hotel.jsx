@@ -59,7 +59,7 @@ export default function ServicesFromHotelCard() {
                           ) : (
                           <></>
                           )}
-                        <Typography sx={{ fontSize: 14}} component="div">
+                        <Typography sx={{ fontSize: 12}} component="div">
                           {t(item.status ? calculateStatus(item.status) : 'Horário não especificado')}
                         </Typography>
                       </Box>

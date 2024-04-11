@@ -15,7 +15,9 @@ export default function Home(){
     setIsLoading(true)
 
     if (storedHotelId) {
-      navigate(`/${storedHotelId}`)
+      setTimeout(()=>{
+        navigate(`/${storedHotelId}`)
+      }, 2000)
     }
   }, [navigate])
 
