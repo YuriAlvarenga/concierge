@@ -1,5 +1,4 @@
 import React, { useContext} from "react"
-import { Fade } from "react-awesome-reveal"
 import MenuBottomNavigation from "../../components/menu/menu-bottom/menu-bottom"
 import { Toolbar, Box } from "@mui/material"
 import WifiCard from "../../components/cards/hotel-card/wi-fi-card"

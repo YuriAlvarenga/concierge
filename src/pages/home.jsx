@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Box, Typography, Fade, CircularProgress  } from '@mui/material'
+import { Box, Typography, CircularProgress  } from '@mui/material'
 
 
 
 export default function Home(){
   const navigate = useNavigate()
   const [isLoading, setIsLoading] = useState(false)
-  const [showWelcomeMessage, setShowWelcomeMessage] = useState(true)
+
 
   useEffect(() => {
     const storedHotelId = localStorage.getItem("selectedHotelId")
-    setShowWelcomeMessage(false)
     setIsLoading(true)
 
     if (storedHotelId) {
@@ -23,7 +22,7 @@ export default function Home(){
 
   return (
     <>
-      <Fade in={showWelcomeMessage} timeout={1000}>
+
         <Box
           minHeight="100vh"
           display="flex"
@@ -48,7 +47,6 @@ export default function Home(){
             <Typography variant="body1" align="center">Redirecionando para sua página...</Typography>
           )}
         </Box>
-      </Fade>
     </>
   )
 }
