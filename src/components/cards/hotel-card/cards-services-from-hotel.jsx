@@ -51,23 +51,25 @@ export default function ServicesFromHotelCard() {
                 <Card key={idx} sx={{ boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2, mb: 2 }}>
                   <CardContent>
                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                      <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        {item.status ? (
-                          calculateStatus(item.status) === "Aberto agora" ? (
-                            <RadioButtonUncheckedIcon sx={{fontSize: 14, background:' green', color: 'green', mr: 1, borderRadius:'50%' }} />
-                          ) : (
-                            <RadioButtonUncheckedIcon sx={{ fontSize: 14, background:'red', color: 'red', mr: 1, borderRadius:'50%' }} />
-                          )
-                          ) : (
-                          <></>
-                          )}
-                        <Typography sx={{ fontSize: 12}} component="div">
-                          {t(item.status ? calculateStatus(item.status) : 'Horário não especificado')}
-                        </Typography>
-                      </Box>
-                      <IconButton onClick={() => handleWhatsAppClick(item.phoneNumber, item.message)}>
-                        <EastIcon sx={{ fontSize: 16, color: "#28afb0" }} />
-                      </IconButton>
+                      <Fade direction='right'>
+                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                          {item.status ? (
+                            calculateStatus(item.status) === "Aberto agora" ? (
+                              <RadioButtonUncheckedIcon sx={{fontSize: 14, background:' green', color: 'green', mr: 1, borderRadius:'50%' }} />
+                            ) : (
+                              <RadioButtonUncheckedIcon sx={{ fontSize: 14, background:'red', color: 'red', mr: 1, borderRadius:'50%' }} />
+                            )
+                            ) : (
+                            <></>
+                            )}
+                          <Typography sx={{ fontSize: 12}} component="div">
+                            {t(item.status ? calculateStatus(item.status) : 'Horário não especificado')}
+                          </Typography>
+                        </Box>
+                        <IconButton onClick={() => handleWhatsAppClick(item.phoneNumber, item.message)}>
+                          <EastIcon sx={{ fontSize: 16, color: "#28afb0" }} />
+                        </IconButton>
+                      </Fade>
                     </Box>
                     <Button sx={{background:'#28afb0'}} variant='contained' fullWidth onClick={() => handleWhatsAppClick(item.phoneNumber, item.message)}>{t(item.name)}</Button>
                   </CardContent>
