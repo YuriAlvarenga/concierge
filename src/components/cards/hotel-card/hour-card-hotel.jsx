@@ -48,17 +48,13 @@ export default function HourCard() {
       {loadedHotel && loadedHotel.hours && loadedHotel.hours.items && loadedHotel.hours.items.length > 0 && (
         <Grid container spacing={2} style={{ padding: 15, paddingBottom: 0 , marginTop:1}}>
           <Grid item xs={12}>
-            <Fade direction='left'>
-              <Typography variant="h6" sx={{ mb: 1 }}>{t(loadedHotel.hours.title)}</Typography>
-            </Fade> 
+            <Typography variant="h6" sx={{ mb: 1 }}>{t(loadedHotel.hours.title)}</Typography>
             <Card sx={{ backgroundColor: '#FFF', borderRadius: 2 }}>
               <CardContent>
                 <Grid container spacing={2}>
                   {loadedHotel.hours.items.map((item, index) => (
                     <Grid item xs={6} key={index}>
-                      <Fade direction='right'>
-                        <HourRow icon={iconMap[item.name]} title={t(item.name)} time={item.horario} />
-                      </Fade>
+                      <HourRow icon={iconMap[item.name]} title={t(item.name)} time={item.horario} />
                     </Grid>
                   ))}
                 </Grid>
