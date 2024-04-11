@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext} from "react"
 import { Fade } from "react-awesome-reveal"
 import MenuBottomNavigation from "../../components/menu/menu-bottom/menu-bottom"
 import { Toolbar, Box } from "@mui/material"
@@ -10,30 +10,28 @@ import HourCard from "../../components/cards/hotel-card/hour-card-hotel"
 import SocialMedia from "../../components/cards/shared-components/card-social-media/social-media"
 import { HotelContext } from "../../context/context"
 
-export default function HotelPage() {
+export default function HotelPage(){
 
-    const { hotel } = useContext(HotelContext)
+    const {hotel} = useContext(HotelContext)
 
-    return (
+    return(
         <>
-            {hotel && (
-                <React.Fragment>
+          {hotel && (
+                <>
                     <ImageCardFromHotel hotelName={hotel.nameHotel} />
                     <Box sx={{ position: "absolute", top: 240, right: 0 }}>
-                        <Fade direction="right">
-                            <SocialMedia
-                                instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
-                                facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
-                            />
-                        </Fade>
+                        <SocialMedia
+                            instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
+                            facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
+                        />
                     </Box>
-                    <SmallCard />
+                    <SmallCard/>
                     <WifiCard />
                     <HourCard />
                     <ServicesFromHotelCard />
                     <Toolbar />
-                    <MenuBottomNavigation />
-                </React.Fragment>
+                    <MenuBottomNavigation/>
+                </>
             )}
         </>
     )
