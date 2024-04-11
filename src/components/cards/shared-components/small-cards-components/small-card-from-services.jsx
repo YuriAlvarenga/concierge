@@ -13,6 +13,7 @@ import RoomServiceIcon from '@mui/icons-material/RoomService'
 import GroupsIcon from '@mui/icons-material/Groups'
 import DvrIcon from '@mui/icons-material/Dvr'
 import { HotelContext } from '../../../../context/context'
+import { Fade } from "react-awesome-reveal"
 
 export default function SmallCardServices() {
   const navigate = useNavigate()
@@ -51,9 +52,11 @@ export default function SmallCardServices() {
     <React.Fragment>
       {loadedHotel && loadedHotel.services && loadedHotel.services.length > 0 && (
          <React.Fragment>
-         <Typography variant="h6" sx={{ml: 1, mt: 2, pt:2}}>
-           {t(loadedHotel.services[0].title)}
-         </Typography>
+          <Fade direction="left">
+            <Typography variant="h6" sx={{ml: 1, mt: 2, pt:2}}>
+              {t(loadedHotel.services[0].title)}
+            </Typography>
+          </Fade>
         <Grid container spacing={1} sx={{ padding: 2 }}>
           { loadedHotel.services.map((service, index) => (
             <Grid item xs={4} key={index} onClick={() => navigate(service.route)}>

@@ -7,7 +7,7 @@ import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import { useTranslation } from 'react-i18next'
 import { HotelContext } from '../../../context/context'
 import { calculateStatus } from '../../../list-of-datas/function-calculate-hour-of-status-from-lists/status-utils'
-
+import { Fade } from "react-awesome-reveal"
 
 export default function ServicesFromHotelCard() {
 
@@ -44,7 +44,9 @@ export default function ServicesFromHotelCard() {
         <Grid container spacing={2} sx={{ padding: 2, mt:1 }}>
            {loadedHotel.contacts && (
             <Grid item xs={12} sm={6}>
-              <Typography variant="h6" sx={{ mb: 1 }}>{t(loadedHotel.contacts.title)}</Typography>
+              <Fade direction='left'>
+                <Typography variant="h6" sx={{ mb: 1 }}>{t(loadedHotel.contacts.title)}</Typography>
+              </Fade>
               {loadedHotel.contacts.items.map((item, idx) => (
                 <Card key={idx} sx={{ boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2, mb: 2 }}>
                   <CardContent>

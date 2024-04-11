@@ -1,10 +1,9 @@
-import React, { useContext, useState, useEffect} from "react"
-
+import React, { useContext} from "react"
+import { Fade } from "react-awesome-reveal"
 import MenuBottomNavigation from "../../components/menu/menu-bottom/menu-bottom"
 import { Toolbar, Box } from "@mui/material"
 import WifiCard from "../../components/cards/hotel-card/wi-fi-card"
 import SmallCard from "../../components/cards/shared-components/small-cards-components/small-card-from-services"
-import Title from "../../components/cards/shared-components/titles/title"
 import ServicesFromHotelCard from "../../components/cards/hotel-card/cards-services-from-hotel"
 import ImageCardFromHotel from "../../components/cards/hotel-card/image-card-from-hotel"
 import HourCard from "../../components/cards/hotel-card/hour-card-hotel"
@@ -18,13 +17,15 @@ export default function HotelPage(){
     return(
         <>
           {hotel && (
-                <>
+                <Fade duration={2000}>
                     <ImageCardFromHotel hotelName={hotel.nameHotel} />
                     <Box sx={{ position: "absolute", top: 240, right: 0 }}>
-                        <SocialMedia
-                            instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
-                            facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
-                        />
+                        <Fade direction="right">
+                            <SocialMedia
+                                instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
+                                facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
+                            />
+                        </Fade>
                     </Box>
                     <SmallCard/>
                     <WifiCard />
@@ -32,7 +33,7 @@ export default function HotelPage(){
                     <ServicesFromHotelCard />
                     <Toolbar />
                     <MenuBottomNavigation/>
-                </>
+                </Fade>
             )}
         </>
     )

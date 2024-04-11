@@ -10,6 +10,7 @@ import HotTubIcon from '@mui/icons-material/HotTub'
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom'
 import DoorBackIcon from '@mui/icons-material/DoorBack'
 import { HotelContext } from '../../../context/context'
+import { Fade } from "react-awesome-reveal"
 
 const iconMap = {
   "Café": <FreeBreakfastIcon sx={{ mr: 1, fontSize: 18 }} />,
@@ -47,13 +48,17 @@ export default function HourCard() {
       {loadedHotel && loadedHotel.hours && loadedHotel.hours.items && loadedHotel.hours.items.length > 0 && (
         <Grid container spacing={2} style={{ padding: 15, paddingBottom: 0 , marginTop:1}}>
           <Grid item xs={12}>
-            <Typography variant="h6" sx={{ mb: 1 }}>{t(loadedHotel.hours.title)}</Typography>
+            <Fade direction='left'>
+              <Typography variant="h6" sx={{ mb: 1 }}>{t(loadedHotel.hours.title)}</Typography>
+            </Fade> 
             <Card sx={{ backgroundColor: '#FFF', borderRadius: 2 }}>
               <CardContent>
                 <Grid container spacing={2}>
                   {loadedHotel.hours.items.map((item, index) => (
                     <Grid item xs={6} key={index}>
-                      <HourRow icon={iconMap[item.name]} title={t(item.name)} time={item.horario} />
+                      <Fade direction='right'>
+                        <HourRow icon={iconMap[item.name]} title={t(item.name)} time={item.horario} />
+                      </Fade>
                     </Grid>
                   ))}
                 </Grid>

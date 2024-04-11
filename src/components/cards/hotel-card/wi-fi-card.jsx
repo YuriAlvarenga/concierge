@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next'
 import HttpsIcon from '@mui/icons-material/Https'
 import WifiIcon from '@mui/icons-material/Wifi'
 import { HotelContext } from '../../../context/context'
+import { Fade } from "react-awesome-reveal"
+
 
 export default function WifiCard() {
 
@@ -47,30 +49,38 @@ export default function WifiCard() {
         <Grid container spacing={2} style={{ padding: 15, paddingBottom: 0, marginTop:1 }}>
           {loadedHotel.internet && (
             <Grid item xs={12}>
-              <Typography variant="h6" sx={{ mb: 1 }}>{loadedHotel.internet.title}</Typography>
+              <Fade direction='left'>
+                <Typography variant="h6" sx={{ mb: 1 }}>{loadedHotel.internet.title}</Typography>
+              </Fade>
               {loadedHotel.internet.items.map((item, index) => (
                 <React.Fragment key={index}>
                   <Box sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2, p: 1 }}>
                     <Box sx={{ display: 'grid', gridTemplateColumns: 'auto auto', justifyContent:'space-around'}}>
                       <Box>
-                        <Typography sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb:1 }}>
-                          <WifiIcon sx={{ fontSize: 17, color: '#28afb0' }} />
-                          {t("Rede")}
-                        </Typography>
-                        <Typography color="text.secondary">{item.network}</Typography>
+                        <Fade direction='left'>
+                          <Typography sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb:1 }}>
+                              <WifiIcon sx={{ fontSize: 17, color: '#28afb0' }} />
+                              {t("Rede")}
+                          </Typography>
+                        </Fade>
+                        <Fade direction='left'>
+                          <Typography color="text.secondary">{item.network}</Typography>
+                        </Fade>
                       </Box>
 
                       <Box>
-                        <Typography sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                          <HttpsIcon sx={{ fontSize: 16, color: '#28afb0' }} />
-                          {t("Senha")}
-                        </Typography>
-                        <Box display={'flex'} alignItems={'center'}>
-                          <Typography color="text.secondary">{item.password}</Typography>
-                          <IconButton aria-label="Copiar Senha" onClick={() => copyToClipboard(item.password, item.network)}>
-                            <FileCopyIcon sx={{ color: '#28afb0' }} />
-                          </IconButton>
-                        </Box>
+                        <Fade direction='right'>
+                          <Typography sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                            <HttpsIcon sx={{ fontSize: 16, color: '#28afb0' }} />
+                            {t("Senha")}
+                          </Typography>
+                          <Box display={'flex'} alignItems={'center'}>
+                            <Typography color="text.secondary">{item.password}</Typography>
+                            <IconButton aria-label="Copiar Senha" onClick={() => copyToClipboard(item.password, item.network)}>
+                              <FileCopyIcon sx={{ color: '#28afb0' }} />
+                            </IconButton>
+                          </Box>
+                        </Fade>
                       </Box>
 
                     </Box>
