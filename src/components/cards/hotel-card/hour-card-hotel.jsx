@@ -52,7 +52,7 @@ export default function HourCard() {
               <CardContent>
                 <Grid container spacing={2}>
                   {loadedHotel.hours.items.map((item, index) => (
-                    <Grid item xs={4} key={index}>
+                    <Grid item xs={6} key={index}>
                       <HourRow icon={iconMap[item.name]} title={t(item.name)} time={item.horario} />
                     </Grid>
                   ))}

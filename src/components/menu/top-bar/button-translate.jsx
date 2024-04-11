@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import LanguageIcon from '@mui/icons-material/Language'
+import TranslateIcon from '@mui/icons-material/Translate';
 import { IconButton, Menu, MenuItem } from "@mui/material"
 import { useTranslation } from 'react-i18next'
 
@@ -32,7 +32,7 @@ export default function ButtonTranslate({color}){
     return(
         <>
             <IconButton onClick={handleClick} style={{ position: 'absolute', right: 1, top: '50%', transform: 'translateY(-50%)', color: color}} >
-                <LanguageIcon sx={{fontSize:25}} />
+                <TranslateIcon sx={{fontSize:25}} />
             </IconButton>
             <Menu
                 anchorEl={anchorEl}

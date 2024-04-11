@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { Grid, Card, CardContent, Typography, IconButton, Snackbar, Box } from '@mui/material'
+import { Grid, Typography, IconButton, Snackbar, Box } from '@mui/material'
 import FileCopyIcon from '@mui/icons-material/FileCopy'
 import { useTranslation } from 'react-i18next'
 import HttpsIcon from '@mui/icons-material/Https'
@@ -50,31 +50,31 @@ export default function WifiCard() {
               <Typography variant="h6" sx={{ mb: 1 }}>{loadedHotel.internet.title}</Typography>
               {loadedHotel.internet.items.map((item, index) => (
                 <React.Fragment key={index}>
-                  <Card sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2 }}>
-                  <CardContent sx={{ display: 'grid', gridTemplateColumns: 'auto auto', justifyContent:'space-around'}}>
-                    <Box>
-                      <Typography sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb:1 }}>
-                        <WifiIcon sx={{ fontSize: 17, color: '#28afb0' }} />
-                        {t("Rede")}
-                      </Typography>
-                      <Typography color="text.secondary">{item.network}</Typography>
-                    </Box>
-
-                    <Box>
-                      <Typography sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                        <HttpsIcon sx={{ fontSize: 16, color: '#28afb0' }} />
-                        {t("Senha")}
-                      </Typography>
-                      <Box display={'flex'} alignItems={'center'}>
-                        <Typography color="text.secondary">{item.password}</Typography>
-                        <IconButton aria-label="Copiar Senha" onClick={() => copyToClipboard(item.password, item.network)}>
-                          <FileCopyIcon sx={{ color: '#28afb0' }} />
-                        </IconButton>
+                  <Box sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2, p: 1 }}>
+                    <Box sx={{ display: 'grid', gridTemplateColumns: 'auto auto', justifyContent:'space-around'}}>
+                      <Box>
+                        <Typography sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb:1 }}>
+                          <WifiIcon sx={{ fontSize: 17, color: '#28afb0' }} />
+                          {t("Rede")}
+                        </Typography>
+                        <Typography color="text.secondary">{item.network}</Typography>
                       </Box>
-                    </Box>
 
-                  </CardContent>
-                  </Card>
+                      <Box>
+                        <Typography sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                          <HttpsIcon sx={{ fontSize: 16, color: '#28afb0' }} />
+                          {t("Senha")}
+                        </Typography>
+                        <Box display={'flex'} alignItems={'center'}>
+                          <Typography color="text.secondary">{item.password}</Typography>
+                          <IconButton aria-label="Copiar Senha" onClick={() => copyToClipboard(item.password, item.network)}>
+                            <FileCopyIcon sx={{ color: '#28afb0' }} />
+                          </IconButton>
+                        </Box>
+                      </Box>
+
+                    </Box>
+                  </Box>
                 </React.Fragment>
               ))}
               <Snackbar

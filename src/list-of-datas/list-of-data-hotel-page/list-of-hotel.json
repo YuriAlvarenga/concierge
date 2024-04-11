@@ -31,7 +31,7 @@
           ]
         },
         "contacts": {
-          "title": "Contatos",
+          "title": "Contatos do hotel",
           "items": [
             { "name": "Reservas", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer uma reserva.", "status": "09:00h às 17:00h" },
             { "name": "Recepção", "phoneNumber": "+5547920025230", "message": "Mensagem para a recepção.", "status": "00:01h às 23:59h"}
@@ -207,7 +207,7 @@
           ]
         },
         "contacts": {
-          "title": "Contatos",
+          "title": "Contatos do hotel",
           "items": [
             { "name": "Reservas", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer uma reserva.", "status": "09:00h às 17:00h" },
             { "name": "Recepção", "phoneNumber": "+5547920025230", "message": "Mensagem para a recepção.", "status": "00:01h às 23:59h"}
