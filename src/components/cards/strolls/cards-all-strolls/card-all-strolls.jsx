@@ -82,7 +82,7 @@ export default function CardAllStrolls() {
                   <Stack direction="row" alignItems="center" sx={{ position: 'absolute', top: 5, right: 5 }}>
                     <Fade direction='right'>
                       <RadioButtonUncheckedIcon sx={{ fontSize: 14, background: 'green', color: 'green', mr: 1, borderRadius: '50%' }} />
-                      <Typography variant="body2"> {t(item.status ? calculateStatus(item.status) : 'Horário não especificado')}</Typography>
+                      <Typography sx={{color:'#FFF'}} variant="body2"> {t(item.status ? calculateStatus(item.status) : 'Horário não especificado')}</Typography>
                     </Fade>
                   </Stack>
                 )}

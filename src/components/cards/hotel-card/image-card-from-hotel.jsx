@@ -17,7 +17,7 @@ export default function ImageCardFromHotel({hotelName}) {
 
   return (
     <Box sx={{mb: 1, overflow: 'hidden' }}>
-      <Typography variant="h6" sx={{ position: 'fixed', width: '86%',top:'3%', zIndex:9998, margin:2, color: '#19647e', backgroundColor: 'rgba(255, 255, 255, 0.7)', padding: '12px 16px', borderRadius: '4px'}}  onClick={handleTypographyClick}><ButtonTranslate color="#19647e" />{hotelName}</Typography>
+      <Typography variant="h6" sx={{ position: 'absolute', right: 2, left: 2, top:3, zIndex:9998, margin:2, color: '#19647e', backgroundColor: 'rgba(255, 255, 255, 0.7)', padding: '12px 16px', borderRadius: '4px'}}  onClick={handleTypographyClick}><ButtonTranslate color="#19647e" />{hotelName}</Typography>
           <Box sx={{ position: 'relative', textAlign: 'center', margin: 0, padding: 0 }}>
             <Card sx={{ maxWidth: '100vw', margin: 0, padding: 0 }}>
               <CardMedia
