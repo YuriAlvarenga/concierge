@@ -19,12 +19,12 @@ export default function PizzariaDistrettoBC(){
             <TopBar title={"Distretto Tratoria"} leftComponent={<ArrowBackButton/>}/>
             <ImageCardFromPizzariaDistretto/>
             <Typography variant="h6" sx={{m:1}}>Distretto Tratoria</Typography>
-            <Box sx={{position:'absolute', top: 250, right: 0}}>
+            {/* <Box sx={{position:'absolute', top: 250, right: 0}}>
                 <SocialMedia 
                         instagramUrl={"https://www.instagram.com/distrettobartrattoria/"} 
                         facebookUrl={"https://www.facebook.com/DistrettoDItalia/?locale=pt_BR"}
                 /> 
-            </Box>
+            </Box> */}
             <CardAddressNavigation endereco = {"3ª Avenida, 1112 - Centro, Balneário-SC"}/>
             <ReservationButton/>
             <AboutUsDistretto/> 

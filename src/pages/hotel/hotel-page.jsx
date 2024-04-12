@@ -13,21 +13,18 @@ export default function HotelPage(){
 
     const { hotel } = useContext(HotelContext)
 
-    useEffect(() => {
-        // Renderizar apenas quando o hotel estiver disponível
-    }, [hotel])
 
     return (
         <Box sx={{ overflowX: 'hidden' }}>
             {hotel && (
                 <>
                     <ImageCardFromHotel hotelName={hotel.nameHotel} />
-                    <Box sx={{ position: "absolute", top: 240, right: 0 }}>
+                    {/* <Box sx={{ position: "absolute", top: 240, right: 0 }}>
                         <SocialMedia
                             instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
                             facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
                         />
-                    </Box>
+                    </Box> */}
                     <SmallCard/>
                     <WifiCard />
                     <HourCard />

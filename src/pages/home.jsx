@@ -26,8 +26,8 @@ export default function Home() {
           <Typography variant="h6" gutterBottom align="center" sx={{ ml: 1 }}>
             Concierge Virtual
           </Typography>
-          <Typography variant="body1" align="center">Redirecionando para sua página...</Typography>
         </Box>
+        <Typography variant="body1" align="center">Redirecionando para sua página...</Typography>
       </Box>
     </React.Fragment>
   )
