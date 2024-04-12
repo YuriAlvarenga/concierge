@@ -20,7 +20,7 @@ export default function HotelPage(){
           {hotel && (
                 <>
                     <ImageCardFromHotel hotelName={hotel.nameHotel} />
-                    <Box sx={{ position: "absolute", top: 240, right: 0 }}>
+                    <Box sx={{ position: "absolute", top: 240}}>
                         <SocialMedia
                             instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
                             facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
@@ -31,6 +31,7 @@ export default function HotelPage(){
                     <HourCard />
                     <ServicesFromHotelCard />
                     <Toolbar />
+                    <MenuBottomNavigation/>
                 </>
             )}
         </>
