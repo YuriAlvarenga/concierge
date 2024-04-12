@@ -2,8 +2,6 @@ import React, {useState, useEffect, useContext} from 'react'
 import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 import { Box, Stack, Typography } from '@mui/material'
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
-import { Fade } from "react-awesome-reveal"
 import { calculateStatus } from '../../../../list-of-datas/function-calculate-hour-of-status-from-lists/status-utils'
 import { HotelContext } from '../../../../context/context'
 
@@ -41,16 +39,16 @@ export default function ImageCardFromPizzariaDistretto(){
       </Card>
       {loadedHotel && loadedHotel.restaurants && loadedHotel.restaurants.items && (
         <Box sx={{ position: 'absolute', bottom: 0, right: 0, left:0, background: 'rgba(0,0,0,0.5)', p: 1, zIndex:9999}}>
-        {loadedHotel.restaurants.items.map((restaurant, index) => (
-          <Stack key={index} direction="row" alignItems="center" justifyContent="flex-end" >
-              {calculateStatus(restaurant.status) === "Aberto agora" &&(
-                <Typography sx={{fontSize:12, color:'green'}} variant="body2"> {calculateStatus(restaurant.status)}</Typography>
-              )}
-              {calculateStatus(restaurant.status) === "Fechado agora" &&(
-                <Typography sx={{fontSize:12,  color:'red'}} variant="body2"> {calculateStatus(restaurant.status)}</Typography>
-              )}
-          </Stack>
-          ))}
+          {loadedHotel.restaurants.items.map((restaurant, index) => (
+            <Stack key={index} direction="row" alignItems="center" justifyContent="flex-end" >
+                {calculateStatus(restaurant.status) === "Aberto agora" &&(
+                  <Typography sx={{fontSize:12, color:'green'}} variant="body2"> {calculateStatus(restaurant.status)}</Typography>
+                )}
+                {calculateStatus(restaurant.status) === "Fechado agora" &&(
+                  <Typography sx={{fontSize:12,  color:'red'}} variant="body2"> {calculateStatus(restaurant.status)}</Typography>
+                )}
+            </Stack>
+            ))}
         </Box>
       )}
 
