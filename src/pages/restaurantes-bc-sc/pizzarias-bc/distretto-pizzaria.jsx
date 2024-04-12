@@ -18,11 +18,13 @@ export default function PizzariaDistrettoBC(){
         <React.Fragment>
             <TopBar title={"Distretto Tratoria"} leftComponent={<ArrowBackButton/>}/>
             <ImageCardFromPizzariaDistretto/>
-            <Typography variant="h6" sx={{m:1}}>Distretto Tratoria</Typography>
-            <SocialMedia 
-                instagramUrl={"https://www.instagram.com/distrettobartrattoria/"} 
-                facebookUrl={"https://www.facebook.com/DistrettoDItalia/?locale=pt_BR"}
-            /> 
+            <Box sx={{display: 'flex', alignItems:'center', justifyContent:'space-between'}}>
+                <Typography variant="h6" sx={{ margin: 1, whiteSpace: 'nowrap' }}>Distretto Tratoria</Typography>
+                <SocialMedia 
+                    instagramUrl={"https://www.instagram.com/distrettobartrattoria/"} 
+                    facebookUrl={"https://www.facebook.com/DistrettoDItalia/?locale=pt_BR"}
+                /> 
+            </Box>
             <CardAddressNavigation endereco = {"3ª Av., 1112 - Centro, Balneário-SC"}/>
             <AboutUsDistretto/> 
             <ReservationButton/>

@@ -39,7 +39,20 @@ export default function ImageCardFromPizzariaDistretto(){
           sx={{ height: 240, objectFit: 'fill', margin: 0, padding: 0 }}
         />
       </Card>
-      
+      {loadedHotel && loadedHotel.restaurants && loadedHotel.restaurants.items && (
+        <Box sx={{ position: 'absolute', bottom: 0, right: 0, left:0, background: 'rgba(0,0,0,0.5)', p: 1, zIndex:9999}}>
+        {loadedHotel.restaurants.items.map((restaurant, index) => (
+          <Stack key={index} direction="row" alignItems="center" justifyContent="flex-end" >
+              {calculateStatus(restaurant.status) === "Aberto agora" &&(
+                <Typography sx={{fontSize:12, color:'green'}} variant="body2"> {calculateStatus(restaurant.status)}</Typography>
+              )}
+              {calculateStatus(restaurant.status) === "Fechado agora" &&(
+                <Typography sx={{fontSize:12,  color:'red'}} variant="body2"> {calculateStatus(restaurant.status)}</Typography>
+              )}
+          </Stack>
+          ))}
+        </Box>
+      )}
 
     </Box>
   )

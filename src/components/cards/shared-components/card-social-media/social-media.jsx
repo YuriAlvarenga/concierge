@@ -53,14 +53,14 @@ export default function SocialMedia() {
                     <Fade direction='right'>
                         {loadedHotel.socialMedia.items.find(item => item.instagram) && (
                             <IconButton component="div" onClick={handleInstagramClick}>
-                                <InstagramIcon sx={{ color: '#9dbebb', fontSize: 30 }} />
+                                <InstagramIcon sx={{ color: '#9dbebb', fontSize: 20 }} />
                             </IconButton>
                         )}
                     </Fade>
                     <Fade direction='right'>
                         {loadedHotel.socialMedia.items.find(item => item.facebook) && (
                             <IconButton sx={{ fontSize: 14 }} component="div" onClick={handleFacebookClick}>
-                                <FacebookIcon sx={{ color: '#9dbebb', fontSize: 30 }} />
+                                <FacebookIcon sx={{ color: '#9dbebb', fontSize: 20 }} />
                             </IconButton>
                         )}
                     </Fade>
