@@ -23,11 +23,11 @@ export default function PizzariaDistrettoBC(){
                 <SocialMedia 
                     instagramUrl={"https://www.instagram.com/distrettobartrattoria/"} 
                     facebookUrl={"https://www.facebook.com/DistrettoDItalia/?locale=pt_BR"}
-                /> 
+                    /> 
             </Box>
-            <CardAddressNavigation endereco = {"3ª Av., 1112 - Centro, Balneário-SC"}/>
-            <AboutUsDistretto/> 
             <ReservationButton/>
+            <AboutUsDistretto/> 
+            <CardAddressNavigation endereco = {"3ª Av., 1112 - Centro, Balneário-SC"}/>
             <Toolbar/>
             <MenuBottomNavigation/>
         </React.Fragment>

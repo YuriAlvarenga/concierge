@@ -51,13 +51,13 @@ export default function SocialMedia() {
                 <Grid item xs={12} style={{ marginTop: 0, display: 'flex', alignItems: 'right', justifyContent: 'flex-end', marginRight: 8 }}>
                     {loadedHotel.socialMedia.items.find(item => item.instagram) && (
                         <IconButton component="div" onClick={handleInstagramClick}>
-                            <InstagramIcon sx={{ color: '#9dbebb', fontSize: 30 }} />
+                            <InstagramIcon sx={{ color: '#9dbebb', fontSize: 25}} />
                         </IconButton>
                     )}
 
                     {loadedHotel.socialMedia.items.find(item => item.facebook) && (
                         <IconButton sx={{ fontSize: 14 }} component="div" onClick={handleFacebookClick}>
-                            <FacebookIcon sx={{ color: '#9dbebb', fontSize: 30 }} />
+                            <FacebookIcon sx={{ color: '#9dbebb', fontSize: 25 }} />
                         </IconButton>
                     )}
 
