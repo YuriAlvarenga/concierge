@@ -39,7 +39,7 @@
         },
         "restaurants": {
           "items": [
-            { "name":"Distretto Trattoria","status": "19:00h às 00:00h", "image": "/restaurants/distretto.jpg", "routePage": "/distretto-tratoria"}
+            { "name":"Distretto Trattoria", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de fazer uma reserva.", "status": "19:00h às 00:00h", "image": "/restaurants/distretto.jpg", "routePage": "/distretto-tratoria"}
           ]
         },
         "strolls": {

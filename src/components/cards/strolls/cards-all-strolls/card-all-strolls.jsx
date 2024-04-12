@@ -31,6 +31,7 @@ export default function CardAllStrolls() {
     }
   }, [hotel])
 
+  //coloca em ordem de abertos em primeiro lugar
   const sortedStrolls = loadedHotel && loadedHotel.strolls && loadedHotel.strolls.items
     ? loadedHotel.strolls.items.sort((a, b) => {
         const statusA = calculateStatus(a.status)
@@ -79,8 +80,8 @@ export default function CardAllStrolls() {
                 )}
 
                 {calculateStatus(item.status) === "Aberto agora" && (
-                  <Stack direction="row" alignItems="center" sx={{ position: 'absolute', top: 5, right: 5 }}>
-                    <Fade direction='right'>
+                  <Stack direction="row" alignItems="center" sx={{ position: 'absolute', top: 5, left: 5 }}>
+                    <Fade direction='left'>
                       <RadioButtonUncheckedIcon sx={{ fontSize: 14, background: 'green', color: 'green', mr: 1, borderRadius: '50%' }} />
                       <Typography sx={{color:'#FFF'}} variant="body2"> {t(item.status ? calculateStatus(item.status) : 'Horário não especificado')}</Typography>
                     </Fade>

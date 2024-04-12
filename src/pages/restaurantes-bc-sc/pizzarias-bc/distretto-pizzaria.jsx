@@ -15,21 +15,19 @@ import ArrowBackButton from "../../../components/menu/top-bar/arrow-back-button"
 
 export default function PizzariaDistrettoBC(){
     return(
-        <>
+        <React.Fragment>
             <TopBar title={"Distretto Tratoria"} leftComponent={<ArrowBackButton/>}/>
             <ImageCardFromPizzariaDistretto/>
             <Typography variant="h6" sx={{m:1}}>Distretto Tratoria</Typography>
-            {/* <Box sx={{position:'absolute', top: 250, right: 0}}>
-                <SocialMedia 
-                        instagramUrl={"https://www.instagram.com/distrettobartrattoria/"} 
-                        facebookUrl={"https://www.facebook.com/DistrettoDItalia/?locale=pt_BR"}
-                /> 
-            </Box> */}
-            <CardAddressNavigation endereco = {"3ª Avenida, 1112 - Centro, Balneário-SC"}/>
-            <ReservationButton/>
+            <SocialMedia 
+                instagramUrl={"https://www.instagram.com/distrettobartrattoria/"} 
+                facebookUrl={"https://www.facebook.com/DistrettoDItalia/?locale=pt_BR"}
+            /> 
+            <CardAddressNavigation endereco = {"3ª Av., 1112 - Centro, Balneário-SC"}/>
             <AboutUsDistretto/> 
+            <ReservationButton/>
             <Toolbar/>
             <MenuBottomNavigation/>
-        </>
+        </React.Fragment>
     )
 }

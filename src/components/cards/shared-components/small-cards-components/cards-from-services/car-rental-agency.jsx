@@ -7,6 +7,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import { calculateStatus } from '../../../../../list-of-datas/function-calculate-hour-of-status-from-lists/status-utils'
 import { useTranslation } from 'react-i18next'
 
+
 export default function CarRentalCard() {
   const { hotel } = useContext(HotelContext)
   const { t } = useTranslation()
@@ -27,13 +28,16 @@ export default function CarRentalCard() {
     }
   }, [hotel])
 
-   //whatspp function
-   const handleWhatsAppClick = (phoneNumber, message) => {
-    const encodedMessage = encodeURIComponent(message)
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
+  const sortByStatus = (instances) => {
+    return instances.sort((a, b) => {
+      const statusA = calculateStatus(a.status)
+      const statusB = calculateStatus(b.status)
+      if (statusA === "Aberto agora" && statusB !== "Aberto agora") return -1
+      if (statusA !== "Aberto agora" && statusB === "Aberto agora") return 1
+      return 0
+    })
   }
 
-  
   return (
     <>
     {loadedHotel && (
@@ -42,7 +46,7 @@ export default function CarRentalCard() {
           <Grid item xs={12} key={index}>
             {service.subTitle === "Locadoras" && (
               <Box>
-                {service.instances && service.instances.map((instance, i) => (
+                {service.instances && sortByStatus(service.instances).map((instance, i) => (
                   <React.Fragment key={`${index}-${i}`}>
                     <Card key={i} sx={{ position: 'relative', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', marginBottom: 2 }} onClick={() => handleWhatsAppClick(instance.phoneNumber, instance.message)}>
                       <CardMedia component="img" image={instance.image} alt={instance.name} sx={{ height: 220, objectFit: 'fill' }}/>
