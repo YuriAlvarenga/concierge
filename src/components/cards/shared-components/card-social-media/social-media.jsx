@@ -3,7 +3,6 @@ import { Grid, IconButton } from '@mui/material'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import { HotelContext } from '../../../../context/context'
-import { Fade } from "react-awesome-reveal"
 
 
 export default function SocialMedia() {
@@ -50,20 +49,18 @@ export default function SocialMedia() {
         shouldRenderIcons && (
             <Grid container spacing={2} style={{ display: 'flex', alignItems: 'right', justifyContent: 'right' }}>
                 <Grid item xs={12} style={{ marginTop: 0, display: 'flex', alignItems: 'right', justifyContent: 'flex-end', marginRight: 8 }}>
-                    <Fade direction='right'>
-                        {loadedHotel.socialMedia.items.find(item => item.instagram) && (
-                            <IconButton component="div" onClick={handleInstagramClick}>
-                                <InstagramIcon sx={{ color: '#9dbebb', fontSize: 20 }} />
-                            </IconButton>
-                        )}
-                    </Fade>
-                    <Fade direction='right'>
-                        {loadedHotel.socialMedia.items.find(item => item.facebook) && (
-                            <IconButton sx={{ fontSize: 14 }} component="div" onClick={handleFacebookClick}>
-                                <FacebookIcon sx={{ color: '#9dbebb', fontSize: 20 }} />
-                            </IconButton>
-                        )}
-                    </Fade>
+                    {loadedHotel.socialMedia.items.find(item => item.instagram) && (
+                        <IconButton component="div" onClick={handleInstagramClick}>
+                            <InstagramIcon sx={{ color: '#9dbebb', fontSize: 30 }} />
+                        </IconButton>
+                    )}
+
+                    {loadedHotel.socialMedia.items.find(item => item.facebook) && (
+                        <IconButton sx={{ fontSize: 14 }} component="div" onClick={handleFacebookClick}>
+                            <FacebookIcon sx={{ color: '#9dbebb', fontSize: 30 }} />
+                        </IconButton>
+                    )}
+
                 </Grid>
             </Grid>
         )
