@@ -55,6 +55,7 @@ export default function WifiCard() {
               {loadedHotel.internet.items.map((item, index) => (
                 <React.Fragment key={index}>
                   <Box sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2, p: 1 }}>
+                  <Fade direction="right">
                     <Box sx={{ display: 'grid', gridTemplateColumns: 'auto auto', justifyContent:'space-around'}}>
                       <Box>
                         <Typography sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb:1 }}>
@@ -76,8 +77,8 @@ export default function WifiCard() {
                           </IconButton>
                         </Box>
                       </Box>
-
                     </Box>
+                  </Fade>
                   </Box>
                 </React.Fragment>
               ))}

@@ -54,7 +54,9 @@ export default function HourCard() {
                 <Grid container spacing={2}>
                   {loadedHotel.hours.items.map((item, index) => (
                     <Grid item xs={6} key={index}>
-                      <HourRow icon={iconMap[item.name]} title={t(item.name)} time={item.horario} />
+                      <Fade direction='right'>
+                        <HourRow icon={iconMap[item.name]} title={t(item.name)} time={item.horario} />
+                      </Fade>
                     </Grid>
                   ))}
                 </Grid>

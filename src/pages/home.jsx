@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Box, Typography, Fade, CircularProgress  } from '@mui/material'
+import { Box, Typography, Fade  } from '@mui/material'
 
 
 
 export default function Home(){
   const navigate = useNavigate()
-  const [isLoading, setIsLoading] = useState(false)
   const [showWelcomeMessage, setShowWelcomeMessage] = useState(true)
 
   useEffect(() => {
     const storedHotelId = localStorage.getItem("selectedHotelId")
     setShowWelcomeMessage(false)
-    setIsLoading(true)
-
-    if (storedHotelId) {
-      navigate(`/${storedHotelId}`)
-    }
+    setTimeout(()=>{
+      if (storedHotelId) {
+        navigate(`/${storedHotelId}`)
+      }
+    },2000 )
   }, [navigate])
 
   return (
@@ -35,16 +34,8 @@ export default function Home(){
             <Typography variant="h6" gutterBottom align="center" sx={{ml:1}}>
               Concierge Virtual
             </Typography>
-          </Box>
-          {isLoading && (
-            <Box mt={2}>
-              <Typography variant="body1" align="center">Carregando...</Typography>
-              <CircularProgress />
-            </Box>
-          )}
-          {!isLoading && (
             <Typography variant="body1" align="center">Redirecionando para sua página...</Typography>
-          )}
+          </Box>
         </Box>
       </Fade>
     </>

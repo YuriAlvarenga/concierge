@@ -44,38 +44,26 @@ export default function CarRentalCard() {
               <Box>
                 {service.instances && service.instances.map((instance, i) => (
                   <React.Fragment key={`${index}-${i}`}>
-                    {calculateStatus(instance.status)=== "Aberto agora" && (
-                      <Box  sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                        <Typography>{instance.name}</Typography>
-                        <Box sx={{ display: 'flex', alignItems: 'center', m:1 }}>
-                        {calculateStatus(instance.status) === 'Aberto agora' && (
-                              <RadioButtonUncheckedIcon sx={{ background:'green', color: 'green', fontSize: 17, mr: 1, borderRadius:'50%'}} />
-                            )}
-                            <Typography> {t(instance.status ? calculateStatus(instance.status) : 'Horário não especificado')}</Typography>
-                        </Box>
-                      </Box>
-                    )}
                     <Card key={i} sx={{ position: 'relative', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', marginBottom: 2 }} onClick={() => handleWhatsAppClick(instance.phoneNumber, instance.message)}>
                       <CardMedia component="img" image={instance.image} alt={instance.name} sx={{ height: 220, objectFit: 'fill' }}/>
-                      <Box sx={{ position: 'absolute', bottom: 0, left: 0, right: 0, p: 2, color: '#FFF'}}>
-                        {calculateStatus(instance.status) !== "Aberto agora" && (
-                          <Box
-                          sx={{
-                            position: 'absolute',
-                            bottom: 0,
-                            left: 0,
-                            right: 0,
-                            p: 2,
-                            background: 'rgba(0,0,0,0.5)',
-                            color: '#FFF',
-                          }}
-                        >
-                          <Typography variant="h6" sx={{ mb: 1 }}>{instance.name}</Typography>
+                      {calculateStatus(instance.status)=== "Aberto agora" && (
+                        <Box sx={{ position: 'absolute', bottom: 0, left: 0, right: 0, p: 2, background: 'rgba(0,0,0,0.5)', color: '#FFF',}}>
                           <Stack direction="row" alignItems="center">
-                            <RadioButtonUncheckedIcon sx={{ fontSize: 14, background:'red', color: 'red', mr: 1, borderRadius:'50%' }} />
+                            <RadioButtonUncheckedIcon sx={{ fontSize: 14, background:'green', color: 'green', mr: 1, borderRadius:'50%' }} />
                             <Typography variant="body2"> {t(instance.status ? calculateStatus(instance.status) : 'Horário não especificado')}</Typography>
                           </Stack>
+                          <Typography variant="h6">{instance.name}</Typography>
                         </Box>
+                      )}
+                      <Box sx={{ position: 'absolute', bottom: 0, left: 0, right: 0, p: 2, color: '#FFF'}}>
+                        {calculateStatus(instance.status) !== "Aberto agora" && (
+                          <Box sx={{ position: 'absolute', bottom: 0, left: 0, right: 0, p: 2, background: 'rgba(0,0,0,0.5)', color: '#FFF',}}>
+                            <Stack direction="row" alignItems="center">
+                              <RadioButtonUncheckedIcon sx={{ fontSize: 14, background:'red', color: 'red', mr: 1, borderRadius:'50%' }} />
+                              <Typography variant="body2"> {t(instance.status ? calculateStatus(instance.status) : 'Horário não especificado')}</Typography>
+                            </Stack>
+                            <Typography variant="h6">{instance.name}</Typography>
+                          </Box>
                         )}
                         <IconButton sx={{ position: 'absolute', bottom: 10, right: 10, color: '#FFF'}} onClick={() => navigate(service.route)}>
                           <ArrowForwardIcon />

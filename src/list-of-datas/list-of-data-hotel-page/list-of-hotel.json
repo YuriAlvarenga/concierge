@@ -39,14 +39,12 @@
         },
         "restaurants": {
           "items": [
-            { "name":"Brava Sushi", "status": "19:00h às 00:00h", "image": "/restaurants/sushi-bc.jpg"},
             { "name":"Distretto Trattoria","status": "19:00h às 00:00h", "image": "/restaurants/distretto.jpg", "routePage": "/distretto-tratoria"}
           ]
         },
         "strolls": {
           "items": [
-            { "name":"Space Adventure", "status": "19:00h às 21:00h", "image": "/strolls-bc/images-from-cards-bc/space-adventure-bc.jpg"},
-            {  "name":"Beto Carrero World", "status": "09:00h às 20:00h", "image": "/strolls-bc/images-from-cards-bc/beto-carrero-world.jpg"},
+            { "name":"Space Adventure", "status": "19:00h às 23:00h", "image": "/strolls-bc/images-from-cards-bc/space-adventure-bc.jpg"},
             { "name":"Oceanic Aquarium", "status": "09:00h às 21:00h", "image": "/strolls-bc/images-from-cards-bc/aquario-bc.jpg", "routePage":"/strolls-oceanic-aquarium-page-bc"}
           ]
         },
@@ -75,7 +73,7 @@
             "subTitle": "Locadoras",
             "route": "/car-rental-agency",
             "instances": [
-              {"name": "Localiza Locadora de Veículos", "status": "19:00h às 21:00h", "image": "/car-rental/localiza-bc.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de alugar um veículo com vocês."},
+              {"name": "Localiza Locadora de Veículos", "status": "19:00h às 23:00h", "image": "/car-rental/localiza-bc.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de alugar um veículo com vocês."},
               {"name": "Movidas Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/movidas-bc.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de alugar um veículo com vocês."},
               {"name": "Unidas Locadora de Veículos", "status": "09:00h às 21:00h", "image": "/car-rental/unidas-bc.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de alugar um veículo com vocês."}
             ]
