@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react"
-import { Box } from "@mui/material"
+import { Box, Toolbar} from "@mui/material"
 import WifiCard from "../../components/cards/hotel-card/wi-fi-card"
 import SmallCard from "../../components/cards/shared-components/small-cards-components/small-card-from-services"
 import ServicesFromHotelCard from "../../components/cards/hotel-card/cards-services-from-hotel"
@@ -32,6 +32,7 @@ export default function HotelPage(){
                     <WifiCard />
                     <HourCard />
                     <ServicesFromHotelCard />
+                    <Toolbar/>
                     <MenuBottomNavigation/>
                 </>
             )}
