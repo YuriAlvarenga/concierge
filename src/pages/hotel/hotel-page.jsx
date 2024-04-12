@@ -31,7 +31,6 @@ export default function HotelPage(){
                     <HourCard />
                     <ServicesFromHotelCard />
                     <Toolbar />
-                    <MenuBottomNavigation/>
                 </>
             )}
         </>
