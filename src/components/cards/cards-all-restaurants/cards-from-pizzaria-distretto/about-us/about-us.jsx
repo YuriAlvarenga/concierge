@@ -6,7 +6,7 @@ export default function AboutUsDistretto() {
 
   return (
     <Grid item xs={12}>
-      <Typography sx={{ m:1}}>
+      <Typography variant="h6" sx={{ m:1}}>
         Sobre nós
       </Typography>
       <Card sx={{ m: 2, borderRadius: 2 }}>
