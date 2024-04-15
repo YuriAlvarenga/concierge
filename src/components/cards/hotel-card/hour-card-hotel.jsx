@@ -71,7 +71,7 @@ export default function HourCard() {
 
 function HourRow({ icon, title, time }) {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent:'center' }}>
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
         {icon}
         <Typography variant="body1">{title}:</Typography>
