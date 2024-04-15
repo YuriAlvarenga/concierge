@@ -38,41 +38,43 @@ export default function SmallCardServices() {
 
   // Mapear os ícones aos títulos de serviço
   const iconMap = {
-    "Farmácias": <MedicationLiquidIcon sx={{color:"#FFF"}} />,
-    "Lavanderia": <LocalLaundryServiceIcon sx={{color:"#FFF"}} />,
-    "Locadoras": <CarRentalIcon sx={{color:"#FFF"}}/>,
-    "Translados": <AirportShuttleIcon sx={{color:"#FFF"}}/>,
-    "Room Service": <RoomServiceIcon sx={{color:"#FFF"}}/>,
-    "Frigobar": <KitchenIcon sx={{color:"#FFF"}}/>,
-    "Sala de Reunião": <GroupsIcon sx={{color:"#FFF"}}/>,
-    "Lista de Canais": <DvrIcon sx={{color:"#FFF"}}/>
+    "Farmácias": <MedicationLiquidIcon sx={{ color: "#FFF" }} />,
+    "Lavanderia": <LocalLaundryServiceIcon sx={{ color: "#FFF" }} />,
+    "Locadoras": <CarRentalIcon sx={{ color: "#FFF" }} />,
+    "Translados": <AirportShuttleIcon sx={{ color: "#FFF" }} />,
+    "Room Service": <RoomServiceIcon sx={{ color: "#FFF" }} />,
+    "Frigobar": <KitchenIcon sx={{ color: "#FFF" }} />,
+    "Sala de Reunião": <GroupsIcon sx={{ color: "#FFF" }} />,
+    "Lista de Canais": <DvrIcon sx={{ color: "#FFF" }} />
   }
 
   return (
     <React.Fragment>
       {loadedHotel && loadedHotel.services && loadedHotel.services.length > 0 && (
-         <React.Fragment>
+        <React.Fragment>
           <Fade direction="left">
-            <Typography variant="h6" sx={{ml: 1, mt: 2, pt:2}}>
+            <Typography variant="h6" sx={{ ml: 1, mt: 2, pt: 2 }}>
               {t(loadedHotel.services[0].title)}
             </Typography>
           </Fade>
-        <Grid container spacing={1} sx={{ padding: 2 }}>
-          { loadedHotel.services.map((service, index) => (
-            <Grid item xs={4} key={index} onClick={() => navigate(service.route)}>
-              <Card sx={{ background: 'linear-gradient(to bottom, #28afb0 60%, #FFF 50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: 80 }}>
-                <CardContent>
-                  <Typography sx={{ fontSize: 16 }} component="div">
-                    {iconMap[service.subTitle]}
-                  </Typography>
-                </CardContent>
-                <Typography sx={{ fontSize: 12 }} alignItems='center' justifyContent='center' component="div">
+          <Grid container spacing={1} sx={{ padding: 2, flexWrap: 'wrap' }}>
+            {loadedHotel.services.map((service, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index} sx={{ flexBasis: '25%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}  onClick={() => navigate(service.route)}>
+                <Card sx={{ background: '#28afb0', borderRadius: '50%', height: 60, width: 60, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <CardContent>
+                    <Typography sx={{ fontSize: 16 }} component="div">
+                      {iconMap[service.subTitle]}
+                    </Typography>
+                  </CardContent>
+                </Card>
+                <Typography sx={{ fontSize: 10, textAlign: 'center', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }} alignItems='center' justifyContent='center' component="div">
                   {t(service.subTitle)}
                 </Typography>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
+              </Grid>
+            ))}
+          </Grid>
+
+
         </React.Fragment>
       )}
     </React.Fragment>

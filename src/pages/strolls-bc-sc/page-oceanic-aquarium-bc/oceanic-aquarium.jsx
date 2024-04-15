@@ -58,7 +58,7 @@ export default function PageStrolls() {
       <StoryFromStrolls />
       <Title title={"Garanta seus dias de Diversão"} />
       <BuyTicketsFromStrollsPage />
-      <CardAddressNavigation endereco={"Rua 4000, 133 Balneário Camboriú, SC"} />
+      <CardAddressNavigation endereco={"Rua 4000, 133 B. Camboriú, SC"} />
       <Title title={"Sobre nós"} />
       <SwiperCardFromStrolls />
       <ImageCardFromPageStrolls />

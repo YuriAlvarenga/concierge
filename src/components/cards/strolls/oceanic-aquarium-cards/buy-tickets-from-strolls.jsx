@@ -23,7 +23,7 @@ export default function BuyTicketsFromStrollsPage(){
             <Card sx={{background:"#ff6888", m:0}} onClick={handleWhatsAppClick}>
               <CardContent sx={{ display:'flex', alignItems:'center', justifyContent:'center' }}>
                 <Typography sx={{fontSize:14, color:"#FFF"}} component="div">
-                    Fale com nosso agente
+                    Fale com a gente
                 </Typography>
               </CardContent>
             </Card>
