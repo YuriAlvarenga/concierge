@@ -38,7 +38,7 @@ export default function StoryFromStrolls() {
       ) : (
         <>
           <Typography sx={{ m: 1, mt:0 }}>Stories</Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around'  }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', mb:1  }}>
             {stories.map((image, index) => (
               <Card key={index} sx={{ boxShadow: 'none', background:"#f3f3f3",  border: '2px solid #2196f3', borderRadius: '50%' }}>
                 <CardMedia

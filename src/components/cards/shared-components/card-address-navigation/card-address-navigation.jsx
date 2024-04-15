@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Grid, CardContent, Typography, IconButton } from '@mui/material'
+import {Grid, Box, Typography, IconButton } from '@mui/material'
 import FileCopyIcon from '@mui/icons-material/FileCopy'
 import DirectionsIcon from '@mui/icons-material/Directions'
 import PlaceIcon from '@mui/icons-material/Place'
@@ -32,26 +32,23 @@ export default function CardAddressNavigation({endereco}) {
 
   return (  
     <Grid container spacing={2}>
-      <Grid item xs={12}>
-          <Typography sx={{m:1}}>
-              Como Chegar?
-          </Typography>
-          <CardContent sx={{display: 'flex', alignItems:'center', justifyContent:'space-around', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', m:2}} >
-              <PlaceIcon sx={{color:'red'}}/>
-              <Typography sx={{fontSize:13}} color="text.secondary">
+      <Grid item xs={12} >
+          <Box sx={{display: 'flex', alignItems:'center', justifyContent:'space-around', m:1}} onClick={openNavigationApp}>
+              <PlaceIcon sx={{color:'red', mr:1}}/>
+              <Typography sx={{fontSize:16, mt:1, whiteSpace: 'nowrap'}} color="text.secondary" >
                   {endereco}
               </Typography>
-              <IconButton 
+              {/* <IconButton 
                 aria-label="Copiar Senha"
                 onClick={() => copyToClipboard(endereco)}
               >
                 <FileCopyIcon />
               </IconButton>
-              <IconButton aria-label="Navegar até o endereço" variant="contained" onClick={openNavigationApp}>
+              <IconButton aria-label="Navegar até o endereço" variant="contained" >
                 <DirectionsIcon />
-              </IconButton>
-          </CardContent>    
-          {copied && <Typography color="text.secondary" sx={{ textAlign: 'center' }}>Endereço copiado para a área de transferência!</Typography>}
+              </IconButton> */}
+          </Box>    
+          {/* {copied && <Typography color="text.secondary" sx={{ textAlign: 'center' }}>Endereço copiado para a área de transferência!</Typography>} */}
       </Grid>
     </Grid>
 

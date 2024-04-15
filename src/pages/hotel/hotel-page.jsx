@@ -8,6 +8,7 @@ import HourCard from "../../components/cards/hotel-card/hour-card-hotel"
 import SocialMedia from "../../components/cards/shared-components/card-social-media/social-media"
 import { HotelContext } from "../../context/context"
 import MenuBottomNavigation from "../../components/menu/menu-bottom/menu-bottom"
+import CardAddressNavigation from "../../components/cards/shared-components/card-address-navigation/card-address-navigation"
 
 export default function HotelPage(){
 
@@ -19,10 +20,13 @@ export default function HotelPage(){
             {hotel && (
                 <>
                     <ImageCardFromHotel hotelName={hotel.nameHotel} />
-                    <SocialMedia
-                        instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
-                        facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
-                    />
+                    <Box sx={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
+                        <CardAddressNavigation endereco = {"3ª Av., 1112 - Centro B. Camboriú"}/>
+                        <SocialMedia
+                            instagramUrl={"https://www.instagram.com/ibiscriciuma/"}
+                            facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
+                        />
+                    </Box>
                     <SmallCard/>
                     <WifiCard />
                     <HourCard />

@@ -60,14 +60,14 @@ export default function SmallCardServices() {
           <Grid container spacing={1} sx={{ padding: 2, flexWrap: 'wrap' }}>
             {loadedHotel.services.map((service, index) => (
               <Grid item xs={12} sm={6} md={4} key={index} sx={{ flexBasis: '25%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}  onClick={() => navigate(service.route)}>
-                <Card sx={{ background: '#28afb0', borderRadius: '50%', height: 70, width: 70, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Card sx={{ background: '#28afb0', borderRadius: '50%', height: 80, width: 80, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <CardContent>
                     <Typography sx={{ fontSize: 16, mt:1 }} component="div">
                       {iconMap[service.subTitle]}
                     </Typography>
                   </CardContent>
                 </Card>
-                <Typography sx={{ fontSize: 10, textAlign: 'center', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }} alignItems='center' justifyContent='center' component="div">
+                <Typography sx={{ fontSize: 14, textAlign: 'center', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }} alignItems='center' justifyContent='center' component="div">
                   {t(service.subTitle)}
                 </Typography>
               </Grid>

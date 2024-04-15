@@ -11,6 +11,7 @@ import CardAddressNavigation from '../../../components/cards/shared-components/c
 import Title from '../../../components/cards/shared-components/titles/title'
 import { HotelContext } from '../../../context/context'
 import { calculateStatus } from '../../../list-of-datas/function-calculate-hour-of-status-from-lists/status-utils'
+import SocialMedia from '../../../components/cards/shared-components/card-social-media/social-media'
 
 
 export default function PageStrolls() {
@@ -56,9 +57,15 @@ export default function PageStrolls() {
         </Box>
       )}
       <StoryFromStrolls />
+      <Box sx={{display: 'flex', alignItems:'center', justifyContent:'space-between'}}>
+        <CardAddressNavigation endereco={"Rua 4000, 133 B. Camboriú, SC"}/>
+        <SocialMedia 
+          instagramUrl={"https://www.instagram.com/distrettobartrattoria/"} 
+          facebookUrl={"https://www.facebook.com/DistrettoDItalia/?locale=pt_BR"}
+         /> 
+      </Box>
       <Title title={"Garanta seus dias de Diversão"} />
       <BuyTicketsFromStrollsPage />
-      <CardAddressNavigation endereco={"Rua 4000, 133 B. Camboriú, SC"} />
       <Title title={"Sobre nós"} />
       <SwiperCardFromStrolls />
       <ImageCardFromPageStrolls />

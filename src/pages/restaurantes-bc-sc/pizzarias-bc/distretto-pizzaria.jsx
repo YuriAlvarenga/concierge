@@ -19,6 +19,7 @@ export default function PizzariaDistrettoBC(){
             <TopBar title={"Distretto Tratoria"} leftComponent={<ArrowBackButton/>}/>
             <ImageCardFromPizzariaDistretto/>
             <Box sx={{display: 'flex', alignItems:'center', justifyContent:'space-between'}}>
+                <CardAddressNavigation endereco = {"3ª Av., 1112 - Centro B. Camboriú"}/>
                 <SocialMedia 
                     instagramUrl={"https://www.instagram.com/distrettobartrattoria/"} 
                     facebookUrl={"https://www.facebook.com/DistrettoDItalia/?locale=pt_BR"}
@@ -26,7 +27,6 @@ export default function PizzariaDistrettoBC(){
             </Box>
             <AboutUsDistretto/> 
             <ReservationButton/>
-            <CardAddressNavigation endereco = {"3ª Av., 1112 - Centro B. Camboriú"}/>
             <Toolbar/>
             <MenuBottomNavigation/>
         </React.Fragment>
