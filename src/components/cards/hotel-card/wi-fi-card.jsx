@@ -59,12 +59,12 @@ export default function WifiCard() {
                       <Grid container spacing={2} alignItems="center">
                         <Grid item xs={6}>
                           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                            <WifiIcon sx={{ fontSize: 14, color: '#28afb0', mr: 1 }} />
-                            <Typography sx={{ fontSize: 14 }}>{t("Rede")}</Typography>
+                            <WifiIcon sx={{ fontSize: 16, color: '#28afb0', mr: 1 }} />
+                            <Typography sx={{ fontSize: 16 }}>{t("Rede")}</Typography>
                           </Box>
                         </Grid>
                         <Grid item xs={6}>
-                          <Typography sx={{ fontSize: 14, ml:1 }} color="text.secondary">{item.network}</Typography>
+                          <Typography sx={{ fontSize: 16, ml:1 }} color="text.secondary">{item.network}</Typography>
                         </Grid>
                       </Grid>
                     </Fade>
@@ -72,13 +72,13 @@ export default function WifiCard() {
                       <Grid container spacing={2} alignItems="center">
                         <Grid item xs={6}>
                           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                            <HttpsIcon sx={{ fontSize: 14, color: '#28afb0', mr: 1 }} />
-                            <Typography sx={{ fontSize: 14 }}>{t("Senha")}</Typography>
+                            <HttpsIcon sx={{ fontSize: 16, color: '#28afb0', mr: 1 }} />
+                            <Typography sx={{ fontSize: 16 }}>{t("Senha")}</Typography>
                           </Box>
                         </Grid>
                         <Grid item xs={6}>
                           <Box sx={{ display: 'flex', alignItems: 'center', ml:1 }}>
-                            <Typography sx={{ fontSize: 14 }} color="text.secondary">{item.password}</Typography>
+                            <Typography sx={{ fontSize: 16 }} color="text.secondary">{item.password}</Typography>
                             <IconButton aria-label="Copiar Senha" onClick={() => copyToClipboard(item.password, item.network)} sx={{ ml: 1 }}>
                               <FileCopyIcon sx={{ color: '#28afb0' }} />
                             </IconButton>
