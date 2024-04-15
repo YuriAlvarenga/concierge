@@ -35,7 +35,7 @@ export default function CardAddressNavigation({endereco}) {
       <Grid item xs={12} >
           <Box sx={{display: 'flex', alignItems:'center', justifyContent:'space-around', ml:1}} onClick={openNavigationApp}>
               <PlaceIcon sx={{color:'red', mr:1}}/>
-              <Typography sx={{fontSize:16, mt:1, whiteSpace: 'nowrap'}} color="text.secondary" >
+              <Typography sx={{fontSize:14, mt:1, whiteSpace: 'nowrap'}} color="text.secondary" >
                   {endereco}
               </Typography>
               {/* <IconButton 

@@ -23,7 +23,7 @@ export default function ImageCardFromHotel({hotelName}) {
               <CardMedia
                 component="img"
                 alt='Imagem'
-                image="/hotels/sala-de-reuniao.jpg" 
+                image="/hotels/hotelIbis.png" 
                 sx={{ height: 240, objectFit: 'fill', margin: 0, padding: 0 }}
               />
             </Card>

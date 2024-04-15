@@ -145,7 +145,7 @@
             ]
           },
           {
-            "subTitle": "Sala de Reunião",
+            "subTitle": "Eventos",
             "route": "/meeting-room-service",
             "instances": [
               {"name": "Salão Brut", "content": "Um excelente espaço para seus eventos, nossa sala de eventos Sala Brut é climatizada, com telão retrátil, projetor datashow , sonorização embutida,  frigobar, pé direito de 3m de altura, existe a possibilidade de abrir a parede lateral e transformar em uma sala maior, caso a sala ao lado esteja disponível, solicite um orçamento.", "image": "/meeting-room/brut-meeting.jpg", "phoneNumber": "+5547920025230", "message": "Olá, gostaria de solicitar um orçamento da sala de eventos."},

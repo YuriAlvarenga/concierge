@@ -46,7 +46,7 @@ export default function WifiCard() {
   return (
     <React.Fragment>
       {loadedHotel && (
-        <Grid container spacing={2} style={{ padding: 15, paddingBottom: 0, marginTop:1 }}>
+        <Grid container spacing={2} style={{ padding: 15, paddingBottom: 0, marginTop: 1 }}>
           {loadedHotel.internet && (
             <Grid item xs={12}>
               <Fade direction='left'>
@@ -54,31 +54,39 @@ export default function WifiCard() {
               </Fade>
               {loadedHotel.internet.items.map((item, index) => (
                 <React.Fragment key={index}>
-                  <Box sx={{ marginBottom: '10px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2, p: 1 }}>
-                  <Fade direction="right">
-                    <Box sx={{ display: 'grid', gridTemplateColumns: 'auto auto', justifyContent:'space-around'}}>
-                      <Box>
-                        <Typography sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb:1 }}>
-                          <WifiIcon sx={{ fontSize: 17, color: '#28afb0' }} />
-                          {t("Rede")}
-                        </Typography>
-                        <Typography color="text.secondary">{item.network}</Typography>
-                      </Box>
+                  <Box sx={{ marginBottom: '10px', background:'#FFF', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', borderRadius: 2, p: 1 }}>
+                    <Fade direction="left">
+                      <Grid container spacing={2} alignItems="center">
+                        <Grid item xs={6}>
+                          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                            <WifiIcon sx={{ fontSize: 14, color: '#28afb0', mr: 1 }} />
+                            <Typography sx={{ fontSize: 14 }}>{t("Rede")}</Typography>
+                          </Box>
+                        </Grid>
+                        <Grid item xs={6}>
+                          <Typography sx={{ fontSize: 14, ml:1 }} color="text.secondary">{item.network}</Typography>
+                        </Grid>
+                      </Grid>
+                    </Fade>
+                    <Fade direction='right'>
+                      <Grid container spacing={2} alignItems="center">
+                        <Grid item xs={6}>
+                          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                            <HttpsIcon sx={{ fontSize: 14, color: '#28afb0', mr: 1 }} />
+                            <Typography sx={{ fontSize: 14 }}>{t("Senha")}</Typography>
+                          </Box>
+                        </Grid>
+                        <Grid item xs={6}>
+                          <Box sx={{ display: 'flex', alignItems: 'center', ml:1 }}>
+                            <Typography sx={{ fontSize: 14 }} color="text.secondary">{item.password}</Typography>
+                            <IconButton aria-label="Copiar Senha" onClick={() => copyToClipboard(item.password, item.network)} sx={{ ml: 1 }}>
+                              <FileCopyIcon sx={{ color: '#28afb0' }} />
+                            </IconButton>
+                          </Box>
+                        </Grid>
+                      </Grid>
 
-                      <Box>
-                        <Typography sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                          <HttpsIcon sx={{ fontSize: 16, color: '#28afb0' }} />
-                          {t("Senha")}
-                        </Typography>
-                        <Box display={'flex'} alignItems={'center'}>
-                          <Typography color="text.secondary">{item.password}</Typography>
-                          <IconButton aria-label="Copiar Senha" onClick={() => copyToClipboard(item.password, item.network)}>
-                            <FileCopyIcon sx={{ color: '#28afb0' }} />
-                          </IconButton>
-                        </Box>
-                      </Box>
-                    </Box>
-                  </Fade>
+                    </Fade>
                   </Box>
                 </React.Fragment>
               ))}

@@ -27,9 +27,9 @@ export default function HotelPage(){
                             facebookUrl={"https://www.facebook.com/hotelibiscriciuma/"}
                         />
                     </Box>
-                    <SmallCard/>
                     <WifiCard />
                     <HourCard />
+                    <SmallCard/>
                     <ServicesFromHotelCard />
                     <Toolbar/>
                     <MenuBottomNavigation/>
