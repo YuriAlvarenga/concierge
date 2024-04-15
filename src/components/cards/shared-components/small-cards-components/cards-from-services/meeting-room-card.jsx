@@ -32,7 +32,7 @@ export default function MeetingRoomCard() {
         <Grid container spacing={1}>
           {loadedHotel.services.map((service, serviceIndex) => (
             <Grid item xs={12} key={serviceIndex}>
-              {service.subTitle === "Sala de Reunião" && (
+              {service.subTitle === "Eventos" && (
                 <>
                   {service.instances.map((instance, instanceIndex) => (
                     <Grid item xs={12} key={instanceIndex}>
