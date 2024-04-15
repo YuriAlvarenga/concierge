@@ -36,7 +36,7 @@ export default function CardAddressNavigation({endereco}) {
           <Typography sx={{m:1}}>
               Como Chegar?
           </Typography>
-          <CardContent sx={{display: 'flex', alignItems:'center', justifyContent:'space-around', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', m:1}} >
+          <CardContent sx={{display: 'flex', alignItems:'center', justifyContent:'space-around', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.5)', m:2}} >
               <PlaceIcon sx={{color:'red'}}/>
               <Typography sx={{fontSize:13}} color="text.secondary">
                   {endereco}

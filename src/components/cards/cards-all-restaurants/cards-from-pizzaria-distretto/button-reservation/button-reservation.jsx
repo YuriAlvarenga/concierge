@@ -12,7 +12,7 @@ export default function ReservationButton() {
 
   return (
     <Grid container>
-      <Grid item xs={12} sx={{ m: 1 }}>
+      <Grid item xs={12} sx={{ m: 2 }}>
         <Button onClick={handleWhatsAppClick} sx={{ background: '#28afb0', color: '#FFF', width: '100%', p: 1 }} variant="outlined" >
           Faça uma reserva
         </Button>
