@@ -49,7 +49,7 @@ export default function CardAllStrolls() {
       {loadedHotel && sortedStrolls && (
         <Grid container spacing={2} style={{ padding: 10, paddingBottom: 15 }}>
           {sortedStrolls.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Grid item xs={12} key={index}>
               <Card sx={{ position: 'relative', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', mb: 4 }} onClick={() => navigate(item.routePage)}>
                 <CardMedia component="img" image={item.image} alt={item.image} sx={{ height: 220, objectFit: 'cover' }} />
 

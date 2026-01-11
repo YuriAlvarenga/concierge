@@ -16,42 +16,79 @@ export default function StoryFromStrolls() {
     setActiveListIndex(null)
   }
 
-  
-
   return (
     <>
       {activeListIndex !== null ? (
-        <Box style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 9998}}>
+        <Box sx={{
+          position: 'absolute', 
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%', 
+          zIndex: 9999,
+          bgcolor: '#000'
+        }}>
           <ReactInstaStories
             stories={stories[activeListIndex].items}
-            defaultInterval={1500}
-            width={window.innerWidth}
-            height={window.innerHeight}
+            width="100%" // Força a largura total do container
+            height="100%" // Força a altura total do container
             onAllStoriesEnd={handleCloseStories}
-            onRequestClose={handleCloseStories}
-            style={{ pointerEvents: 'auto' }}
           />
-          <IconButton onClick={handleCloseStories} sx={{ position: 'absolute', top: 15, right: 10, zIndex: 9999 }}>
+
+          <IconButton
+            onClick={handleCloseStories}
+            sx={{
+              position: 'absolute',
+              top: 15,
+              right: 10,
+              zIndex: 9999,
+              backgroundColor: 'rgba(0,0,0,0.3)',
+              '&:hover': { backgroundColor: 'rgba(0,0,0,0.5)' }
+            }}
+          >
             <CloseIcon sx={{ color: '#FFF' }} />
           </IconButton>
         </Box>
       ) : (
-        <>
-          <Typography variant='h6' sx={{ m: 1, mt:1 }}>Stories</Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', mb:1  }}>
+        <Box sx={{ p: 1 }}>
+          <Typography variant='h6' sx={{ mb: 1 }}>Stories</Typography>
+          <Box sx={{
+            display: 'flex',
+            justifyContent:'space-around',
+            gap: 2,
+            overflowX: 'auto',
+            pb: 1,
+            '::-webkit-scrollbar': { display: 'none' } // Esconde barra de scroll
+          }}>
             {stories.map((image, index) => (
-              <Card key={index} sx={{ boxShadow: 'none', background:"#f3f3f3",  border: '2px solid #2196f3', borderRadius: '50%' }}>
-                <CardMedia
-                  component="img"
-                  image={image.image}
-                  alt={image.image}
-                  sx={{ borderRadius: "50%", width: 80, height: 80, cursor: 'pointer'  }}
-                  onClick={() => handleCardClick(index)}
-                />
-              </Card>
+              <Box key={index} sx={{ textAlign: 'center', flexShrink: 0 }}>
+                <Card
+                  sx={{
+                    boxShadow: 'none',
+                    background: "transparent",
+                    border: '3px solid #2196f3',
+                    borderRadius: '50%',
+                    p: 0.3 
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image={image.image}
+                    alt="Story thumb"
+                    sx={{
+                      borderRadius: "50%",
+                      width: 70,
+                      height: 70,
+                      cursor: 'pointer',
+                      objectFit: 'cover'
+                    }}
+                    onClick={() => handleCardClick(index)}
+                  />
+                </Card>
+              </Box>
             ))}
           </Box>
-        </>
+        </Box>
       )}
     </>
   )

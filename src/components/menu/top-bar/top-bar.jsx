@@ -7,7 +7,7 @@ export default function TopBar({title, leftComponent, rightComponent}) {
 
   const { t } = useTranslation()
   return (
-    <AppBar sx={{position:'fixed',ml:3,  background:'#19647e', color:'#FFF',  p:1, boxShadow:'none'}}>
+    <AppBar sx={{position:'absolute',ml:3,  background:'#19647e', color:'#FFF',  p:1, boxShadow:'none'}}>
         <Typography style={{ margin: 'auto', fontSize:14 }}>
             {t(title)}
             {leftComponent}

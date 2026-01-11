@@ -39,7 +39,7 @@ export default function PageStrolls() {
       <TopBar title={"Oceanic Aquarium"} leftComponent={<ArrowBackButton />} />
       <Toolbar />
       {loadedHotel && loadedHotel.strolls && loadedHotel.strolls.items && (
-        <Box sx={{ position: 'fixed', top: 35, right: 0, left: 0, background: 'rgba(0,0,0,0.5)', p: 1, zIndex: 9999 }}>
+        <Box sx={{ position: 'absolute', top: 35, right: 0, left: 0, background: 'rgba(0,0,0,0.5)', p: 1, zIndex: 9999 }}>
           {loadedHotel.strolls.items.map((stroll, index) => (
             <React.Fragment>
               {stroll.name === "Oceanic Aquarium" && (

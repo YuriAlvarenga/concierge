@@ -44,7 +44,7 @@ export default function ServicesFromHotelCard() {
       {loadedHotel && (
         <Grid container spacing={2} sx={{ padding: 2, mt:1 }}>
            {loadedHotel.contacts && (
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} >
               <Fade direction='left'>
                 <Typography variant="h6" sx={{ mb: 1 }}>{t(loadedHotel.contacts.title)}</Typography>
               </Fade>

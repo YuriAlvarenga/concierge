@@ -10,11 +10,13 @@ import RestaurantIcon from '@mui/icons-material/Restaurant'
 
 const RootBottomNavigation = styled(BottomNavigation)({
   width: '100%',
-  position: 'fixed',
+  position: 'absolute', // Mudamos de fixed para absolute
   bottom: 0,
+  left: 0, // Garante que comece do início do container de 450px
   background: '#19647e',
   margin: 0,
-  padding: 0
+  padding: 0,
+  zIndex: 1000, // Garante que ele fique sempre por cima do conteúdo
 })
 
 export default function MenuBottomNavigation({ hotelId }) {
